@@ -1,14 +1,13 @@
-import Image from "next/image";
+const isProd = process.env.NODE_ENV === 'production';
+const basePath = isProd ? '/harrywaterman' : '';
 
 export default function Home() {
   return (
     <>
       <div className="apollo">
-        <Image
-          src="/apollo.png"
+        <img
+          src={`${basePath}/apollo.png`}
           alt="Apollo"
-          width={500}
-          height={500}
           style={{ width: '100%', height: 'auto' }}
         />
       </div>
