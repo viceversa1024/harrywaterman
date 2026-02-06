@@ -1,4 +1,4 @@
-import { getPostData, getAllPostSlugs, formatDate } from '@/lib/posts';
+import { getPostData, getAllPostSlugs, formatDateLong } from '@/lib/posts';
 import Link from 'next/link';
 
 export async function generateStaticParams() {
@@ -22,7 +22,7 @@ export default async function BlogPost({ params }: Props) {
       <article className="reader-article">
         <header className="reader-header">
           <h1 className="reader-title">{post.title}</h1>
-          <time className="reader-date">{formatDate(post.date)}</time>
+          <time className="reader-date">{formatDateLong(post.date)}</time>
         </header>
         <div
           className="reader-content"
