@@ -1,5 +1,6 @@
 import { getPostData, getAllPostSlugs, formatDateLong } from '@/lib/posts';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 
 export async function generateStaticParams() {
   const slugs = getAllPostSlugs();
@@ -8,6 +9,16 @@ export async function generateStaticParams() {
 
 interface Props {
   params: Promise<{ slug: string }>;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getPostData(slug);
+
+  return {
+    title: post.title,
+    description: post.excerpt || `${post.title} - Harry Waterman`,
+  };
 }
 
 export default async function BlogPost({ params }: Props) {

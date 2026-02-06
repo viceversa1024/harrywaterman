@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Harry Waterman",
-  description: "Personal website of Harry Waterman",
+  description: "a site of my own",
   icons: {
     icon: [
       { url: '/favicons/favicon.ico' },

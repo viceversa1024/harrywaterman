@@ -89,6 +89,7 @@ export async function getPostData(slug: string): Promise<PostData> {
     slug,
     title: matterResult.data.title || slug,
     date: matterResult.data.date || '',
+    excerpt: matterResult.data.excerpt || '',
     contentHtml,
   };
 }
