@@ -1,3 +1,6 @@
+const isProd = process.env.NODE_ENV === 'production';
+const basePath = isProd ? '/harrywaterman' : '';
+
 export default function Reading() {
   return (
     <>
@@ -13,7 +16,7 @@ export default function Reading() {
           <p><a href="https://www.astralcodexten.com/p/the-psychopolitics-of-trauma" target="_blank" rel="noopener noreferrer">Scott Alexander - The Psychopolitics of Trauma</a></p>
           <p><a href="https://minordissent.substack.com/p/politics-is-worse-than-video-games" target="_blank" rel="noopener noreferrer">Max Meursault - Politics Is Worse Than Video Games, Drugs, and Porn Combined</a></p>
           <p><a href="http://slehar.com/wwwRel//cartoonepist/cartoonepist.html" target="_blank" rel="noopener noreferrer">Steve Lehar - A Cartoon Epistemology</a></p>
-          <p><a href="/heath.pdf" target="_blank" rel="noopener noreferrer">Robert G. Heath - Electrical Self-Stimulation of the Brain in Man</a></p>
+          <p><a href={`${basePath}/heath.pdf`} target="_blank" rel="noopener noreferrer">Robert G. Heath - Electrical Self-Stimulation of the Brain in Man</a></p>
         </div>
 
         <h2>Short Stories</h2>
