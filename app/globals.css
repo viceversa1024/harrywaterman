@@ -99,7 +99,6 @@ a:hover {
   cursor: pointer;
   padding: 4px 8px;
   position: relative;
-  top: 20px;
   flex-direction: column;
   gap: 5px;
 }
@@ -392,6 +391,10 @@ a:hover {
 
   .nav-links.nav-open {
     display: block;
+  }
+
+  .nav-links h2:first-of-type {
+    margin-top: 15px;
   }
 
   .two-column {

@@ -52,10 +52,6 @@ export default function Home() {
   const handlePolygonClick = (index: number, e: React.MouseEvent) => {
     if (isTouchDevice()) {
       e.preventDefault();
-      if (index === 1) {
-        navigator.clipboard.writeText('vice9versa');
-        setCopied(true);
-      }
       setMobileTooltip(mobileTooltip === index ? null : index);
     } else if (index === 1) {
       e.preventDefault();
@@ -156,7 +152,13 @@ export default function Home() {
                   {layers[mobileTooltip].text}
                 </a>
               ) : (
-                <span style={{ color: 'white', textDecoration: 'underline' }}>
+                <span
+                  style={{ color: 'white', textDecoration: 'underline', cursor: 'pointer' }}
+                  onClick={() => {
+                    navigator.clipboard.writeText('vice9versa');
+                    setCopied(true);
+                  }}
+                >
                   {layers[mobileTooltip].text}
                 </span>
               )}
