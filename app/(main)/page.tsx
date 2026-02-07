@@ -11,7 +11,7 @@ interface LayerInfo {
 }
 
 const layers: LayerInfo[] = [
-  { text: 'resume', href: '/HW_Resume.pdf' },
+  { text: 'github', href: 'https://github.com/viceversa1024' },
   { text: 'discord (copy)' },
   { text: 'zine-a-thon', href: 'https://helenatran.com/humanexperiments/' },
 ];
@@ -95,11 +95,11 @@ export default function Home() {
               }
             `}</style>
             <a
-              href="/HW_Resume.pdf"
+              href="https://github.com/viceversa1024"
               target="_blank"
               rel="noopener noreferrer"
               className="layer-link"
-              onMouseMove={(e) => { if (!isTouchDevice()) setTooltip({ x: e.clientX, y: e.clientY, text: 'resume' }); }}
+              onMouseMove={(e) => { if (!isTouchDevice()) setTooltip({ x: e.clientX, y: e.clientY, text: 'github' }); }}
               onMouseLeave={() => setTooltip(null)}
               onClick={(e) => handlePolygonClick(0, e)}
             >
