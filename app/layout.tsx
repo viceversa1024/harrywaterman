@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const isProd = process.env.NODE_ENV === 'production';
+const basePath = isProd ? '/harrywaterman' : '';
+
 export const metadata: Metadata = {
   title: "Harry Waterman",
   description: "a site of my own",
   icons: {
     icon: [
-      { url: '/favicons/favicon.ico' },
-      { url: '/favicons/favicon.svg', type: 'image/svg+xml' },
+      { url: `${basePath}/favicons/favicon.ico` },
+      { url: `${basePath}/favicons/favicon.svg`, type: 'image/svg+xml' },
     ],
-    apple: '/favicons/apple-touch-icon.png',
+    apple: `${basePath}/favicons/apple-touch-icon.png`,
   },
 };
 
