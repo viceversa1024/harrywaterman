@@ -396,11 +396,23 @@ a:hover {
 
   .two-column {
     flex-direction: column;
-    gap: 20px;
+    gap: 0;
+  }
+
+  h1 {
+    margin-top: 10px;
+  }
+
+  h1:first-of-type {
+    margin-top: 10px;
   }
 
   .apollo {
     max-width: 100%;
+  }
+
+  .layers-container {
+    width: 40% !important;
   }
 
   .footer {
