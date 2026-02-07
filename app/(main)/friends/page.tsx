@@ -61,8 +61,6 @@ export default function Friends() {
           <div className="friend-description">If you&apos;re cool with that.</div>
         </div>
 
-        <div className="friend-divider"></div>
-
         {showCam && (
           <div style={{ marginTop: '20px', paddingLeft: '20px' }}>
             <video
