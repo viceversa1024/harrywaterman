@@ -54,7 +54,6 @@ export default function Home() {
               <polygon points="42,57 160,16 156,284 37,325" />
             </a>
             <a
-              href="#"
               className="layer-link"
               onMouseMove={(e) => setTooltip({ x: e.clientX, y: e.clientY, text: 'discord (copy)' })}
               onMouseLeave={() => setTooltip(null)}
