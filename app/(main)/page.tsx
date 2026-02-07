@@ -1,12 +1,9 @@
-const isProd = process.env.NODE_ENV === 'production';
-const basePath = isProd ? '/harrywaterman' : '';
-
 export default function Home() {
   return (
     <>
       <div className="apollo">
         <img
-          src={`${basePath}/apollo.png`}
+          src="/apollo.png"
           alt="Apollo"
           style={{ width: '100%', height: 'auto' }}
         />
