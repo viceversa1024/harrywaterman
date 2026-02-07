@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import friends from './friends.json';
 
 export default function Friends() {
   const [showCam, setShowCam] = useState(false);
@@ -36,23 +37,17 @@ export default function Friends() {
     <>
       <h1>Friends, Under Constant Construction</h1>
       <div className="friends-list">
-        <div className="friend-entry">
-          <div className="friend-name">
-            <a href="https://helenatran.com/" target="_blank" rel="noopener noreferrer">Helena Tran</a>
+        {friends.map((friend, i) => (
+          <div key={friend.name}>
+            <div className="friend-entry">
+              <div className="friend-name">
+                <a href={friend.url} target="_blank" rel="noopener noreferrer">{friend.name}</a>
+              </div>
+              <div className="friend-description">{friend.description}</div>
+            </div>
+            <div className="friend-divider"></div>
           </div>
-          <div className="friend-description">Real artist in the real world. Utterly exciting progenitor.</div>
-        </div>
-
-        <div className="friend-divider"></div>
-
-        <div className="friend-entry">
-          <div className="friend-name">
-            <a href="https://cairosmith.com/" target="_blank" rel="noopener noreferrer">Cairo Smith</a>
-          </div>
-          <div className="friend-description">Active anthropologist and the one good podcaster.</div>
-        </div>
-
-        <div className="friend-divider"></div>
+        ))}
 
         <div className="friend-entry">
           <div className="friend-name">
