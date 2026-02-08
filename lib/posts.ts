@@ -83,7 +83,7 @@ export async function getPostData(slug: string): Promise<PostData> {
   const processedContent = await remark()
     .use(html)
     .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+  const contentHtml = processedContent.toString().replace(/<a /g, '<a target="_blank" rel="noopener noreferrer" ');
 
   return {
     slug,
