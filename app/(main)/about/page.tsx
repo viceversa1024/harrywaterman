@@ -8,7 +8,7 @@ export default function About() {
           &quot;Every second spent without pain is a lucky second. String enough of those lucky seconds together, you have a lucky minute.&quot;
           <a href="https://www.youtube.com/watch?v=cbEEndKQCsw" target="_blank" rel="noopener noreferrer"> -Dr. Bigelow</a>
         </p>
-        <p>A young dilettante trying to live a good, beautiful life, in that order. I bought a domain because names are powerful. If anything on this site interests you, formally or informally, please email me at watermah at uci dot edu; it would be my pleasure.</p>
+        <p>A young dilettante trying to live a good, beautiful life, in that order. I bought a domain because names are powerful. If anything on this site interests you, formally or informally, please email me at watermah at uci dot edu or text me at <a href="https://www.google.com/search?q=1991+berkeley+area+code" target="_blank" rel="noopener noreferrer">(berkeley area code)</a> 9843960; it would be my pleasure.</p>
       </div>
     </>
   );
