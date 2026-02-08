@@ -372,6 +372,22 @@ a:hover {
   padding: 0;
 }
 
+.reader-content img {
+  display: block;
+  margin: 1.5em auto 0.5em;
+  max-width: 70%;
+}
+
+.reader-content p:has(> img) + p > em:only-child {
+  display: block;
+  text-align: center;
+  font-size: 0.85em;
+  color: #888;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
 @media (max-width: 768px) {
   .left-column {
     width: 100%;
