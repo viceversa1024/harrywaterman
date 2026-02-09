@@ -1,3 +1,5 @@
+import DarkModeToggle from './components/DarkModeToggle';
+
 export default function ReaderLayout({
   children,
 }: Readonly<{
@@ -5,6 +7,7 @@ export default function ReaderLayout({
 }>) {
   return (
     <div className="reader-container">
+      <DarkModeToggle />
       {children}
     </div>
   );
