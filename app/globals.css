@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   font-family: 'Lora', serif;
   background-color: #f4efe0;
