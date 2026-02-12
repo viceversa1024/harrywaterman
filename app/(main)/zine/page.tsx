@@ -49,7 +49,7 @@ export default function Zine() {
             alignItems: "center",
             justifyContent: "center",
             cursor: "pointer",
-            zIndex: 1000,
+            zIndex: 1001,
           }}
         >
           <img
