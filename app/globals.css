@@ -15,8 +15,9 @@ body {
   background-color: #f4efe0;
   margin: 0;
   padding: 20px;
-  padding-bottom: 100px;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 ::-webkit-scrollbar {
@@ -129,9 +130,11 @@ a:hover {
 }
 
 .container {
+  width: 100%;
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
+  flex: 1;
 }
 
 .two-column {
@@ -179,14 +182,12 @@ a:hover {
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  margin-bottom: -20px;
   height: 120px;
   background-repeat: repeat-x;
   background-size: auto 100%;
-  z-index: 1000;
 }
 
 /* Friends page styles */
@@ -546,10 +547,6 @@ a:hover {
 
   .footer {
     height: 100px;
-  }
-
-  body {
-    padding-bottom: 100px;
   }
 
   .reader-container {
