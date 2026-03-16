@@ -14,12 +14,6 @@ I really wish 500 days of summer was a good movie. I won't say it was all bad. I
 
 —
 
-It's the first hot day of the year and everyone is smiling at something. It's the type of day that makes the girl in the library lean closer to him, resting her chin on an open palm and giggling. She's beautiful, her and the other girl, and I look at her and she looks back, completely. This is the only day.
-
-I won't meet my wife while wearing my headphones.
-
-—
-
 The first time I met Gavin he was sitting with his friends in the garden during lunch  
 And I was sitting with my friends  
 We were eating lunch out there because the cafeteria was real busy  
