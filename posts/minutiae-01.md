@@ -31,7 +31,7 @@ And he's dating the actress I really had a crush on last year
 I wanted to show someone but I didn't think they'd really understand  
 I think I told Lisa but that made it worse  
 After all it is just celebrity gossip and I really shouldn't waste my time with that garbage  
-But laying in the backseat of my car I thought about it
+But lying in the backseat of my car I thought about it
 
 —
 

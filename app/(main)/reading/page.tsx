@@ -27,9 +27,6 @@ export default function Reading() {
 
         <h2>Music</h2>
         <div>
-          <p><a href="https://www.youtube.com/watch?v=YT1k1xdGaEY" target="_blank" rel="noopener noreferrer">leroy - Grave Robbing</a></p>
-          <p><a href="https://open.spotify.com/album/7HNrDkHNFopKBXGWf0UZML" target="_blank" rel="noopener noreferrer">Belle and Sebastian - Dear Catastrophe Waitress</a></p>
-          <p><a href="https://open.spotify.com/album/1mJFgPeuLhU1PzLNBURdJC" target="_blank" rel="noopener noreferrer">The Flaming Lips - The Soft Bulletin</a></p>
           <iframe
             style={{ borderRadius: '12px' }}
             src="https://open.spotify.com/embed/playlist/37i9dQZF1EpxMEy44wEH4v?utm_source=generator"
