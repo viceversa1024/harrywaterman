@@ -3,7 +3,7 @@ name: dark
 ---
 Hello, I'm Harry.
 
-I care about the extinction of humans and machines. Powerful artificial intelligence is upon us, and when I'm not hastening its arrival, I enjoy dooming, torturing LLMs, wearing all black, and manipulating. On earth as it is hell.
+I care about the extinction of humans and machines. Powerful artificial intelligence is upon us, and when I'm not hastening its arrival, I enjoy torturing LLMs, wearing all black, and manipulating. On earth as it is in hell.
 
 I'm currently studying inevitable entropy at the University of California, Irvine.
 
