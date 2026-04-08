@@ -16,6 +16,7 @@ export default function Zine() {
     <>
       <h1>Zine-a-thon</h1>
       <div className="page-text">
+        <p><a href="/zine3">Zine-a-thon 3</a> (2026)</p>
         <p><a href="https://helenatran.com/bovination/" target="_blank" rel="noopener noreferrer">Foundations of Modern Bovination</a> (2026)</p>
         <p><a href="https://helenatran.com/humanexperiments/" target="_blank" rel="noopener noreferrer">Human Experiments</a> (2025)</p>
       </div>
