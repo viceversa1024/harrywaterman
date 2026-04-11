@@ -24,7 +24,7 @@ export default function Navigation() {
         </button>
       </div>
       <div className={`nav-links${open ? ' nav-open' : ''}`}>
-        <h2><Link href="/about" onClick={() => setOpen(false)}>About</Link></h2>
+        <h2><Link href="/now" onClick={() => setOpen(false)}>Now</Link></h2>
         <h2><Link href="/reading" onClick={() => setOpen(false)}>Reading</Link></h2>
         <h2><Link href="/riting" onClick={() => setOpen(false)}>Riting</Link></h2>
         <h2><Link href="/rithmetic" onClick={() => setOpen(false)}>Rithmetic</Link></h2>
