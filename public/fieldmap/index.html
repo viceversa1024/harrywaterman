@@ -83,6 +83,18 @@
   .tm-tooltip .tt-label { color: #7a8088; }
   .tm-tooltip .tt-val { color: #e8eaed; }
 
+  /* Context comparison */
+  .ctx-section { margin-bottom: 32px; }
+  .ctx-section-title { font-size: 13px; font-weight: 600; color: #e8eaed; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .ctx-row { display: flex; align-items: center; gap: 12px; padding: 6px 0; }
+  .ctx-label { width: 200px; flex-shrink: 0; font-size: 13px; color: #c8ccd0; }
+  .ctx-label.highlight { color: #6db3f2; font-weight: 600; }
+  .ctx-bar-wrap { flex: 1; height: 24px; display: flex; align-items: center; }
+  .ctx-bar { height: 100%; border-radius: 4px; min-width: 2px; display: flex; align-items: center; padding-left: 8px; flex-shrink: 0; }
+  .ctx-bar-val { font-size: 11px; font-weight: 600; color: #fff; white-space: nowrap; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+  .ctx-bar-val-outside { font-size: 11px; font-weight: 600; color: #7a8088; white-space: nowrap; margin-left: 8px; flex-shrink: 0; }
+  .ctx-note { font-size: 11px; color: #555960; margin-top: 2px; padding-left: 212px; }
+
   /* Source quality */
   .src-bar { display: flex; height: 14px; border-radius: 3px; overflow: hidden; min-width: 60px; }
   .src-bar .seg { height: 100%; }
@@ -135,6 +147,7 @@
     <button class="tab" data-tab="funders">Funders</button>
     <button class="tab" data-tab="gaps">Data Gaps</button>
     <button class="tab" data-tab="sources">Sources</button>
+    <button class="tab" data-tab="context">Context</button>
   </div>
 
   <div id="tab-treemap" class="tab-content">
@@ -219,6 +232,14 @@
     <div id="gap-summary"></div>
     <div id="gap-table"></div>
   </div>
+
+  <div id="tab-context" class="tab-content" style="display:none">
+    <p style="font-size:13px;color:#7a8088;margin-bottom:20px;max-width:700px">
+      Rough estimates for context. AI safety figures are from this dataset; other fields use published estimates from government budgets, workforce surveys, and research reports. Methodology and scope vary across fields — treat as order-of-magnitude comparisons, not precise benchmarks.
+    </p>
+    <div id="context-charts"></div>
+    <div id="context-table" style="margin-top:24px"></div>
+  </div>
 </div>
 
 <script>
@@ -250,7 +271,8 @@ async function load() {
 
 function fmt(n) {
   if (n == null) return null;
-  if (n >= 1e6) return '$' + (n / 1e6).toFixed(1) + 'M';
+  if (n >= 1e9) return '$' + (n / 1e9).toFixed(1) + 'B';
+  if (n >= 1e6) return '$' + (n / 1e6).toFixed(0) + 'M';
   if (n >= 1e3) return '$' + (n / 1e3).toFixed(0) + 'K';
   return '$' + n.toFixed(0);
 }
@@ -1138,6 +1160,130 @@ function populateGapFilters() {
   document.getElementById('gap-filter-subfield').addEventListener('change', applyGapFilters);
   document.getElementById('gap-filter-field').addEventListener('change', applyGapFilters);
   document.getElementById('gap-sort').addEventListener('change', applyGapFilters);
+}
+
+// ── Context comparison tab ──
+
+const COMPARISON_FIELDS = [
+  {
+    name: 'AI Safety',
+    ftes: null, // filled from DATA.summary
+    spending: null, // filled from DATA.summary
+    color: '#6db3f2',
+    highlight: true,
+    source: 'This dataset',
+  },
+  {
+    name: 'Planetary Defense',
+    ftes: 350,
+    spending: 380e6,
+    color: '#7c5cbf',
+    source: 'NASA Planetary Defense budget FY2025 (~$380M). Staff estimate includes PDCO, JPL NEO program, DART/NEO Surveyor teams.',
+  },
+  {
+    name: 'Biosecurity',
+    ftes: 8000,
+    spending: 4e9,
+    color: '#c75050',
+    source: 'US BARDA + global health security funding. FTE estimate from Johns Hopkins CHS surveys of dedicated bio-threat researchers and preparedness staff (excludes broader public health).',
+  },
+  {
+    name: 'Nuclear Security (NNSA)',
+    ftes: 67600,
+    spending: 22.2e9,
+    color: '#b87333',
+    source: 'NNSA FY2024: $22.2B budget, ~2,600 federal + ~65,000 contractor FTEs. Wikipedia / DOE budget docs.',
+  },
+  {
+    name: 'Cybersecurity (US gov)',
+    ftes: 100000,
+    spending: 13e9,
+    color: '#4a8c6f',
+    source: 'US federal civilian cyber workforce ~100K (CyberSeek/NICE 2024). Federal cyber budget ~$13B (OMB 2024). Private sector not included — global cyber workforce is ~5.5M per ISC2.',
+  },
+  {
+    name: 'Climate Adaptation (global)',
+    ftes: 500000,
+    spending: 63e9,
+    color: '#5a8a8a',
+    source: 'Global adaptation finance ~$63B/yr (Climate Policy Initiative 2023). Workforce is a rough order-of-magnitude estimate across UNFCCC, national agencies, NGOs, and research.',
+  },
+];
+
+function renderContext() {
+  // Fill AI safety row from live data
+  const ais = COMPARISON_FIELDS[0];
+  ais.ftes = DATA.summary.total_ftes;
+  ais.spending = DATA.summary.total_granted; // all-time grants as proxy
+
+  const charts = document.getElementById('context-charts');
+
+  // FTE chart
+  const maxFtes = Math.max(...COMPARISON_FIELDS.map(f => f.ftes));
+  const fteRows = COMPARISON_FIELDS
+    .slice().sort((a, b) => a.ftes - b.ftes)
+    .map(f => {
+      const pct = (f.ftes / maxFtes * 100);
+      const wide = pct > 15;
+      const valStr = f.ftes >= 1e6 ? (f.ftes / 1e6).toFixed(1) + 'M' : f.ftes >= 1e3 ? (f.ftes / 1e3).toFixed(0) + 'K' : f.ftes.toLocaleString();
+      return `<div class="ctx-row">
+        <div class="ctx-label ${f.highlight ? 'highlight' : ''}">${f.name}</div>
+        <div class="ctx-bar-wrap">
+          <div class="ctx-bar" style="width:${Math.max(pct, 0.5)}%;background:${f.color}">
+            ${wide ? `<span class="ctx-bar-val">${valStr}</span>` : ''}
+          </div>
+          ${!wide ? `<span class="ctx-bar-val-outside">${valStr}</span>` : ''}
+        </div>
+      </div>`;
+    }).join('');
+
+  // Spending chart
+  const maxSpend = Math.max(...COMPARISON_FIELDS.map(f => f.spending));
+  const spendRows = COMPARISON_FIELDS
+    .slice().sort((a, b) => a.spending - b.spending)
+    .map(f => {
+      const pct = (f.spending / maxSpend * 100);
+      const wide = pct > 15;
+      const valStr = fmt(f.spending);
+      return `<div class="ctx-row">
+        <div class="ctx-label ${f.highlight ? 'highlight' : ''}">${f.name}</div>
+        <div class="ctx-bar-wrap">
+          <div class="ctx-bar" style="width:${Math.max(pct, 0.5)}%;background:${f.color}">
+            ${wide ? `<span class="ctx-bar-val">${valStr}</span>` : ''}
+          </div>
+          ${!wide ? `<span class="ctx-bar-val-outside">${valStr}</span>` : ''}
+        </div>
+      </div>`;
+    }).join('');
+
+  charts.innerHTML = `
+    <div class="ctx-section">
+      <div class="ctx-section-title">Estimated workforce (FTEs)</div>
+      ${fteRows}
+    </div>
+    <div class="ctx-section">
+      <div class="ctx-section-title">Estimated annual spending (USD)</div>
+      ${spendRows}
+    </div>
+  `;
+
+  // Source table
+  const tableRows = COMPARISON_FIELDS.map(f => {
+    const ftesStr = f.ftes >= 1e6 ? (f.ftes / 1e6).toFixed(1) + 'M' : f.ftes >= 1e3 ? (f.ftes / 1e3).toFixed(0) + 'K' : f.ftes.toLocaleString();
+    return `<tr>
+      <td${f.highlight ? ' style="color:#6db3f2;font-weight:600"' : ''}>${f.name}</td>
+      <td>${ftesStr}</td>
+      <td>${fmt(f.spending)}</td>
+      <td class="muted" style="font-size:11px;max-width:400px">${f.source}</td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('context-table').innerHTML = `
+    <table>
+      <tr><th>Field</th><th>FTEs</th><th>Spending</th><th>Source / Notes</th></tr>
+      ${tableRows}
+    </table>
+  `;
 }
 
 // Resize handler
