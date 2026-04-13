@@ -84,6 +84,10 @@
   .tm-tooltip .tt-val { color: #e8eaed; }
 
   /* Context comparison */
+  .scope-details { max-width: 700px; margin-bottom: 12px; font-size: 13px; color: #7a8088; }
+  .scope-details summary { cursor: pointer; color: #9aa0a6; font-weight: 600; font-size: 13px; }
+  .scope-details summary:hover { color: #e8eaed; }
+  .scope-details p { margin: 8px 0 0 0; line-height: 1.5; }
   .ctx-section { margin-bottom: 32px; }
   .ctx-section-title { font-size: 13px; font-weight: 600; color: #e8eaed; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
   .ctx-row { display: flex; align-items: center; gap: 12px; padding: 6px 0; }
@@ -136,7 +140,14 @@
 <body>
 <div class="container">
   <h1>AI Safety Field Map</h1>
-  <p class="subtitle">Data coverage explorer — red = missing, green = filled</p>
+  <details class="scope-details">
+    <summary>Scope definition</summary>
+    <p>Organizations and teams whose primary mission is AI safety, alignment, or AI governance.
+    Includes safety teams inside large AI labs (estimated FTEs for safety-relevant staff only),
+    university research groups with dedicated AI safety funding, and government AI safety bodies.
+    Excludes broader responsible AI, AI ethics teams at tech companies, general ML fairness research,
+    and AI regulation bodies not focused on catastrophic/existential risk.</p>
+  </details>
 
   <div class="cards" id="cards"></div>
 
@@ -237,6 +248,10 @@
     <p style="font-size:13px;color:#7a8088;margin-bottom:20px;max-width:700px">
       Rough estimates for context. AI safety figures are from this dataset; other fields use published estimates from government budgets, workforce surveys, and research reports. Methodology and scope vary across fields — treat as order-of-magnitude comparisons, not precise benchmarks.
     </p>
+    <details class="scope-details" style="margin-bottom:20px">
+      <summary>Scope caveat</summary>
+      <p>"AI safety" here means organizations focused on alignment, safety research, and AI governance around catastrophic/existential risk. A 3x scope expansion (e.g. including all responsible-AI and ML fairness work) could increase headcount estimates by ~10x. These comparisons reflect the narrow scope defined above.</p>
+    </details>
     <div id="context-charts"></div>
     <div id="context-table" style="margin-top:24px"></div>
   </div>
