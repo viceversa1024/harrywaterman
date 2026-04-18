@@ -12,7 +12,7 @@ interface LayerInfo {
 
 const layers: LayerInfo[] = [
   { text: 'meet with me', href: 'https://calendar.app.google/RJz5GmyK3fpELsz66' },
-  { text: 'discord (copy)' },
+  { text: 'email (copy)' },
   { text: 'zine-a-thon', href: '/zine' },
 ];
 
@@ -64,7 +64,7 @@ export default function HomeContent({ altBios }: HomeContentProps) {
       setMobileTooltip(mobileTooltip === index ? null : index);
     } else if (index === 1) {
       e.preventDefault();
-      navigator.clipboard.writeText('vice9versa');
+      navigator.clipboard.writeText('watermah@uci.edu');
       setCopied(true);
     }
   };
@@ -134,7 +134,7 @@ export default function HomeContent({ altBios }: HomeContentProps) {
             </a>
             <a
               className="layer-link"
-              onMouseMove={(e) => { if (!isTouchDevice()) setTooltip({ x: e.clientX, y: e.clientY, text: 'discord (copy)' }); }}
+              onMouseMove={(e) => { if (!isTouchDevice()) setTooltip({ x: e.clientX, y: e.clientY, text: 'email (copy)' }); }}
               onMouseLeave={() => setTooltip(null)}
               onClick={(e) => handlePolygonClick(1, e)}
             >
@@ -179,7 +179,7 @@ export default function HomeContent({ altBios }: HomeContentProps) {
                 <span
                   style={{ color: 'white', textDecoration: 'underline', cursor: 'pointer' }}
                   onClick={() => {
-                    navigator.clipboard.writeText('vice9versa');
+                    navigator.clipboard.writeText('watermah@uci.edu');
                     setCopied(true);
                   }}
                 >
@@ -223,7 +223,7 @@ export default function HomeContent({ altBios }: HomeContentProps) {
             zIndex: 1000,
           }}
         >
-          discord username copied to clipboard
+          email copied to clipboard
         </div>
       )}
       {universe === null ? (
@@ -239,9 +239,12 @@ export default function HomeContent({ altBios }: HomeContentProps) {
           ))}
         </>
       )}
-      <button className="universe-toggle" onClick={handleUniverseToggle}>
-        {buttonLabel}
-      </button>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: '1em 0', width: '100%' }}>
+        <p style={{ margin: 0 }}>watermah at uci dot edu</p>
+        <button className="universe-toggle" onClick={handleUniverseToggle} style={{ marginTop: 0 }}>
+          {buttonLabel}
+        </button>
+      </div>
     </>
   );
 }
