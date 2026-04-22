@@ -6,6 +6,7 @@ const posters = [
   { src: "/zine/spendadaywith.png", alt: "Spend a Day With advertisement poster" },
   { src: "/zine/inaday.png", alt: "In a Day advertisement poster" },
   { src: "/zine/grazewithus.png", alt: "Graze With Us Zine-a-thon advertisement poster" },
+  { src: "/zine/9fs-poster01.png", alt: "Zine-a-thon advertisement poster" },
 ];
 
 export default function Zine() {
