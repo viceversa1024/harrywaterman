@@ -4,6 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Harry Waterman",
   description: "a site of my own",
+  robots: { index: true, follow: true },
   icons: {
     icon: [
       { url: '/favicons/favicon.ico' },
