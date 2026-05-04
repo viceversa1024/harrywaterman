@@ -13,7 +13,7 @@ interface LayerInfo {
 const layers: LayerInfo[] = [
   { text: 'meet with me', href: 'https://calendar.app.google/RJz5GmyK3fpELsz66' },
   { text: 'email (copy)' },
-  { text: 'zine-a-thon', href: '/zine' },
+  { text: 'zine-a-thon', href: 'https://zineathon.com' },
 ];
 
 const layerCenterPct = [14, 48, 82];
@@ -144,7 +144,9 @@ export default function HomeContent({ altBios }: HomeContentProps) {
               <polygon points="279,63 401,17 396,288 275,328" />
             </a>
             <a
-              href="/zine"
+              href="https://zineathon.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="layer-link"
               onMouseMove={(e) => { if (!isTouchDevice()) setTooltip({ x: e.clientX, y: e.clientY, text: 'zine-a-thon' }); }}
               onMouseLeave={() => setTooltip(null)}

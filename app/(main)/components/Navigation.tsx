@@ -26,7 +26,7 @@ export default function Navigation() {
       <div className={`nav-links${open ? ' nav-open' : ''}`}>
         <h2><Link href="/now" onClick={() => setOpen(false)}>Now</Link></h2>
         <h2><Link href="/reading" onClick={() => setOpen(false)}>Reading</Link></h2>
-        <h2><Link href="/zine" onClick={() => setOpen(false)}>Riting</Link></h2>
+        <h2><a href="https://zineathon.com" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>Riting</a></h2>
         <h2><Link href="/rithmetic" onClick={() => setOpen(false)}>Rithmetic</Link></h2>
         <h2><Link href="/friends" onClick={() => setOpen(false)}>Friends</Link></h2>
         <h2><Link href="/blog" onClick={() => setOpen(false)}>Blog</Link></h2>
