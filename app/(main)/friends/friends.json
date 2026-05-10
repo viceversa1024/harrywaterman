@@ -3,5 +3,6 @@
   { "name": "Cairo", "url": "https://cairosmith.com/", "description": "Active anthropologist and the one good podcaster." },
   { "name": "Edward", "url": "https://etsullivan.substack.com/", "description": "SYM" },
   { "name": "Henry", "url": "https://computerwebsite.net/", "description": "Evil twin" },
-  { "name": "Nate", "url": "https://marginnotes05.substack.com/", "description": "Man of faith and action" }
+  { "name": "Nate", "url": "https://marginnotes05.substack.com/", "description": "Man of faith and action" },
+  { "name": "Ivan", "url": "http://ivanshishkin.com", "description": "Protagonist" }
 ]
