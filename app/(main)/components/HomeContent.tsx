@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useLayoutEffect, useRef, useCallback } from 'react';
 
 const isTouchDevice = () => 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
@@ -33,6 +33,8 @@ export default function HomeContent({ altBios }: HomeContentProps) {
   const [copied, setCopied] = useState(false);
   const [universe, setUniverse] = useState<number | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const anchorTopRef = useRef<number | null>(null);
 
   useEffect(() => {
     if (copied) {
@@ -72,8 +74,19 @@ export default function HomeContent({ altBios }: HomeContentProps) {
   // Cycle: null → 0 → null → 1 → null → 2 → ... → null → 0 → ...
   const [nextAltIndex, setNextAltIndex] = useState(0);
 
+  useLayoutEffect(() => {
+    if (anchorTopRef.current === null || !buttonRef.current) return;
+    const newTop = buttonRef.current.getBoundingClientRect().top;
+    const delta = newTop - anchorTopRef.current;
+    if (delta !== 0) window.scrollBy({ top: delta, left: 0, behavior: 'instant' as ScrollBehavior });
+    anchorTopRef.current = null;
+  }, [universe]);
+
   const handleUniverseToggle = () => {
     if (altBios.length === 0) return;
+    if (buttonRef.current) {
+      anchorTopRef.current = buttonRef.current.getBoundingClientRect().top;
+    }
     if (universe !== null) {
       // Currently showing an alt — go back to normal
       setNextAltIndex((universe + 1) % altBios.length);
@@ -246,7 +259,7 @@ export default function HomeContent({ altBios }: HomeContentProps) {
       )}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: '1em 0', width: '100%' }}>
         <p style={{ margin: 0 }}>watermah at uci dot edu</p>
-        <button className="universe-toggle" onClick={handleUniverseToggle} style={{ marginTop: 0 }}>
+        <button ref={buttonRef} className="universe-toggle" onClick={handleUniverseToggle} style={{ marginTop: 0 }}>
           {buttonLabel}
         </button>
       </div>
