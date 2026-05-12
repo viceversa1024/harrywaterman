@@ -3,7 +3,15 @@ export default function Riting() {
     <>
       <h1>Riting</h1>
       <div className="page-text">
-        <p>Things I&apos;ve written.</p>
+        <a
+          href="https://zineathon.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="zineathon-button"
+        >
+          <span className="zineathon-label">ZINEATHON</span>
+          <span className="zineathon-arrow" aria-hidden="true">↗</span>
+        </a>
       </div>
     </>
   );
