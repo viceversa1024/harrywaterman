@@ -1,5 +1,5 @@
 ---
-title: "An Unrelated Collection of AIS Things I’m Thinking About"
+title: "A Collection of Unrelated AIS Things I’m Thinking About"
 date: "2026-06-05"
 excerpt: "Pivotal processes, automated coders, Antbux & Openbux."
 ---
