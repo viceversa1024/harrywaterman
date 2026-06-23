@@ -244,7 +244,7 @@
 
   <div id="tab-pacs" class="tab-content" style="display:none">
     <div class="legend" style="margin-bottom:12px; display:flex; align-items:center; gap:14px; flex-wrap:wrap">
-      <span class="muted">Box area = electoral-cycle spend (or funds raised where spend isn't filed).</span>
+      <span class="muted">Box area ≈ cycle spend (sqrt-scaled so small committees stay visible); labels show actual $.</span>
       <span style="margin-left:auto; display:inline-flex; align-items:center; gap:6px"><span class="legend-dot" style="background:#c0152f; box-shadow:0 0 5px #ff3b5c"></span> Pro-industry</span>
       <span style="display:inline-flex; align-items:center; gap:6px"><span class="legend-dot" style="background:#2f8f5b"></span> Pro-safety</span>
     </div>
@@ -437,6 +437,9 @@ function orgTable(orgs) {
 
 // Money proxy for a committee: latest cycle spend, falling back to funds raised.
 function pacMoney(o) { return o.pac_cycle_spent || o.pac_cycle_raised || 0; }
+// Box area is sqrt-scaled: cycle $ spans ~600x ($221M vs $349K), so linear
+// area would collapse small committees to invisible slivers. Labels show real $.
+function pacArea(o) { return Math.sqrt(pacMoney(o)); }
 const STANCE_LABEL = { pro_industry: 'Pro-industry', pro_safety: 'Pro-safety' };
 
 // Treemap of political committees, grouped by stance, sized by cycle $.
@@ -444,7 +447,8 @@ function renderPacs() {
   const container = document.getElementById('pac-treemap');
   if (!container) return;
   const W = container.offsetWidth;
-  const H = container.offsetHeight || (W * 9 / 16);
+  // Cap height so the whole treemap fits the viewport (no tall-page scrolling).
+  const H = Math.max(360, Math.min(Math.round(W * 9 / 16), window.innerHeight - 240));
   container.style.height = H + 'px';
   container.innerHTML = '';
   document.querySelectorAll('.pac-tooltip').forEach(t => t.remove());
@@ -452,10 +456,14 @@ function renderPacs() {
   const pacs = (DATA.pacs || []).filter(o => pacMoney(o) > 0);
   const groups = ['pro_industry', 'pro_safety'].map(st => {
     const orgs = pacs.filter(o => o.political_stance === st).sort((a, b) => pacMoney(b) - pacMoney(a));
-    return { name: st, orgs, total: orgs.reduce((t, o) => t + pacMoney(o), 0) };
+    return {
+      name: st, orgs,
+      total: orgs.reduce((t, o) => t + pacMoney(o), 0),       // real $ (label)
+      area: orgs.reduce((t, o) => t + pacArea(o), 0),         // sqrt-scaled (layout)
+    };
   }).filter(g => g.orgs.length);
 
-  const groupRects = squarify(groups.map(g => ({ value: g.total, data: g })), 0, 0, W, H);
+  const groupRects = squarify(groups.map(g => ({ value: g.area, data: g })), 0, 0, W, H);
 
   const tooltip = document.createElement('div');
   tooltip.className = 'tm-tooltip pac-tooltip';
@@ -480,7 +488,7 @@ function renderPacs() {
 
     const innerW = gr.w - 2, innerH = gr.h - pad - 2;
     if (innerW > 0 && innerH > 0) {
-      const cellRects = squarify(g.orgs.map(o => ({ value: pacMoney(o), data: o })), 1, pad, innerW, innerH);
+      const cellRects = squarify(g.orgs.map(o => ({ value: pacArea(o), data: o })), 1, pad, innerW, innerH);
       for (const cr of cellRects) {
         const o = cr.data;
         const cell = document.createElement('div');
