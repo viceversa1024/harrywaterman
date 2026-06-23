@@ -200,6 +200,7 @@
     <button class="tab" data-tab="funders">Funders</button>
     <button class="tab" data-tab="subfields">Subfields</button>
     <button class="tab" data-tab="orgs">All Orgs</button>
+    <button class="tab" data-tab="pacs">PACs</button>
     <button class="tab" data-tab="gaps">Data Gaps</button>
     <button class="tab" data-tab="sources">Sources</button>
     <button class="tab" data-tab="context">Context</button>
@@ -213,8 +214,6 @@
         <button class="tm-mbtn" data-metric="budget">Budget</button>
       </div>
       <span class="muted">Grouped by subfield. Boxes shown only where the metric is known.</span>
-      <span style="margin-left:auto; display:inline-flex; align-items:center; gap:6px"><span class="legend-dot" style="background:#c0152f; box-shadow:0 0 5px #ff3b5c"></span> Pro-industry PAC</span>
-      <span style="display:inline-flex; align-items:center; gap:6px"><span class="legend-dot" style="background:#2f8f5b"></span> Pro-safety PAC</span>
     </div>
     <div class="treemap-container" id="treemap"></div>
     <div id="treemap-detail" class="org-table-wrap"></div>
@@ -233,12 +232,6 @@
     <div class="filter-bar">
       <input type="text" id="org-search" placeholder="Search orgs...">
       <select id="org-filter-subfield"><option value="">All subfields</option></select>
-      <select id="org-filter-stance">
-        <option value="">All orgs</option>
-        <option value="pacs">PACs only</option>
-        <option value="pro_safety">Pro-safety PACs</option>
-        <option value="pro_industry">Pro-industry PACs</option>
-      </select>
       <select id="org-filter-gap">
         <option value="">All</option>
         <option value="missing-budget">Missing budget</option>
@@ -247,6 +240,10 @@
       </select>
     </div>
     <div id="org-table"></div>
+  </div>
+
+  <div id="tab-pacs" class="tab-content" style="display:none">
+    <div id="pac-content"></div>
   </div>
 
   <div id="tab-funders" class="tab-content" style="display:none">
@@ -426,6 +423,55 @@ function orgTable(orgs) {
   </table>`;
 }
 
+// Money proxy for a committee: latest cycle spend, falling back to funds raised.
+function pacMoney(o) { return o.pac_cycle_spent || o.pac_cycle_raised || 0; }
+
+function pacTable(list, menace) {
+  const edge = menace ? '#ff3b5c' : '#46d488';
+  return `<table>
+    <tr><th>Committee</th><th>Type</th><th>Affiliated with</th><th>Raised</th><th>Spent</th></tr>
+    ${list.map(o => `<tr style="box-shadow: inset 3px 0 0 ${edge}">
+      <td>${o.url ? '<a href="' + o.url + '" target="_blank" class="org-name-link">' + o.name + '</a>' : o.name}${o.ais_scope_note ? '<div class="muted" style="font-size:11px;margin-top:2px;max-width:520px;white-space:normal">' + o.ais_scope_note + '</div>' : ''}</td>
+      <td class="muted">${(o.tax_status || '').replace('527_', '').replace('_', ' ')}</td>
+      <td class="muted">${o.parent_org || '-'}</td>
+      <td>${o.pac_cycle_raised ? fmt(o.pac_cycle_raised) : '<span class="muted">-</span>'}</td>
+      <td style="${menace ? 'color:#ff8aa0;font-weight:600' : ''}">${o.pac_cycle_spent ? fmt(o.pac_cycle_spent) : '<span class="muted">-</span>'}</td>
+    </tr>`).join('')}
+  </table>`;
+}
+
+function renderPacs() {
+  const pacs = DATA.pacs || [];
+  const indu = pacs.filter(p => p.political_stance === 'pro_industry').sort((a, b) => pacMoney(b) - pacMoney(a));
+  const safe = pacs.filter(p => p.political_stance === 'pro_safety').sort((a, b) => pacMoney(b) - pacMoney(a));
+  const sum = l => l.reduce((t, o) => t + pacMoney(o), 0);
+  const iTot = sum(indu), sTot = sum(safe);
+  const ratio = sTot ? (iTot / sTot).toFixed(1) + '×' : '—';
+  document.getElementById('pac-content').innerHTML = `
+    <p class="muted" style="margin:0 0 14px;max-width:760px">Political action committees in the AI-policy fight — a distinct entity class from the research/advocacy orgs, tracked separately. Money below is the latest electoral-cycle spend (or funds raised where spend isn't yet filed); it is deliberately kept out of the orgs' operating-budget totals.</p>
+    <div style="display:flex; gap:14px; margin-bottom:20px; flex-wrap:wrap">
+      <div style="flex:1; min-width:200px; padding:14px 16px; border-radius:8px; background:#1f1113; border:1px solid #c0152f">
+        <div style="font-size:12px; color:#ff8aa0; text-transform:uppercase; letter-spacing:.5px">Pro-industry (accelerationist)</div>
+        <div style="font-size:22px; font-weight:700; color:#ff5c78; margin-top:4px">${fmt(iTot) || '$0'}</div>
+        <div class="muted" style="font-size:12px">${indu.length} committees</div>
+      </div>
+      <div style="flex:1; min-width:200px; padding:14px 16px; border-radius:8px; background:#10201a; border:1px solid #2f8f5b">
+        <div style="font-size:12px; color:#46d488; text-transform:uppercase; letter-spacing:.5px">Pro-safety</div>
+        <div style="font-size:22px; font-weight:700; color:#46d488; margin-top:4px">${fmt(sTot) || '$0'}</div>
+        <div class="muted" style="font-size:12px">${safe.length} committees</div>
+      </div>
+      <div style="flex:1; min-width:200px; padding:14px 16px; border-radius:8px; background:#16181d; border:1px solid #2a2d35; display:flex; flex-direction:column; justify-content:center">
+        <div style="font-size:22px; font-weight:700; color:#e8eaed">${ratio}</div>
+        <div class="muted" style="font-size:12px">pro-industry money advantage</div>
+      </div>
+    </div>
+    <h3 class="section-title" style="color:#ff5c78">Pro-industry — the opposition</h3>
+    ${pacTable(indu, true)}
+    <h3 class="section-title" style="color:#46d488; margin-top:24px">Pro-safety</h3>
+    ${pacTable(safe, false)}
+  `;
+}
+
 function renderOrgs() {
   applyOrgFilters();
 }
@@ -433,14 +479,11 @@ function renderOrgs() {
 function applyOrgFilters() {
   const search = (document.getElementById('org-search')?.value || '').toLowerCase();
   const sfFilter = document.getElementById('org-filter-subfield')?.value || '';
-  const stanceFilter = document.getElementById('org-filter-stance')?.value || '';
   const gapFilter = document.getElementById('org-filter-gap')?.value || '';
 
   let orgs = DATA.orgs;
   if (search) orgs = orgs.filter(o => o.name.toLowerCase().includes(search));
   if (sfFilter) orgs = orgs.filter(o => o.subfield === sfFilter);
-  if (stanceFilter === 'pacs') orgs = orgs.filter(o => o.political_stance);
-  else if (stanceFilter) orgs = orgs.filter(o => o.political_stance === stanceFilter);
   if (gapFilter === 'missing-budget') orgs = orgs.filter(o => !o.annual_budget_usd);
   if (gapFilter === 'missing-grants') orgs = orgs.filter(o => o.grant_count === 0);
   if (gapFilter === 'complete') orgs = orgs.filter(o => o.annual_budget_usd && o.grant_count > 0);
@@ -461,7 +504,6 @@ function populateFilters() {
   });
   document.getElementById('org-search').addEventListener('input', applyOrgFilters);
   document.getElementById('org-filter-subfield').addEventListener('change', applyOrgFilters);
-  document.getElementById('org-filter-stance').addEventListener('change', applyOrgFilters);
   document.getElementById('org-filter-gap').addEventListener('change', applyOrgFilters);
 }
 
@@ -653,15 +695,9 @@ function worstRatio(row, rowArea, side, totalArea, fullSide) {
 }
 
 let treemapMetric = 'ftes';
-// PACs have no operating budget/FTEs; in budget view they're sized by electoral cycle $.
-function pacVal(o) { return o.pac_cycle_spent || o.pac_cycle_raised || 0; }
-function tmVal(o) { return treemapMetric === 'budget' ? (o.annual_budget_usd || pacVal(o) || 0) : (o.ftes || 0); }
+function tmVal(o) { return treemapMetric === 'budget' ? (o.annual_budget_usd || 0) : (o.ftes || 0); }
 function tmGroupLabel(total) { return treemapMetric === 'budget' ? (fmt(total) || '$0') : (total + ' FTEs'); }
-function tmCellLabel(o) {
-  if (treemapMetric !== 'budget') return o.ftes + ' FTEs';
-  if (o.annual_budget_usd) return fmt(o.annual_budget_usd);
-  return pacVal(o) ? fmt(pacVal(o)) + ' (cycle)' : '-';
-}
+function tmCellLabel(o) { return treemapMetric === 'budget' ? (fmt(o.annual_budget_usd) || '-') : (o.ftes + ' FTEs'); }
 
 function renderTreemap() {
   const container = document.getElementById('treemap');
