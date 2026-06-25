@@ -88,9 +88,9 @@
   .tm-cell .tm-name { font-size: 10px; font-weight: 500; color: #fff; line-height: 1.2; text-shadow: 0 1px 2px rgba(0,0,0,0.6); overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
   .tm-cell .tm-ftes { font-size: 9px; color: rgba(255,255,255,0.7); margin-top: 1px; }
   .tm-toggle { display:inline-flex; border:1px solid #2a2d35; border-radius:6px; overflow:hidden; }
-  .tm-mbtn { background:#16181d; color:#9aa0aa; border:none; padding:3px 14px; font-size:12px; cursor:pointer; }
-  .tm-mbtn:hover { color:#fff; }
-  .tm-mbtn.active { background:#4f46e5; color:#fff; }
+  .tm-mbtn, .tm-cbtn { background:#16181d; color:#9aa0aa; border:none; padding:3px 14px; font-size:12px; cursor:pointer; }
+  .tm-mbtn:hover, .tm-cbtn:hover { color:#fff; }
+  .tm-mbtn.active, .tm-cbtn.active { background:#4f46e5; color:#fff; }
 
   /* Tooltip */
   .tm-tooltip { position: fixed; background: #1a1b22; border: 1px solid #33353b; border-radius: 6px; padding: 10px 14px; font-size: 12px; color: #c8ccd0; pointer-events: none; z-index: 100; max-width: 280px; box-shadow: 0 4px 16px rgba(0,0,0,0.5); }
@@ -213,7 +213,17 @@
         <button class="tm-mbtn active" data-metric="ftes">FTEs</button>
         <button class="tm-mbtn" data-metric="budget">Budget</button>
       </div>
-      <span class="muted">Grouped by subfield. Boxes shown only where the metric is known.</span>
+      <span style="margin-left:6px">Color:</span>
+      <div class="tm-toggle">
+        <button class="tm-cbtn active" data-color="subfield">Subfield</button>
+        <button class="tm-cbtn" data-color="tax">501(c)(3) vs (c)(4)</button>
+      </div>
+      <span id="tm-tax-legend" style="display:none; align-items:center; gap:10px">
+        <span style="display:inline-flex; align-items:center; gap:6px"><span class="legend-dot" style="background:#3b6ea5"></span> 501(c)(3)</span>
+        <span style="display:inline-flex; align-items:center; gap:6px"><span class="legend-dot" style="background:#d98324"></span> 501(c)(4)</span>
+        <span style="display:inline-flex; align-items:center; gap:6px"><span class="legend-dot" style="background:#444751"></span> other</span>
+      </span>
+      <span class="muted" id="tm-subfield-note">Grouped by subfield. Boxes shown only where the metric is known.</span>
     </div>
     <div class="treemap-container" id="treemap"></div>
     <div id="treemap-detail" class="org-table-wrap"></div>
@@ -753,6 +763,17 @@ function worstRatio(row, rowArea, side, totalArea, fullSide) {
 }
 
 let treemapMetric = 'ftes';
+// Cell coloring mode for the Field Map: by subfield (default) or by tax status (c3 vs c4).
+let treemapColor = 'subfield';
+const TAX_COLORS = {
+  '501c3': { bg: '#3b6ea5', text: '#cfe6ff' },   // charitable — blue
+  '501c4': { bg: '#d98324', text: '#ffe6c4' },   // social-welfare / political — amber
+};
+const TAX_OTHER = { bg: '#444751', text: '#c0c4cc' };  // c6 / academic / gov / for-profit / unknown
+function tmCellColor(o, groupColors) {
+  if (treemapColor === 'tax') return TAX_COLORS[o.tax_status] || TAX_OTHER;
+  return cellColors(o, groupColors);
+}
 function tmVal(o) { return treemapMetric === 'budget' ? (o.annual_budget_usd || 0) : (o.ftes || 0); }
 function tmGroupLabel(total) { return treemapMetric === 'budget' ? (fmt(total) || '$0') : (total + ' FTEs'); }
 function tmCellLabel(o) { return treemapMetric === 'budget' ? (fmt(o.annual_budget_usd) || '-') : (o.ftes + ' FTEs'); }
@@ -819,7 +840,7 @@ function renderTreemap() {
 
       for (const cr of cellRects) {
         const o = cr.data;
-        const cc = cellColors(o, colors);
+        const cc = tmCellColor(o, colors);
         const cell = document.createElement('div');
         cell.className = 'tm-cell';
         if (o.political_stance === 'pro_industry') cell.classList.add('tm-cell-menace');
@@ -1677,6 +1698,19 @@ document.querySelectorAll('.tm-mbtn').forEach(btn => {
     treemapMetric = btn.dataset.metric;
     document.querySelectorAll('.tm-mbtn').forEach(b => b.classList.toggle('active', b === btn));
     document.getElementById('treemap-detail').innerHTML = '';
+    renderTreemap();
+  });
+});
+
+// Field Map color toggle (Subfield / Tax status)
+document.querySelectorAll('.tm-cbtn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (btn.dataset.color === treemapColor) return;
+    treemapColor = btn.dataset.color;
+    document.querySelectorAll('.tm-cbtn').forEach(b => b.classList.toggle('active', b === btn));
+    const tax = treemapColor === 'tax';
+    document.getElementById('tm-tax-legend').style.display = tax ? 'inline-flex' : 'none';
+    document.getElementById('tm-subfield-note').style.display = tax ? 'none' : 'inline';
     renderTreemap();
   });
 });
