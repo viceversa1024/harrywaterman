@@ -765,6 +765,17 @@ function worstRatio(row, rowArea, side, totalArea, fullSide) {
 let treemapMetric = 'ftes';
 // Cell coloring mode for the Field Map: by subfield (default) or by tax status (c3 vs c4).
 let treemapColor = 'subfield';
+// URL-hash anchors for each color mode (both live on the Field Map tab).
+const COLOR_HASH = { 'subfield': 'subfield', 'tax': 'c3-vs-c4' };
+const HASH_COLOR = { 'subfield': 'subfield', 'c3-vs-c4': 'tax' };
+// Apply a color mode to the toggle buttons + legend (does NOT re-render or touch the URL).
+function setTreemapColor(mode) {
+  treemapColor = mode;
+  document.querySelectorAll('.tm-cbtn').forEach(b => b.classList.toggle('active', b.dataset.color === mode));
+  const tax = mode === 'tax';
+  document.getElementById('tm-tax-legend').style.display = tax ? 'inline-flex' : 'none';
+  document.getElementById('tm-subfield-note').style.display = tax ? 'none' : 'inline';
+}
 const TAX_COLORS = {
   '501c3': { bg: '#3b6ea5', text: '#cfe6ff' },   // charitable — blue
   '501c4': { bg: '#d98324', text: '#ffe6c4' },   // social-welfare / political — amber
@@ -1685,11 +1696,19 @@ function showTab(name) {
 }
 document.querySelectorAll('.tab').forEach(tab => {
   tab.addEventListener('click', () => {
-    if (showTab(tab.dataset.tab)) history.replaceState(null, '', '#' + tab.dataset.tab);
+    if (!showTab(tab.dataset.tab)) return;
+    // The Field Map carries its current color mode in the hash (#subfield / #c3-vs-c4).
+    const hash = tab.dataset.tab === 'treemap' ? COLOR_HASH[treemapColor] : tab.dataset.tab;
+    history.replaceState(null, '', '#' + hash);
   });
 });
+// Route a hash to a tab (and, for the Field Map color anchors, a color mode).
+function routeHash(h) {
+  if (h in HASH_COLOR) { setTreemapColor(HASH_COLOR[h]); return showTab('treemap'); }
+  return showTab(h);
+}
 // React to manual hash edits / browser navigation.
-window.addEventListener('hashchange', () => { showTab(location.hash.slice(1)); });
+window.addEventListener('hashchange', () => { routeHash(location.hash.slice(1)); });
 
 // Field Map metric toggle (FTEs / Budget)
 document.querySelectorAll('.tm-mbtn').forEach(btn => {
@@ -1702,16 +1721,13 @@ document.querySelectorAll('.tm-mbtn').forEach(btn => {
   });
 });
 
-// Field Map color toggle (Subfield / Tax status)
+// Field Map color toggle (Subfield / Tax status) — also reflected in the URL hash.
 document.querySelectorAll('.tm-cbtn').forEach(btn => {
   btn.addEventListener('click', () => {
     if (btn.dataset.color === treemapColor) return;
-    treemapColor = btn.dataset.color;
-    document.querySelectorAll('.tm-cbtn').forEach(b => b.classList.toggle('active', b === btn));
-    const tax = treemapColor === 'tax';
-    document.getElementById('tm-tax-legend').style.display = tax ? 'inline-flex' : 'none';
-    document.getElementById('tm-subfield-note').style.display = tax ? 'none' : 'inline';
+    setTreemapColor(btn.dataset.color);
     renderTreemap();
+    history.replaceState(null, '', '#' + COLOR_HASH[treemapColor]);
   });
 });
 
@@ -1720,7 +1736,7 @@ window.fetch = (p) => Promise.resolve({ json: () => Promise.resolve(STATIC_DATA[
 load().then(() => {
   renderTreemap();
   const h = location.hash.slice(1);
-  if (h) showTab(h);  // open the tab named in the URL hash, e.g. /#context
+  if (h) routeHash(h);  // open the tab/color named in the URL hash, e.g. /#context, /#c3-vs-c4
 });
 </script>
 </body>
