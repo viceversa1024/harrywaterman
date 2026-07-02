@@ -179,6 +179,29 @@
   .gap-count.zero { color: #4ade80; }
   .gap-count.some { color: #f0c040; }
   .gap-count.many { color: #e85d5d; }
+
+  /* Grantmakers tab */
+  .gm-caveat { font-size: 12px; color: #f0c040; background: rgba(240,192,64,0.08); border: 1px solid rgba(240,192,64,0.25); border-radius: 8px; padding: 10px 14px; margin-bottom: 20px; line-height: 1.5; }
+  .gm-panel { background: #14151a; border: 1px solid #23252b; border-radius: 8px; padding: 18px 20px; margin-bottom: 16px; }
+  .gm-twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .gm-bars { display: flex; flex-direction: column; gap: 8px; }
+  .gm-bar-row { display: grid; grid-template-columns: 168px 1fr 26px; align-items: center; gap: 10px; }
+  .gm-bar-row .name { font-size: 12.5px; color: #c8ccd0; text-align: right; }
+  .gm-bar-track { background: #1a1b20; border-radius: 4px; height: 12px; overflow: hidden; }
+  .gm-bar-fill { height: 100%; border-radius: 4px; background: #3b6ea5; }
+  .gm-bar-fill.alt { background: #d98324; }
+  .gm-bar-fill.alt2 { background: #4ade80; }
+  .gm-bar-row .val { font-family: monospace; font-size: 11.5px; color: #7a8088; }
+  .gm-degree-levels { display: flex; gap: 12px; }
+  .gm-dl { flex: 1; text-align: center; padding: 14px 6px; background: #16181d; border-radius: 8px; }
+  .gm-dl .n { font-size: 22px; font-weight: 700; color: #6db3f2; }
+  .gm-dl .l { font-size: 10.5px; color: #7a8088; margin-top: 2px; }
+  .gm-orglist { display: flex; flex-wrap: wrap; gap: 8px; }
+  .gm-org-chip { font-size: 11.5px; padding: 6px 12px; background: rgba(109,179,242,0.08); border: 1px solid rgba(109,179,242,0.25); border-radius: 999px; color: #9fc9ef; }
+  .gm-connector-list { display: flex; flex-direction: column; gap: 6px; }
+  .gm-connector { font-size: 12.5px; color: #c8ccd0; }
+  .gm-connector b { color: #f0c040; }
+  .gm-connector .orgs { color: #7a8088; }
 </style>
 </head>
 <body>
@@ -205,6 +228,7 @@
     <button class="tab" data-tab="gaps">Data Gaps</button>
     <button class="tab" data-tab="sources">Sources</button>
     <button class="tab" data-tab="context">Context</button>
+    <button class="tab" data-tab="grantmakers">Grantmakers</button>
   </div>
 
   <div id="tab-treemap" class="tab-content">
@@ -322,6 +346,146 @@
     </details>
     <div id="context-charts"></div>
     <div id="context-table" style="margin-top:24px"></div>
+  </div>
+
+  <div id="tab-grantmakers" class="tab-content" style="display:none">
+    <p class="subtitle" style="margin-bottom:16px">187 named grant decision-makers across 25 organizations — school, experience, and cause-area focus for each.</p>
+
+    <div class="gm-caveat">Unlike the rest of this field map, this tab is LLM-researched via multi-agent web search rather than hand-sourced. Degree/roster data is single-source (adversarial cross-checking was skipped by request); years-of-experience and cause-area are single-pass estimates. Treat as directional, not authoritative.</div>
+
+    <div class="cards">
+      <div class="card"><div class="value">103</div><div class="label">Grantmaking orgs found</div></div>
+      <div class="card"><div class="value">25</div><div class="label">Orgs with rosters built</div></div>
+      <div class="card"><div class="value">187</div><div class="label">Unique decision-makers</div></div>
+      <div class="card"><div class="value">146</div><div class="label">With school on record</div></div>
+    </div>
+
+    <div class="gm-twocol">
+      <div class="gm-panel">
+        <div class="section-title" style="margin-top:0">Most common alma maters</div>
+        <div class="gm-bars">
+          <div class="gm-bar-row"><div class="name">Oxford</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:100%"></div></div><div class="val">22</div></div>
+          <div class="gm-bar-row"><div class="name">Stanford</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:86%"></div></div><div class="val">19</div></div>
+          <div class="gm-bar-row"><div class="name">UC Berkeley</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:86%"></div></div><div class="val">19</div></div>
+          <div class="gm-bar-row"><div class="name">Cambridge</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:73%"></div></div><div class="val">16</div></div>
+          <div class="gm-bar-row"><div class="name">MIT</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:50%"></div></div><div class="val">11</div></div>
+          <div class="gm-bar-row"><div class="name">Harvard</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:27%"></div></div><div class="val">6</div></div>
+          <div class="gm-bar-row"><div class="name">Toronto</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:27%"></div></div><div class="val">6</div></div>
+          <div class="gm-bar-row"><div class="name">Columbia</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:27%"></div></div><div class="val">6</div></div>
+        </div>
+      </div>
+
+      <div class="gm-panel">
+        <div class="section-title" style="margin-top:0">Degree fields</div>
+        <div class="gm-bars">
+          <div class="gm-bar-row"><div class="name">Computer Science</div><div class="gm-bar-track"><div class="gm-bar-fill alt" style="width:100%"></div></div><div class="val">71</div></div>
+          <div class="gm-bar-row"><div class="name">Mathematics</div><div class="gm-bar-track"><div class="gm-bar-fill alt" style="width:48%"></div></div><div class="val">34</div></div>
+          <div class="gm-bar-row"><div class="name">Engineering</div><div class="gm-bar-track"><div class="gm-bar-fill alt" style="width:35%"></div></div><div class="val">25</div></div>
+          <div class="gm-bar-row"><div class="name">Philosophy</div><div class="gm-bar-track"><div class="gm-bar-fill alt" style="width:34%"></div></div><div class="val">24</div></div>
+          <div class="gm-bar-row"><div class="name">Economics</div><div class="gm-bar-track"><div class="gm-bar-fill alt" style="width:20%"></div></div><div class="val">14</div></div>
+          <div class="gm-bar-row"><div class="name">Physics</div><div class="gm-bar-track"><div class="gm-bar-fill alt" style="width:17%"></div></div><div class="val">12</div></div>
+          <div class="gm-bar-row"><div class="name">Psychology</div><div class="gm-bar-track"><div class="gm-bar-fill alt" style="width:11%"></div></div><div class="val">8</div></div>
+          <div class="gm-bar-row"><div class="name">Political Science</div><div class="gm-bar-track"><div class="gm-bar-fill alt" style="width:10%"></div></div><div class="val">7</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gm-panel">
+      <div class="section-title" style="margin-top:0">Degree levels held (146 people with school data)</div>
+      <div class="gm-degree-levels">
+        <div class="gm-dl"><div class="n">143</div><div class="l">Bachelor's</div></div>
+        <div class="gm-dl"><div class="n">82</div><div class="l">Master's</div></div>
+        <div class="gm-dl"><div class="n">64</div><div class="l">Doctorate</div></div>
+      </div>
+    </div>
+
+    <div class="gm-twocol">
+      <div class="gm-panel">
+        <div class="section-title" style="margin-top:0">Years of relevant experience (149 people)</div>
+        <div class="gm-bars">
+          <div class="gm-bar-row"><div class="name">0–2 yrs</div><div class="gm-bar-track"><div class="gm-bar-fill alt2" style="width:19%"></div></div><div class="val">12</div></div>
+          <div class="gm-bar-row"><div class="name">3–5 yrs</div><div class="gm-bar-track"><div class="gm-bar-fill alt2" style="width:64%"></div></div><div class="val">41</div></div>
+          <div class="gm-bar-row"><div class="name">6–10 yrs</div><div class="gm-bar-track"><div class="gm-bar-fill alt2" style="width:100%"></div></div><div class="val">64</div></div>
+          <div class="gm-bar-row"><div class="name">11–15 yrs</div><div class="gm-bar-track"><div class="gm-bar-fill alt2" style="width:27%"></div></div><div class="val">17</div></div>
+          <div class="gm-bar-row"><div class="name">16+ yrs</div><div class="gm-bar-track"><div class="gm-bar-fill alt2" style="width:23%"></div></div><div class="val">15</div></div>
+        </div>
+      </div>
+
+      <div class="gm-panel">
+        <div class="section-title" style="margin-top:0">Organization types (25 orgs)</div>
+        <div class="gm-bars">
+          <div class="gm-bar-row"><div class="name">Fund</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:100%"></div></div><div class="val">9</div></div>
+          <div class="gm-bar-row"><div class="name">Foundation</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:89%"></div></div><div class="val">8</div></div>
+          <div class="gm-bar-row"><div class="name">Regranting platform</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:44%"></div></div><div class="val">4</div></div>
+          <div class="gm-bar-row"><div class="name">Government program</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:22%"></div></div><div class="val">2</div></div>
+          <div class="gm-bar-row"><div class="name">Individual donor</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:11%"></div></div><div class="val">1</div></div>
+          <div class="gm-bar-row"><div class="name">Corporate consortium</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:11%"></div></div><div class="val">1</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gm-panel">
+      <div class="section-title" style="margin-top:0">Specific cause area within AI safety (149 people)</div>
+      <div class="gm-bars">
+        <div class="gm-bar-row"><div class="name">AI Governance / Policy</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:100%"></div></div><div class="val">36</div></div>
+        <div class="gm-bar-row"><div class="name">Technical: Alignment (general)</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:39%"></div></div><div class="val">14</div></div>
+        <div class="gm-bar-row"><div class="name">Generalist / Leadership</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:36%"></div></div><div class="val">13</div></div>
+        <div class="gm-bar-row"><div class="name">Field-building / Capacity</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:33%"></div></div><div class="val">12</div></div>
+        <div class="gm-bar-row"><div class="name">Frontier Model Evals</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:28%"></div></div><div class="val">10</div></div>
+        <div class="gm-bar-row"><div class="name">Technical AI Safety (general)</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:25%"></div></div><div class="val">9</div></div>
+        <div class="gm-bar-row"><div class="name">s-risk / Suffering-focused</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:25%"></div></div><div class="val">9</div></div>
+        <div class="gm-bar-row"><div class="name">Interpretability</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:19%"></div></div><div class="val">7</div></div>
+        <div class="gm-bar-row"><div class="name">Agent Foundations / Decision Theory</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:17%"></div></div><div class="val">6</div></div>
+        <div class="gm-bar-row"><div class="name">Cooperative AI / Multi-agent</div><div class="gm-bar-track"><div class="gm-bar-fill" style="width:14%"></div></div><div class="val">5</div></div>
+      </div>
+    </div>
+
+    <div class="gm-panel">
+      <div class="section-title" style="margin-top:0">Cross-org connectors — people who sit on multiple grantmaking bodies</div>
+      <div class="gm-connector-list">
+        <div class="gm-connector"><b>Jaan Tallinn</b> <span class="orgs">— SFF, personal giving, Lightspeed Grants</span></div>
+        <div class="gm-connector"><b>Oliver Habryka</b> <span class="orgs">— SFF, Lightspeed Grants, LTFF, ARM Fund</span></div>
+        <div class="gm-connector"><b>Andrew Critch</b> <span class="orgs">— SFF, Jaan Tallinn personal giving, BERI</span></div>
+        <div class="gm-connector"><b>Jonas Vollmer</b> <span class="orgs">— Macroscopic Ventures, LTFF, EAIF</span></div>
+        <div class="gm-connector"><b>Aidan O'Gara</b> <span class="orgs">— Effektiv Spenden, Manifund, Longview Philanthropy</span></div>
+        <div class="gm-connector"><b>Eric Rogstad, Ethan Ashkie, Seán Ó hÉigeartaigh, Julia Kerley, Alyssa Amey</b> <span class="orgs">— SFF + Jaan Tallinn personal giving</span></div>
+        <div class="gm-connector"><b>+ 8 more</b> <span class="orgs">sitting on 2 grantmaking bodies each (17 total connectors found)</span></div>
+      </div>
+    </div>
+
+    <div class="gm-panel">
+      <div class="section-title" style="margin-top:0">Organizations covered (25)</div>
+      <div class="gm-orglist">
+        <span class="gm-org-chip">Coefficient Giving</span>
+        <span class="gm-org-chip">Good Ventures</span>
+        <span class="gm-org-chip">Survival &amp; Flourishing Fund</span>
+        <span class="gm-org-chip">Jaan Tallinn (personal)</span>
+        <span class="gm-org-chip">Long-Term Future Fund</span>
+        <span class="gm-org-chip">EA Infrastructure Fund</span>
+        <span class="gm-org-chip">AI Risk Mitigation Fund</span>
+        <span class="gm-org-chip">Manifund</span>
+        <span class="gm-org-chip">Lightspeed Grants</span>
+        <span class="gm-org-chip">Foresight Institute</span>
+        <span class="gm-org-chip">Frontier Model Forum</span>
+        <span class="gm-org-chip">UK AISI / Alignment Project</span>
+        <span class="gm-org-chip">US NSF (SLES)</span>
+        <span class="gm-org-chip">CIFAR (Canada)</span>
+        <span class="gm-org-chip">Longview Philanthropy</span>
+        <span class="gm-org-chip">CLR Fund</span>
+        <span class="gm-org-chip">Founders Pledge GCR</span>
+        <span class="gm-org-chip">Macroscopic Ventures</span>
+        <span class="gm-org-chip">Future of Life Institute</span>
+        <span class="gm-org-chip">Navigation Fund</span>
+        <span class="gm-org-chip">Schmidt Sciences</span>
+        <span class="gm-org-chip">Cooperative AI Foundation</span>
+        <span class="gm-org-chip">Effektiv Spenden</span>
+        <span class="gm-org-chip">BERI</span>
+        <span class="gm-org-chip">Catalyze Impact / Halcyon / EIP</span>
+        <span class="gm-org-chip">+ 78 more discovered, not yet rostered</span>
+      </div>
+    </div>
+
+    <p class="muted" style="font-size:11px; text-align:center; margin-top:8px">Generated from a ~600-agent multi-source research run · 2026-06-30</p>
   </div>
 </div>
 
