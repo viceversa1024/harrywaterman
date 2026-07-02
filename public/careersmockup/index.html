@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Safety Career Stories (mockup)</title>
+<style>
+  :root {
+    --cyan: #2ebdd1;
+    --teal: #2597a7;
+    --teal-dark: #1e7d8a;
+    --teal-deep: #028496;
+    --ink: #2a2e30;
+    --body: #484e51;
+    --muted: #8e9092;
+    --wash: #f5f5f5;
+    --line: #e4e6e7;
+    --heading-stack: museo-sans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --body-stack: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: #fff;
+    color: var(--body);
+    font-family: var(--body-stack);
+    font-size: 16px;
+    line-height: 1.55;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--heading-stack);
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.1;
+    margin: 0;
+    text-wrap: balance;
+  }
+  a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--cyan); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  a:hover { color: var(--teal-deep); }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--cyan); outline-offset: 2px; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- Nav ---------- */
+  .navbar { background: #fff; border-bottom: 1px solid var(--line); }
+  .navbar .wrap { min-height: 84px; display: flex; align-items: center; gap: 32px; }
+  .wordmark { font-family: var(--heading-stack); font-weight: 700; font-size: 24px; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; white-space: nowrap; }
+  .wordmark:hover { color: var(--ink); }
+  .nav-links { display: flex; gap: 26px; margin-left: auto; align-items: center; }
+  .nav-links a { text-decoration: none; color: var(--body); font-size: 15.5px; }
+  .nav-links a:hover { color: var(--teal-deep); }
+  .nav-links a.active { color: var(--ink); font-weight: 700; box-shadow: 0 3px 0 var(--cyan); padding-bottom: 4px; }
+  .btn {
+    display: inline-block; font-family: var(--body-stack); font-weight: 600; font-size: 15.5px;
+    background: var(--teal); color: #fff; border: 1px solid var(--teal-dark);
+    border-radius: 4px; padding: 10px 20px; text-decoration: none; cursor: pointer;
+  }
+  .btn:hover { background: var(--teal-deep); color: #fff; }
+  .btn-ghost { background: #fff; color: var(--teal-deep); border: 1px solid var(--teal); }
+  .btn-ghost:hover { background: #eefafc; color: var(--teal-deep); }
+
+  /* ---------- Hero ---------- */
+  .hero { background: var(--wash); border-bottom: 1px solid var(--line); padding: 72px 0 64px; }
+  .hero-eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--teal-deep); margin-bottom: 14px; }
+  .hero h1 { font-size: clamp(32px, 5vw, 44px); max-width: 21ch; }
+  .hero h1 .hl { box-shadow: inset 0 -0.35em 0 rgba(46, 189, 209, 0.35); }
+  .hero p { max-width: 62ch; font-size: 18px; margin: 20px 0 0; }
+  .hero-actions { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+
+  /* ---------- Filters ---------- */
+  .stories { padding: 56px 0 24px; }
+  .section-heading { font-size: 30px; margin-bottom: 8px; }
+  .section-sub { margin: 0 0 26px; max-width: 66ch; }
+  .filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
+  .chip {
+    font-family: var(--body-stack); font-size: 14.5px; font-weight: 600; color: var(--body);
+    background: #fff; border: 1px solid #cfd3d4; border-radius: 999px; padding: 7px 16px; cursor: pointer;
+  }
+  .chip:hover { border-color: var(--teal); color: var(--teal-deep); }
+  .chip[aria-pressed="true"] { background: var(--teal); border-color: var(--teal-dark); color: #fff; }
+
+  /* ---------- Cards ---------- */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 24px; }
+  .card {
+    background: #fff; border: 1px solid var(--line); border-radius: 6px;
+    padding: 24px 24px 20px; display: flex; flex-direction: column; gap: 14px;
+    box-shadow: 0 1px 3px rgba(42, 46, 48, 0.06);
+  }
+  .card.hidden { display: none; }
+  .card-top { display: flex; gap: 14px; align-items: center; }
+  .avatar {
+    width: 56px; height: 56px; border-radius: 50%; flex: none;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--heading-stack); font-weight: 700; font-size: 19px; color: #fff;
+  }
+  .card h3 { font-size: 19px; }
+  .card .role { font-size: 14.5px; color: var(--muted); margin-top: 2px; }
+  .tag {
+    align-self: flex-start; font-size: 12px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+    color: var(--teal-deep); background: #e7f7fa; border-radius: 3px; padding: 3px 9px;
+  }
+  .day-label { font-size: 12.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .card p.day { margin: 0; font-size: 15.5px; flex: 1; }
+  .video-row {
+    display: flex; align-items: center; gap: 12px; width: 100%;
+    margin-top: auto; padding: 12px 14px; border: 1px solid var(--line); border-radius: 5px;
+    background: var(--wash); cursor: pointer; text-align: left; font-family: var(--body-stack);
+  }
+  .video-row:hover { border-color: var(--teal); background: #eefafc; }
+  .play {
+    width: 36px; height: 36px; border-radius: 50%; flex: none; background: var(--teal);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .play::after { content: ""; display: block; margin-left: 3px; border-style: solid; border-width: 7px 0 7px 11px; border-color: transparent transparent transparent #fff; }
+  .video-row .vtitle { font-size: 14.5px; font-weight: 600; color: var(--ink); }
+  .video-row .vmeta { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .see-more {
+    background: none; border: none; padding: 2px 0; cursor: pointer; text-align: left;
+    font-family: var(--body-stack); font-size: 14.5px; font-weight: 700; color: var(--teal-deep);
+  }
+  .see-more::after { content: " →"; }
+  .see-more:hover { text-decoration: underline; text-decoration-color: var(--cyan); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  .interview[hidden] { display: none; }
+  .mock-note { margin: 28px 0 0; font-size: 13.5px; color: var(--muted); }
+
+  /* ---------- Next steps ---------- */
+  .next { background: var(--wash); border-top: 1px solid var(--line); margin-top: 56px; padding: 56px 0 64px; }
+  .next-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 26px; }
+  .next-card { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 26px; }
+  .next-card h3 { font-size: 19px; margin-bottom: 8px; }
+  .next-card p { margin: 0 0 16px; font-size: 15.5px; }
+  .arrow-link { font-weight: 700; text-decoration: none; color: var(--teal-deep); }
+  .arrow-link::after { content: " →"; }
+
+  /* ---------- Footer ---------- */
+  footer { background: var(--ink); color: #c9cccd; padding: 48px 0 40px; font-size: 14.5px; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; }
+  footer .fbrand { font-family: var(--heading-stack); font-weight: 700; font-size: 20px; color: #fff; }
+  footer .fcols { display: flex; gap: 56px; flex-wrap: wrap; }
+  footer h4 { color: #fff; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 12px; }
+  footer ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+  footer a { color: #c9cccd; text-decoration: none; }
+  footer a:hover { color: var(--cyan); }
+  .fnote { width: 100%; border-top: 1px solid #3d4245; padding-top: 18px; margin-top: 8px; font-size: 13px; color: #8e9092; }
+
+  /* ---------- Video modal ---------- */
+  dialog#player { border: none; border-radius: 8px; padding: 0; max-width: 720px; width: calc(100% - 40px); }
+  dialog#player::backdrop { background: rgba(42, 46, 48, 0.75); }
+  .player-body { max-height: 48vh; overflow-y: auto; }
+  .player-body .prole { margin: 0 0 4px; font-size: 14.5px; color: var(--muted); }
+  .player-body .lede { font-style: italic; }
+  .player-body .q { font-family: var(--heading-stack); font-weight: 700; color: var(--ink); font-size: 15.5px; margin: 20px 0 6px; }
+  .player-body p { font-size: 15.5px; margin: 0 0 12px; }
+  .player-body .btn-ghost { margin-top: 10px; }
+  .player-screen { position: relative; aspect-ratio: 16 / 9; background: linear-gradient(135deg, #2a2e30 0%, #1e7d8a 130%); display: flex; align-items: center; justify-content: center; }
+  .player-screen .play { width: 64px; height: 64px; }
+  .player-screen .play::after { border-width: 12px 0 12px 19px; }
+  .player-bar { position: absolute; left: 16px; right: 16px; bottom: 14px; display: flex; align-items: center; gap: 10px; color: #fff; font-size: 12.5px; font-variant-numeric: tabular-nums; }
+  .player-track { flex: 1; height: 4px; border-radius: 2px; background: rgba(255,255,255,0.3); overflow: hidden; }
+  .player-track span { display: block; width: 18%; height: 100%; background: var(--cyan); }
+  .player-body { padding: 18px 22px 22px; }
+  .player-body h3 { font-size: 18px; margin-bottom: 4px; }
+  .player-body p { margin: 0 0 16px; font-size: 14.5px; color: var(--muted); }
+
+  @media (max-width: 760px) {
+    .nav-links a:not(.active) { display: none; }
+    .hero { padding: 48px 0 44px; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .card { transition: box-shadow 0.15s ease; }
+    .card:hover { box-shadow: 0 4px 14px rgba(42, 46, 48, 0.10); }
+  }
+</style>
+
+</head>
+<body>
+<nav class="navbar">
+  <div class="wrap">
+    <a class="wordmark" href="#">AI Safety Career Stories</a>
+    <div class="nav-links">
+      <a class="active" href="#stories">Stories</a>
+      <a href="#next">Resources</a>
+      <a class="btn" href="#">Suggest a person</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>What does working in AI safety <span class="hl">actually look like?</span></h1>
+    <p>AI safety is a young, pre-paradigmatic field, and job titles alone don't tell you much. So we asked people in impactful technical, policy, field-building, and communications roles to describe a day in their working life, share their CV, and record a 60-second video about how they got here.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#stories">Browse the stories</a>
+      <a class="btn btn-ghost" href="#next">See open roles</a>
+    </div>
+  </div>
+</header>
+
+<main class="stories wrap" id="stories">
+  <div class="filters" role="group" aria-label="Filter stories by role type">
+    <button class="chip" aria-pressed="true" data-filter="all">All roles</button>
+    <button class="chip" aria-pressed="false" data-filter="technical">Technical research</button>
+    <button class="chip" aria-pressed="false" data-filter="policy">Policy</button>
+    <button class="chip" aria-pressed="false" data-filter="fieldbuilding">Field-building</button>
+    <button class="chip" aria-pressed="false" data-filter="comms">Communications</button>
+    <button class="chip" aria-pressed="false" data-filter="grantmaking">Grantmaking</button>
+    <button class="chip" aria-pressed="false" data-filter="ops">Generalist &amp; ops</button>
+  </div>
+
+  <div class="grid">
+    <article class="card" data-cat="technical">
+      <div class="card-top">
+        <div class="avatar" style="background:#2597a7;">MC</div>
+        <div><h3>Maya Chen</h3><div class="role">Interpretability Researcher · frontier AI lab</div></div>
+      </div>
+      <span class="tag">Technical research</span>
+      <div>
+        <div class="day-label">A day in her life</div>
+        <p class="day">Maya spends her mornings running experiments on transformer internals: "mostly staring at attention patterns and writing a lot of throwaway PyTorch." Afternoons are paper reading groups and debugging with her team. She came from a physics undergrad and says the on-ramp was MATS, not a PhD.</p>
+      </div>
+      <button class="video-row" data-name="Maya Chen" data-blurb="How a physics undergrad who'd never trained a model ended up doing interpretability research full-time.">
+        <span class="play" aria-hidden="true"></span>
+        <span><span class="vtitle">60 seconds with Maya</span><br><span class="vmeta">0:58 · video interview</span></span>
+      </button>
+      <button class="see-more">Read the full interview</button>
+      <div class="interview" hidden>
+        <p class="q">How did you end up doing interpretability research?</p>
+        <p>Almost by accident. I was finishing a physics degree and assumed I would do a PhD in condensed matter. A friend sent me a mechanistic interpretability paper and I remember thinking, this is the same instinct as physics: here is a system that works and nobody knows why, go find the mechanism. I did the AI Safety Fundamentals course that fall, spent a summer replicating papers on evenings and weekends, and applied to MATS with a short write-up of a small circuit I had found. The MATS project became a paper, the paper became an internship, and the internship became this job. Total time from "what is a transformer" to full-time researcher was about eighteen months.</p>
+        <p class="q">What does a typical day actually look like?</p>
+        <p>Less glamorous than people expect. I usually have one main experiment running: some hypothesis about what a set of attention heads is doing, and an ablation or patching setup to test it. Mornings are for writing and running code while I am sharp. Afternoons are meetings, our team's paper reading group, and the long tail of research logistics: cleaning up notebooks, writing up negative results, reviewing a colleague's draft. Maybe one day in ten something genuinely surprising shows up in the data, and those days are why I do this.</p>
+        <p class="q">What is the hardest part of the job?</p>
+        <p>Tolerating being confused for weeks at a time. In physics courses the problem sets have answers. Here, you can spend a month on a hypothesis, discover it is wrong, and the deliverable is a paragraph explaining why. You have to genuinely believe negative results are progress, not just say it. The other hard part is prioritization: there are a hundred interesting questions and maybe three that matter for safety, and telling them apart is half the skill.</p>
+        <p class="q">What would you tell a student who wants your job?</p>
+        <p>Start doing the work before anyone gives you permission to. Nobody hired me because of my degree; they hired me because I could show them three small projects where I had found something real. Replicate a paper, extend it slightly, write it up clearly, and put it where people can read it. Also, do not wait until you feel ready. I applied to MATS feeling like a fraud, and so did most of my cohort.</p>
+      </div>
+    </article>
+
+    <article class="card" data-cat="policy">
+      <div class="card-top">
+        <div class="avatar" style="background:#31708f;">DO</div>
+        <div><h3>Daniel Okafor</h3><div class="role">AI Policy Researcher · DC think tank</div></div>
+      </div>
+      <span class="tag">Policy</span>
+      <div>
+        <div class="day-label">A day in his life</div>
+        <p class="day">Daniel's days alternate between writing briefs on compute governance for congressional staffers and meetings where he translates technical safety concepts into policy language. He studied international relations, then did a policy fellowship. "You don't need to code. You need to be able to explain."</p>
+      </div>
+      <button class="video-row" data-name="Daniel Okafor" data-blurb="Why an IR grad with zero ML background became one of the most useful people in AI governance.">
+        <span class="play" aria-hidden="true"></span>
+        <span><span class="vtitle">60 seconds with Daniel</span><br><span class="vmeta">1:02 · video interview</span></span>
+      </button>
+      <button class="see-more">Read the full interview</button>
+      <div class="interview" hidden>
+        <p class="q">You studied international relations. How did that lead here?</p>
+        <p>I spent my degree thinking about nuclear arms control, and the parallels to AI hit me hard in my final year: powerful dual-use technology, a small number of key actors, and a closing window to set norms before positions harden. I did not know any machine learning, and I assumed that disqualified me. It did not. I took a policy fellowship that placed early-career researchers in AI governance organizations, spent six months learning enough of the technical landscape to be conversational, and discovered that people who can bridge the two worlds are rarer than people who are deep in either one.</p>
+        <p class="q">Walk us through a typical day.</p>
+        <p>Today I spent the morning revising a brief on compute thresholds: who would verify them, what a chip order actually reveals, where the enforcement gaps are. Then two calls with congressional staffers who have thirty minutes and need the honest version of a complicated question. Afternoons are usually reading: lab publications, draft legislation, what other think tanks are putting out. The writing is maybe a third of the job. The rest is building trust so that when something urgent happens, staffers call us instead of guessing.</p>
+        <p class="q">What do people get wrong about AI policy work?</p>
+        <p>They imagine it is either glamorous, testifying before committees, or hopeless, shouting into the void. It is neither. Most of the impact is unglamorous precision: getting one definition right in one bill, or catching a loophole before it ships. And the field is far more open than people think. A well-argued report from a junior researcher genuinely can change what a government does, because the number of people doing this work carefully is still small.</p>
+        <p class="q">What should a student do if they want this career?</p>
+        <p>Write publicly, even short pieces. Policy hiring is a writing filter before it is anything else, and a blog post analyzing a real bill beats a perfect GPA. Learn the technical basics: you do not need to train models, but you need to know what a benchmark is and why evals are hard. And apply for fellowships early. The pipeline programs exist precisely because the field wants people like you before you feel qualified.</p>
+      </div>
+    </article>
+
+    <article class="card" data-cat="fieldbuilding">
+      <div class="card-top">
+        <div class="avatar" style="background:#028496;">HV</div>
+        <div><h3>Helena Vogel</h3><div class="role">Program Associate · Constellation</div></div>
+      </div>
+      <span class="tag">Field-building</span>
+      <div>
+        <div class="day-label">A day in her life</div>
+        <p class="day">Helena runs residencies that put safety researchers in the same room. A typical day: matching visiting scholars with mentors, planning a workshop, and a dozen conversations connecting people who should know each other. She founded her university's AI safety group, and that operational track record was her CV.</p>
+      </div>
+      <button class="video-row" data-name="Helena Vogel" data-blurb="From starting a student group to getting hired at Constellation: what field-building work really involves.">
+        <span class="play" aria-hidden="true"></span>
+        <span><span class="vtitle">60 seconds with Helena</span><br><span class="vmeta">0:55 · video interview</span></span>
+      </button>
+      <button class="see-more">Read the full interview</button>
+      <div class="interview" hidden>
+        <p class="q">You went from student organizer to Constellation. What happened?</p>
+        <p>I founded my university's AI safety group in my second year, mostly out of frustration that there was nowhere to discuss this stuff seriously. Running it turned out to be a crash course in the exact skills field-building organizations need: recruiting people, designing programs, keeping a community alive through exam season, figuring out which events actually change minds and which just feel nice. When Constellation opened a program role, my application was essentially the group itself: here is what I built, here are the numbers, here are the researchers who came out of it.</p>
+        <p class="q">What does a program associate actually do all day?</p>
+        <p>The core of my job is putting the right people in the same room. A typical day: morning reviewing applications for our next residency and checking references, midday walking a visiting researcher through their first week and connecting them with two people they should meet, afternoon planning a workshop agenda with a research lead. Plus a dozen small conversations, in the kitchen, on Slack, that are secretly the most important part. A lot of value in this field comes from introductions that would not have happened otherwise.</p>
+        <p class="q">Is field-building a real career, or a detour from one?</p>
+        <p>It is real, and I wish more people believed that. The bottleneck in AI safety is not just research ideas; it is the infrastructure that turns interested people into productive contributors. Every strong researcher I know passed through a program someone had to design, fund, and run well. If you multiply modest improvements in those programs across hundreds of participants, the impact case is very strong. It is also a role where a 24-year-old can hold real responsibility, because the field is young and the demand for competent operators exceeds supply.</p>
+        <p class="q">Advice for someone running a student group right now?</p>
+        <p>Treat it like the job it secretly is. Track what you do, measure what works, and write it down: that documentation becomes your CV. Prioritize depth over headcount; five members who go on to do real work beat fifty who attended one talk. And talk to the organizations you admire early. They remember competent students, and the field is small enough that a good reputation travels fast.</p>
+      </div>
+    </article>
+
+    <article class="card" data-cat="comms">
+      <div class="card-top">
+        <div class="avatar" style="background:#3c8f7c;">SR</div>
+        <div><h3>Sofia Reyes</h3><div class="role">Communications Director · AI safety nonprofit</div></div>
+      </div>
+      <span class="tag">Communications</span>
+      <div>
+        <div class="day-label">A day in her life</div>
+        <p class="day">Sofia decides how research reaches the world: editing explainers, prepping researchers for podcast interviews, and fielding journalist questions about evals. She was a science journalist for six years first. "My job is making sure the careful version of the story is also the one people actually read."</p>
+      </div>
+      <button class="video-row" data-name="Sofia Reyes" data-blurb="How a science journalist turned her skills into a communications career inside AI safety.">
+        <span class="play" aria-hidden="true"></span>
+        <span><span class="vtitle">60 seconds with Sofia</span><br><span class="vmeta">1:00 · video interview</span></span>
+      </button>
+      <button class="see-more">Read the full interview</button>
+      <div class="interview" hidden>
+        <p class="q">How does a science journalist end up running comms for an AI safety org?</p>
+        <p>Six years of covering research taught me one thing above all: the gap between what scientists know and what the public hears is where most damage happens. I had written about gene editing and pandemics, and when I started covering AI in 2023 I noticed the safety conversation was being lost in a fog of hype and dismissal at the same time. When this organization advertised for a comms lead, I realized I could spend my career translating one field's careful thinking instead of skimming a different field every week. The interview process was mostly editing tests: here is a dense technical claim, make it accurate and readable.</p>
+        <p class="q">What fills your calendar in a normal week?</p>
+        <p>Editing is the constant: blog posts, op-eds, the explainer series, all of which need to survive both expert scrutiny and a general reader's attention span. Beyond that, I prep our researchers before podcast and media appearances, which means anticipating the hard questions and rehearsing honest answers. I field journalist inquiries, some on deadline about a model release, some background conversations that shape coverage months later. And I sit in on research meetings, because I cannot communicate work I do not understand.</p>
+        <p class="q">What is the hardest editorial judgment you make?</p>
+        <p>Calibration. Every piece has two failure modes: overclaiming, which burns credibility with the technical community, and underclaiming, which fails the public. The whole job lives in that narrow channel. My rule is that the careful version of the story must also be the compelling version, and if I cannot make it compelling without stretching, the piece is not ready. Saying no to a viral-but-sloppy framing is the most valuable thing I do, and nobody ever sees it.</p>
+        <p class="q">What should someone build if they want this path?</p>
+        <p>A portfolio, full stop. Comms hiring ignores credentials and reads your clips. Write explainers of safety papers and publish them anywhere: a blog, a student paper, a forum. If your explanation of a hard idea gets shared by the people who work on that idea, you are hireable. Journalism experience helps but is not required; the transferable skill is caring equally about being right and being read.</p>
+      </div>
+    </article>
+
+    <article class="card" data-cat="grantmaking">
+      <div class="card-top">
+        <div class="avatar" style="background:#5b7a99;">JP</div>
+        <div><h3>James Park</h3><div class="role">Grantmaker · philanthropic foundation</div></div>
+      </div>
+      <span class="tag">Grantmaking</span>
+      <div>
+        <div class="day-label">A day in his life</div>
+        <p class="day">James reads grant proposals in the morning and interviews founders and researchers in the afternoon, deciding where millions in safety funding goes. He was a management consultant, then an ops generalist at a safety org. "The job is judgment: which of fifty plausible-sounding projects will actually matter?"</p>
+      </div>
+      <button class="video-row" data-name="James Park" data-blurb="What grantmakers look for in AI safety proposals, and how he got a seat at that table.">
+        <span class="play" aria-hidden="true"></span>
+        <span><span class="vtitle">60 seconds with James</span><br><span class="vmeta">0:57 · video interview</span></span>
+      </button>
+      <button class="see-more">Read the full interview</button>
+      <div class="interview" hidden>
+        <p class="q">Consulting to grantmaking is an unusual jump. How did it happen?</p>
+        <p>Consulting taught me to evaluate organizations fast: read the numbers, interview the team, figure out in two weeks whether a plan is real. I left because I wanted the evaluations to matter for something bigger than a client's margins. I spent two years as an operations generalist at a safety org first, which I recommend to anyone eyeing grantmaking: you learn what dysfunction looks like from the inside, and you build the network that later tells you things applicants will not. When the foundation opened a program officer seat, the combination of evaluation skills and field context was exactly what they wanted.</p>
+        <p class="q">What does the job look like day to day?</p>
+        <p>Mornings are reading: proposals, progress reports from existing grantees, and the research itself, because you cannot fund what you cannot evaluate. Afternoons are conversations, usually three or four. Some are pitches. The more useful ones are diligence calls: talking to people who have worked with an applicant, asking what the proposal glosses over. A few times a quarter I write an investigation memo recommending for or against a major grant, and those memos move seven-figure amounts, so they get written carefully.</p>
+        <p class="q">What actually separates a funded proposal from a rejected one?</p>
+        <p>Almost never the idea. Fifty proposals a year sound plausible; the job is figuring out which teams will still be executing when the plan meets reality. I look for evidence the applicants have already done a cheap version of the thing, for honest accounting of what could fail, and for a theory of change that survives three whys in a row. The biggest red flag is a proposal that cannot name what would make it not worth funding.</p>
+        <p class="q">How does someone get into grantmaking?</p>
+        <p>Not directly, usually. Do object-level work first, in research, operations, or policy, so your judgment is grounded in something. Write evaluations in public: reviews of research agendas, retrospectives on projects, anything that shows calibrated thinking. Foundations hire people whose judgment they can inspect. And be aware the job is emotionally odd: you say no to good people constantly, and your wins are quiet. If you need visible credit, this is the wrong seat.</p>
+      </div>
+    </article>
+
+    <article class="card" data-cat="technical">
+      <div class="card-top">
+        <div class="avatar" style="background:#1e7d8a;">AB</div>
+        <div><h3>Aisha Bello</h3><div class="role">Evals Engineer · AI safety institute</div></div>
+      </div>
+      <span class="tag">Technical research</span>
+      <div>
+        <div class="day-label">A day in her life</div>
+        <p class="day">Aisha builds the tests that check whether frontier models can deceive, self-replicate, or assist with weapons development. Her days are mostly software engineering (harnesses, pipelines, red-team scaffolds), not ML theory. She was a backend engineer at a fintech startup for four years before switching.</p>
+      </div>
+      <button class="video-row" data-name="Aisha Bello" data-blurb="Why ordinary software engineering skills are in desperate demand for dangerous-capability evals.">
+        <span class="play" aria-hidden="true"></span>
+        <span><span class="vtitle">60 seconds with Aisha</span><br><span class="vmeta">1:01 · video interview</span></span>
+      </button>
+      <button class="see-more">Read the full interview</button>
+      <div class="interview" hidden>
+        <p class="q">You were a fintech engineer. Why evals?</p>
+        <p>I spent four years building payment infrastructure, and I was good at it, but I kept reading about AI progress at lunch and feeling like the important thing was happening somewhere else. What tipped me was learning that safety institutes were struggling to hire ordinary software engineers. Not ML researchers, engineers. Evals are, at their core, a hard software problem: you need reliable harnesses, reproducible environments, and pipelines that do not silently break, and the field had more brilliant researchers than people who could build that plumbing. I applied thinking I was underqualified and discovered I was the exact profile they were short of.</p>
+        <p class="q">Describe an actual day.</p>
+        <p>This week I am building a scaffold that lets a model attempt a multi-step task in a sandboxed environment so we can measure whether it can do things like acquire resources or copy itself. That means writing the orchestration code, making the sandbox airtight, and logging everything, because an eval you cannot audit is worthless. Days are mostly code review, debugging agent loops, and arguing in a good way with researchers about whether a task measures what they think it measures. It feels like startup engineering with unusually high stakes.</p>
+        <p class="q">What surprised you most after switching?</p>
+        <p>How much my boring skills mattered. Idempotent pipelines, sensible retries, tests that catch regressions: this is not glamorous, but when your results inform government decisions about model deployment, "the harness had a bug" is not an acceptable sentence. The second surprise was how fast I picked up the ML context. You do not need to derive the transformer from scratch; you need to understand model behavior empirically, and engineers are already good at empirical debugging.</p>
+        <p class="q">What is your advice for engineers considering the jump?</p>
+        <p>Your skills transfer more directly than you think, and the field will tell you exactly what it needs if you look at job postings: infrastructure, tooling, security engineering, data pipelines. Build one relevant thing to prove interest, maybe an open-source eval harness or a contribution to an existing one. And take the pay adjustment seriously but not too seriously; the compensation gap has narrowed a lot, and the meaning gap went the other direction entirely.</p>
+      </div>
+    </article>
+    <article class="card" data-cat="technical">
+      <div class="card-top">
+        <div class="avatar" style="background:#2c6e91;">TS</div>
+        <div><h3>Tomás Silva</h3><div class="role">Research Engineer · scalable oversight team</div></div>
+      </div>
+      <span class="tag">Technical research</span>
+      <div>
+        <div class="day-label">A day in his life</div>
+        <p class="day">Tomás turns research ideas into experiments that actually run: distributed training jobs, debate protocols, human-feedback pipelines. "The researchers sketch it on a whiteboard, and I make it exist by Friday." He was a competitive programmer who joined straight from a software engineering job, no grad school.</p>
+      </div>
+      <button class="video-row" data-name="Tomás Silva" data-blurb="Why strong software engineers can contribute to alignment research from day one.">
+        <span class="play" aria-hidden="true"></span>
+        <span><span class="vtitle">60 seconds with Tomás</span><br><span class="vmeta">0:59 · video interview</span></span>
+      </button>
+      <button class="see-more">Read the full interview</button>
+      <div class="interview" hidden>
+        <p class="q">You joined a frontier lab without a research background. How?</p>
+        <p>Competitive programming got me the interview; shipping got me the job. I had been a backend engineer for three years and did algorithm contests for fun, which turns out to be decent preparation for research engineering: both are about implementing something correct and fast under constraints. I cold-applied after reading the team's papers and building a small replication of one result over a few weekends. In the interview I could not discuss the theory as an equal, but I could say exactly how I would build the experiment, and that turned out to be the skill they were hiring for.</p>
+        <p class="q">What is the actual division of labor with researchers?</p>
+        <p>A researcher comes to me with something like: we want to test whether a debate protocol makes model answers more honest, here is the rough design. My job is everything between that whiteboard sketch and a plot in a paper. I write the training and evaluation code, get it running on the cluster, chase down the inevitable distributed-computing weirdness, and build the tooling so the next experiment takes days instead of weeks. "The researchers sketch it and I make it exist by Friday" is only slightly an exaggeration.</p>
+        <p class="q">What is underrated about the role?</p>
+        <p>The intellectual input. People imagine research engineers as pure implementers, but half my value is saying: that experiment as designed will not distinguish your two hypotheses, or, we can get eighty percent of the signal at a tenth of the compute this other way. You develop research taste by building experiments, the way a sound engineer develops taste in music. Several ideas I proposed as engineering shortcuts ended up in papers as methods.</p>
+        <p class="q">What should a software engineer do this month to move toward this?</p>
+        <p>Pick one alignment paper with released code and get it running, then change one thing and see what happens. That single exercise teaches you the stack, gives you something concrete to discuss in interviews, and tells you quickly whether you enjoy the work. Strong general engineering plus demonstrated genuine interest beats a mediocre ML degree in every hiring process I have seen from the inside. The bar is real, but it is a different bar than people assume.</p>
+      </div>
+    </article>
+
+    <article class="card" data-cat="policy">
+      <div class="card-top">
+        <div class="avatar" style="background:#23617a;">IL</div>
+        <div><h3>Ingrid Larsen</h3><div class="role">Policy Advisor · UK AI Security Institute</div></div>
+      </div>
+      <span class="tag">Policy</span>
+      <div>
+        <div class="day-label">A day in her life</div>
+        <p class="day">Ingrid works inside government, drafting guidance on frontier model testing and briefing ministers before international summits. Her days are documents, meetings, and careful wording that will bind real companies. She trained as a lawyer and says the field badly needs people who can write regulation that survives contact with reality.</p>
+      </div>
+      <button class="video-row" data-name="Ingrid Larsen" data-blurb="What it is like to work on AI policy inside a national government rather than a think tank.">
+        <span class="play" aria-hidden="true"></span>
+        <span><span class="vtitle">60 seconds with Ingrid</span><br><span class="vmeta">1:03 · video interview</span></span>
+      </button>
+      <button class="see-more">Read the full interview</button>
+      <div class="interview" hidden>
+        <p class="q">From law into government AI policy: what was the path?</p>
+        <p>I qualified as a solicitor and spent three years in technology law, mostly data protection compliance for large firms. The work was fine and the material was fascinating, but I was always implementing rules after the fact rather than shaping them. When the government began standing up serious AI capacity, they needed people who could read a statute and a technical report in the same afternoon, and there were remarkably few of us. I took a pay cut I have never regretted. Within six months I was in rooms where the questions I cared about were actually being decided.</p>
+        <p class="q">What does working inside government feel like day to day?</p>
+        <p>Slower and more consequential than outside commentary suggests. Today I revised guidance language on pre-deployment testing for frontier models, sat in two interdepartmental meetings reconciling positions, and prepared a two-page brief for a minister ahead of an international summit. Every sentence I draft gets read by lawyers, economists, and diplomats before it survives. That friction is frustrating and also the point: what we publish binds real companies and sets precedents other governments copy.</p>
+        <p class="q">What do outsiders misunderstand about the work?</p>
+        <p>That the technical people and the policy people are different tribes. The most valuable colleagues I have sit in the overlap, and the overlap is learnable from either side. Also, people underestimate drafting as a skill. A regulation that is conceptually right but ambiguously worded will be exploited, and a beautifully precise rule aimed at the wrong thing is worse. Writing regulation that survives contact with clever, motivated lawyers is a craft, and I use my legal training every single day.</p>
+        <p class="q">How should a law student or lawyer break in?</p>
+        <p>Develop a public record of thinking about AI governance specifically: case notes on relevant litigation, analysis of proposed rules, comparisons across jurisdictions. Apply for the policy fellowships and civil service fast streams; governments are hiring for this and cannot fill the seats. And learn the technical basics properly rather than performatively. You do not need to code, but the first time a company's lawyers realize you actually understand model evaluations, the negotiation changes.</p>
+      </div>
+    </article>
+
+    <article class="card" data-cat="fieldbuilding">
+      <div class="card-top">
+        <div class="avatar" style="background:#3f9e8f;">RM</div>
+        <div><h3>Ravi Menon</h3><div class="role">Program Manager · research training program</div></div>
+      </div>
+      <span class="tag">Field-building</span>
+      <div>
+        <div class="day-label">A day in his life</div>
+        <p class="day">Ravi runs a cohort-based training program for new alignment researchers: recruiting mentors, reviewing hundreds of applications, and unblocking scholars mid-project. "My output is other people's research careers." He got here by running his university group so well that the program hired him before he graduated.</p>
+      </div>
+      <button class="video-row" data-name="Ravi Menon" data-blurb="How organizing a student group became a full-time career building the AI safety talent pipeline.">
+        <span class="play" aria-hidden="true"></span>
+        <span><span class="vtitle">60 seconds with Ravi</span><br><span class="vmeta">0:56 · video interview</span></span>
+      </button>
+      <button class="see-more">Read the full interview</button>
+      <div class="interview" hidden>
+        <p class="q">You were hired before you graduated. What did they see?</p>
+        <p>A track record, basically. I ran our university group for two years and treated it like an organization rather than a club: we tracked which programs produced people who went on to do real safety work, killed the events that did not, and wrote retrospectives on everything. When I emailed the training program asking for advice on our curriculum, I attached our internal metrics document. Two months later they asked if I wanted to help run admissions for a cohort. The lesson I took: operational competence is legible, and the field is small enough that it gets noticed fast.</p>
+        <p class="q">What does a program manager do during a cohort?</p>
+        <p>Before a cohort, I am reviewing several hundred applications, coordinating interviews, and matching accepted scholars with mentors, which is the highest-stakes decision we make; a bad match wastes three months of two people's time. During a cohort, my job is unblocking: a scholar needs compute access, a mentor relationship is drifting, someone's visa is stuck, a research project needs an emergency pivot at week six. After, it is retrospectives and alumni tracking, because our real output is not the program, it is what participants do afterward.</p>
+        <p class="q">Do you ever regret not doing research yourself?</p>
+        <p>I tried research for a summer and I was fine at it, which is not good enough. What I am unusually good at is making twenty researchers more productive, and the arithmetic there is favorable: if the program lifts each scholar's trajectory even slightly, and we run cohorts of dozens, my counterfactual impact plausibly beats what my own mediocre research would have been. The field needs maybe one great program designer for every twenty researchers, and far fewer people compete for that seat.</p>
+        <p class="q">What is your advice to current student organizers?</p>
+        <p>Measure outcomes, not attendance. The question is never how many people came; it is who changed course because of what you ran. Write everything down, because your documentation is transferable and your vibes are not. Ask the organizations you feed people into what they wish you did differently. And know that the skills you are practicing, prioritization, delegation, program design under uncertainty, are exactly what field-building organizations hire for, at an age when your peers are still doing coffee runs.</p>
+      </div>
+    </article>
+
+    <article class="card" data-cat="comms">
+      <div class="card-top">
+        <div class="avatar" style="background:#4a8fa3;">GL</div>
+        <div><h3>Grace Liu</h3><div class="role">Video Producer · AI safety media nonprofit</div></div>
+      </div>
+      <span class="tag">Communications</span>
+      <div>
+        <div class="day-label">A day in her life</div>
+        <p class="day">Grace scripts, shoots, and edits explainer videos that have introduced millions of viewers to alignment ideas. A typical day is half storyboarding with researchers to get the technical details right, half in the edit bay making them watchable. She ran a small YouTube channel before this; that portfolio was her interview.</p>
+      </div>
+      <button class="video-row" data-name="Grace Liu" data-blurb="How a hobbyist YouTuber became one of the field's most-watched science communicators.">
+        <span class="play" aria-hidden="true"></span>
+        <span><span class="vtitle">60 seconds with Grace</span><br><span class="vmeta">1:00 · video interview</span></span>
+      </button>
+      <button class="see-more">Read the full interview</button>
+      <div class="interview" hidden>
+        <p class="q">Your YouTube channel was the whole interview?</p>
+        <p>Essentially, yes. I ran a small science channel for three years, forty thousand subscribers, nothing huge, while working a marketing job. When this nonprofit posted a video producer role, I sent three of my videos and a one-page breakdown of how I would explain a specific alignment concept for a general audience. The portfolio answered every question a CV could not: can she script, can she edit, does she have taste, will people actually watch to the end. Audience retention graphs are brutally honest, and mine were good. Nobody ever asked where I went to university.</p>
+        <p class="q">Take us through a production cycle.</p>
+        <p>A video takes four to six weeks. The first week is the hardest and least visible: sitting with researchers until I actually understand the idea, because you cannot simplify what you have not understood, you can only distort it. Then scripting, which goes through technical review; our rule is that the researcher must sign off that it is accurate and I must sign off that it is watchable, and neither of us can override the other. Then filming, animation, edit, sound. Half my day-to-day is storyboarding and half is in the edit bay making a compute governance explainer feel like something you would choose to watch.</p>
+        <p class="q">What is the tension in communicating safety ideas on video?</p>
+        <p>The algorithm rewards alarm and certainty, and the material demands nuance and calibration. Every thumbnail is a small ethical decision. We could triple our views with doom-lock imagery, and we would deserve the credibility loss that followed. My conviction is that clarity is a better hook than fear: the videos that performed best for us are the ones where a viewer feels genuinely smarter afterward. Millions of people formed their first impression of alignment from a video someone like me made, and I want that impression to survive their second impression.</p>
+        <p class="q">How does someone start toward this job today?</p>
+        <p>Make things now, badly at first, in public. One finished, mediocre video teaches you more than a year of planning the perfect one. Explain one safety idea you actually understand, post it, read the comments, make the next one better. The field has a genuine shortage of people who can do this; the demand side is not the problem. The filter is simply whether you have shipped enough to be good, and shipping is entirely within your control.</p>
+      </div>
+    </article>
+
+    <article class="card" data-cat="grantmaking">
+      <div class="card-top">
+        <div class="avatar" style="background:#6b8ba4;">NK</div>
+        <div><h3>Nora Kimani</h3><div class="role">Grants Associate · AI safety fund</div></div>
+      </div>
+      <span class="tag">Grantmaking</span>
+      <div>
+        <div class="day-label">A day in her life</div>
+        <p class="day">Nora handles the fast-turnaround end of funding: small grants to independent researchers, student groups, and new projects that need a decision in weeks, not months. Mornings are proposal reviews; afternoons are calls with applicants. She came from academic grants administration and says the skills transferred almost one to one.</p>
+      </div>
+      <button class="video-row" data-name="Nora Kimani" data-blurb="The unglamorous, high-leverage work of getting money to good projects quickly.">
+        <span class="play" aria-hidden="true"></span>
+        <span><span class="vtitle">60 seconds with Nora</span><br><span class="vmeta">0:54 · video interview</span></span>
+      </button>
+      <button class="see-more">Read the full interview</button>
+      <div class="interview" hidden>
+        <p class="q">Academic grants administration seems worlds away from AI safety. Was it?</p>
+        <p>Much closer than either side believes. I spent five years at a university research office moving grant money: eligibility checks, disbursement, reporting, the whole unglamorous machine. When I found the AI safety funding world, I saw a field with generous funders, urgent timelines, and shockingly little of that machine. Money that should have reached a researcher in three weeks was taking four months, not from caution but from missing process. I applied to the fund with a memo describing five specific bottlenecks I could remove. They hired me to remove them.</p>
+        <p class="q">What is the fast-turnaround end of funding like?</p>
+        <p>My docket is the small stuff: five thousand dollars for a student group retreat, thirty thousand for an independent researcher's six-month project, seed money for a new workshop series. Individually tiny, collectively the field's capillary system. Mornings I review proposals, and I aim to give every applicant a decision or a concrete question within two weeks, because for an independent researcher, four months of silence is a no that also wastes their time. Afternoons are calls: sometimes diligence, often just helping a nervous first-time applicant restructure a budget that was underselling their own project.</p>
+        <p class="q">What do small grants teach you that big ones do not?</p>
+        <p>That speed is a form of impact nobody puts on posters. A three-week decision on a small grant frequently matters more than the amount: it is the difference between someone starting safety work now or taking the corporate job while they wait. Small grants are also the field's scouting system. Several researchers whose first funding was a tiny grant from us are now doing work major funders compete to support. Being early is our comparative advantage, and being early requires being fast.</p>
+        <p class="q">Who should consider this work?</p>
+        <p>People who like enabling more than performing. My name appears on nothing I fund, and that has to feel fine. Operations and administration people from any sector transfer well; the skills are process design, judgment under volume, and clear communication with stressed people. If you have ever fixed a broken bureaucratic process and felt real satisfaction, the field genuinely needs you, and hardly anyone is telling you that.</p>
+      </div>
+    </article>
+
+    <article class="card" data-cat="ops">
+      <div class="card-top">
+        <div class="avatar" style="background:#37827b;">BH</div>
+        <div><h3>Ben Halloran</h3><div class="role">Chief of Staff · alignment research nonprofit</div></div>
+      </div>
+      <span class="tag">Generalist &amp; ops</span>
+      <div>
+        <div class="day-label">A day in his life</div>
+        <p class="day">Ben does whatever the organization needs most that week: hiring rounds, board decks, visa logistics for incoming researchers, fixing the compute budget. "I multiply the time of twelve researchers. That math motivates me." He was a startup operations manager and never took a single ML course.</p>
+      </div>
+      <button class="video-row" data-name="Ben Halloran" data-blurb="Why generalist operators are some of the most sought-after hires in AI safety.">
+        <span class="play" aria-hidden="true"></span>
+        <span><span class="vtitle">60 seconds with Ben</span><br><span class="vmeta">0:58 · video interview</span></span>
+      </button>
+      <button class="see-more">Read the full interview</button>
+      <div class="interview" hidden>
+        <p class="q">Chief of staff at a research nonprofit: what is the honest job description?</p>
+        <p>Whatever the organization needs most this week that nobody else owns. Since January that has included running two hiring rounds, rebuilding our compute budget after a price change, preparing board materials, sorting a visa emergency for an incoming researcher, and renegotiating our office lease. The unifying thread is that every hour of friction I remove from a researcher's week is an hour of alignment research that happens instead. I multiply the time of twelve researchers. When I am deciding whether to take on something tedious, that arithmetic is the whole decision.</p>
+        <p class="q">You came from startup operations. What transferred?</p>
+        <p>Nearly everything except the motivation structure. Startup ops taught me to build processes that scale, hire quickly without hiring badly, and stay calm when two urgent things break at once. What changed is what the processes protect. At the startup, smooth operations meant faster revenue growth. Here, it means a researcher spends their afternoon on a deception eval instead of fighting a procurement form. I never took a single machine learning course and I have never needed one, though I have absorbed a lot by osmosis and by asking basic questions at lunch.</p>
+        <p class="q">What is the failure mode of generalist roles, and how do you avoid it?</p>
+        <p>Becoming a human catch-all with no leverage: fifty small tasks, zero systems, and burnout in eighteen months. The discipline is to treat every recurring task as a process to build rather than a chore to do. The first visa case took me two weeks; I wrote the playbook, and the fourth took two days. A good chief of staff is constantly automating themselves out of last quarter's job. The other trap is invisibility resentment. Nobody cites your board deck. You have to genuinely price impact over credit, not just claim to.</p>
+        <p class="q">What is the entry path for a student generalist?</p>
+        <p>Operations roles at safety organizations are chronically under-applied to, so the bar is more reachable than for research. Demonstrate ownership of anything real: run a conference, manage a student group's finances, coordinate a project with actual stakes and write up what broke. Organizations hire generalists on evidence of reliability under ambiguity, and student life offers plenty of chances to generate that evidence if you volunteer for the jobs everyone else avoids.</p>
+      </div>
+    </article>
+  </div>
+
+  <p class="mock-note">Mockup note: all six profiles are illustrative placeholders, not real people. The live version would feature selected individuals with a ~150-word blurb, CV, and optional 2-minute video testimony.</p>
+</main>
+
+<section class="next" id="next">
+  <div class="wrap">
+    <h2 class="section-heading">Ready to take a step?</h2>
+    <div class="next-grid">
+      <div class="next-card">
+        <h3>Find an open role</h3>
+        <p>The 80,000 Hours job board lists hundreds of vetted openings in AI safety: technical, policy, and everything in between.</p>
+        <a class="arrow-link" href="https://jobs.80000hours.org/">Browse the job board</a>
+      </div>
+      <div class="next-card">
+        <h3>Join a local group</h3>
+        <p>Most people here started in a university or city group. Find one near you and meet people working through the same questions.</p>
+        <a class="arrow-link" href="https://www.aisafety.com/groups">Find a group on aisafety.com</a>
+      </div>
+      <div class="next-card">
+        <h3>Go deeper on research careers</h3>
+        <p>For a detailed survey of how technical researchers broke into the field, read the community's guide on LessWrong.</p>
+        <a class="arrow-link" href="https://www.lesswrong.com/posts/uKPtCoDesfawNfyJg/how-to-become-an-ai-safety-researcher">How to become an AI safety researcher</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">AI Safety Career Stories</div>
+    <div class="fcols">
+      <div><h4>Explore</h4><ul><li><a href="#stories">Stories</a></li><li><a href="https://jobs.80000hours.org/">Job board</a></li><li><a href="https://www.aisafety.com/groups">Local groups</a></li></ul></div>
+      <div><h4>Contribute</h4><ul><li><a href="#">Suggest a person</a></li><li><a href="#">Share your story</a></li></ul></div>
+      <div><h4>About</h4><ul><li><a href="#">Why this exists</a></li><li><a href="#">Contact us</a></li></ul></div>
+    </div>
+    <div class="fnote">This is a design mockup illustrating an "AI Safety Career Stories" page concept. All profiles are illustrative placeholders, not real people.</div>
+  </div>
+</footer>
+
+<dialog id="player">
+  <div class="player-screen">
+    <span class="play" aria-hidden="true"></span>
+    <div class="player-bar"><span>0:11</span><div class="player-track"><span></span></div><span id="player-dur">0:58</span></div>
+  </div>
+  <div class="player-body">
+    <h3 id="player-name">60 seconds</h3>
+    <p class="prole" id="player-role"></p>
+    <p class="lede" id="player-blurb"></p>
+    <div id="player-interview"></div>
+    <button class="btn btn-ghost" id="player-close">Close</button>
+  </div>
+</dialog>
+
+<script>
+  const chips = document.querySelectorAll('.chip');
+  const cards = document.querySelectorAll('.card');
+  chips.forEach(chip => chip.addEventListener('click', () => {
+    chips.forEach(c => c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'));
+    const f = chip.dataset.filter;
+    cards.forEach(card => card.classList.toggle('hidden', f !== 'all' && card.dataset.cat !== f));
+  }));
+
+  const dlg = document.getElementById('player');
+  cards.forEach(card => {
+    const row = card.querySelector('.video-row');
+    const openProfile = () => {
+      const name = card.querySelector('h3').textContent;
+      document.getElementById('player-name').textContent = '60 seconds with ' + name.split(' ')[0];
+      document.getElementById('player-role').textContent = card.querySelector('.role').textContent;
+      document.getElementById('player-blurb').textContent = row.dataset.blurb + ' (Video placeholder. The live page would embed the real interview here.)';
+      document.getElementById('player-dur').textContent = row.querySelector('.vmeta').textContent.split(' ')[0];
+      const interview = card.querySelector('.interview');
+      document.getElementById('player-interview').innerHTML = interview ? interview.innerHTML : '';
+      dlg.showModal();
+      dlg.querySelector('.player-body').scrollTop = 0;
+    };
+    row.addEventListener('click', openProfile);
+    const more = card.querySelector('.see-more');
+    if (more) more.addEventListener('click', openProfile);
+  });
+  document.getElementById('player-close').addEventListener('click', () => dlg.close());
+  dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+</script>
+</body>
+</html>
