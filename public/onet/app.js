@@ -3,6 +3,7 @@
 const CAT_COLORS = ['#009af1', '#e62c11', '#00a5a6', '#6a3ecb', '#ea8d00', '#1d7a22']; // validated fixed order
 let DATA = null;
 let UPLIFT = null;
+let SOURCES = null;
 let view = 'current';
 const expanded = new Set();
 
@@ -81,14 +82,18 @@ function chip(rating, display, extraClass = '') {
 /* ---------- current view ---------- */
 
 function render() {
-  if (view === 'uplift' && !UPLIFT) {
+  const lazy = { uplift: ['data/uplift.json', u => { UPLIFT = u; }],
+                 sources: ['data/sources.json', s => { SOURCES = s; }] };
+  if (lazy[view] && !(view === 'uplift' ? UPLIFT : SOURCES)) {
+    const [url, set] = lazy[view];
     $('#app').innerHTML = '';
-    fetch('data/uplift.json').then(r => r.json()).then(u => { UPLIFT = u; render(); })
-      .catch(e => { $('#app').textContent = 'Failed to load data/uplift.json — ' + e; });
+    fetch(url).then(r => r.json()).then(d => { set(d); render(); })
+      .catch(e => { $('#app').textContent = `Failed to load ${url} — ` + e; });
     return;
   }
   $('#app').innerHTML = view === 'current' ? renderCurrent()
-    : view === 'timeline' ? renderTimeline() : renderUplift();
+    : view === 'timeline' ? renderTimeline()
+    : view === 'uplift' ? renderUplift() : renderSources();
   if (view === 'current') bindRows();
   bindTooltips();
 }
@@ -289,6 +294,42 @@ function bandChart(dates, series, anchors, w, h) {
     <path d="${band}" fill="#009af1" opacity="0.13"/>
     <path d="${median}" fill="none" stroke="#009af1" stroke-width="2"/>
     ${dots}${marks}</svg>`;
+}
+
+/* ---------- sources view ---------- */
+
+function renderSources() {
+  const bf = SOURCES.backfill;
+  return `<div class="chart-block">
+      <h2>Rating evidence — 2022–2026 backfill</h2>
+      <p class="chart-note">${SOURCES.backfillCount} citations · ${bf.length} unique sources · ${esc(SOURCES.note)}</p>
+      <table class="src-table"><tbody>
+        ${bf.map(s => `<tr>
+          <td class="src-link"><a href="${esc(s.url)}">${esc(s.domain)}</a>
+            <span class="src-note">${esc(s.note)}</span></td>
+          <td class="src-meta">${esc(s.date)}${s.retrospective ? ' <span class="retro" data-tip="cited as retrospective testimony at least once">retro</span>' : ''}</td>
+          <td class="src-cites" data-tip="${s.citedBy.map(c => c.task + ' @ ' + c.snapshot).join(', ')}">${s.citedBy.length}×</td>
+        </tr>`).join('')}
+      </tbody></table>
+    </div>
+    <div class="chart-block">
+      <h2>Uplift model evidence</h2>
+      <p class="chart-note">${SOURCES.uplift.reduce((n, t) => n + t.findings.length, 0)} findings across ${SOURCES.uplift.length} topics · full extractions in analysis/uplift/evidence/</p>
+      ${SOURCES.uplift.map(t => `<div class="src-topic">
+        <h3>${esc(t.topic)}</h3>
+        <table class="src-table"><tbody>
+          ${t.findings.map(f => `<tr>
+            <td class="src-claim">${esc(f.claim)}</td>
+            <td class="src-meta">${f.url && /^https?:/.test(f.url) ? `<a href="${esc(f.url)}">${esc(urlDomain(f.url))}</a>` : esc(f.url)}
+              ${f.author ? '· ' + esc(f.author) : ''} ${f.date ? '· ' + esc(f.date) : ''}</td>
+          </tr>`).join('')}
+        </tbody></table>
+      </div>`).join('')}
+    </div>`;
+}
+
+function urlDomain(u) {
+  try { return new URL(u).hostname.replace('www.', ''); } catch { return u; }
 }
 
 /* ---------- tooltip ---------- */

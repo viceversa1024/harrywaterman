@@ -1,0 +1,5770 @@
+{
+ "note": "Every citation behind the historical ratings (also visible on each task row) and behind the uplift model's parameters. Backfill evidence was gathered by AI research agents; sources marked retro attest to earlier practice from a later publication.",
+ "backfillCount": 520,
+ "backfill": [
+  {
+   "url": "https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic",
+   "domain": "anthropic.com",
+   "note": "Aug 2025 internal survey; no mention of AI in direction-setting",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "1.1.1",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "1.1.2",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "1.1.3",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "1.1.3",
+     "snapshot": "2026-01"
+    },
+    {
+     "task": "1.2.2",
+     "snapshot": "2024-01"
+    },
+    {
+     "task": "1.2.2",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "1.2.2",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "1.2.2",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "1.2.2",
+     "snapshot": "2026-01"
+    },
+    {
+     "task": "1.2.3",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "2.1.1",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "2.1.3",
+     "snapshot": "2026-01"
+    },
+    {
+     "task": "2.1.4",
+     "snapshot": "2026-01"
+    },
+    {
+     "task": "2.2.2",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "2.2.2",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "2.2.2",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "2.2.2",
+     "snapshot": "2026-01"
+    },
+    {
+     "task": "2.2.7",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "2.2.7",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "3.1.1",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "3.1.3",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "4.1.3",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "4.1.3",
+     "snapshot": "2026-01"
+    },
+    {
+     "task": "4.3.1",
+     "snapshot": "2024-01"
+    },
+    {
+     "task": "4.3.1",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "5.1.1",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "5.1.2",
+     "snapshot": "2026-01"
+    },
+    {
+     "task": "5.1.3",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "6.1.2",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "6.1.2",
+     "snapshot": "2026-01"
+    },
+    {
+     "task": "6.2.2",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "6.2.2",
+     "snapshot": "2026-01"
+    },
+    {
+     "task": "6.2.3",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "6.3.1",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "6.3.1",
+     "snapshot": "2026-01"
+    },
+    {
+     "task": "6.4.1",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2025-08"
+  },
+  {
+   "url": "https://openai.com/index/chatgpt/",
+   "domain": "openai.com",
+   "note": "ChatGPT launched Nov 2022, general chatbot, not research-strategy tool",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "1.1.2",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "1.1.3",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "1.2.2",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "1.2.2",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "1.2.3",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "1.2.3",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "2.1.1",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "2.1.1",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "2.1.2",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "2.1.3",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "2.1.4",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "2.1.4",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "2.2.2",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "2.2.7",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "3.1.1",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "3.1.3",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "4.1.2",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "4.2.2",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "4.3.2",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "5.1.1",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "5.1.2",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "5.1.3",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "5.2.1",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "6.2.1",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "6.2.2",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "6.3.2",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "6.4.1",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "6.4.1",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2022-11"
+  },
+  {
+   "url": "https://metr.org/blog/2024-11-22-evaluating-r-d-capabilities-of-llms/",
+   "domain": "metr.org",
+   "note": "Claude 3.5 Sonnet/o1-preview strong on execution, not strategic judgment",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "1.1.2",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "1.1.3",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "1.2.3",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "2.1.2",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "2.1.3",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "2.1.4",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "2.1.4",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "3.1.2",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "3.1.6",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "3.1.6",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "4.1.1",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "5.1.1",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "5.1.1",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "5.1.3",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "5.1.3",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2024-11"
+  },
+  {
+   "url": "https://github.blog/2022-06-21-github-copilot-is-generally-available-to-all-developers/",
+   "domain": "github.blog",
+   "note": "Copilot GA was code completion, not research design",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.1.2",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "2.2.7",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "3.1.4",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "3.1.7",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "4.2.1",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "4.3.2",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "4.3.3",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "5.1.1",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "5.1.2",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "5.1.3",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "5.2.3",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "6.2.1",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "6.2.2",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "6.3.2",
+     "snapshot": "2022-07"
+    }
+   ],
+   "date": "2022-06"
+  },
+  {
+   "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+   "domain": "anthropic.com",
+   "note": "Claude 3.5 Sonnet (Jun 2024) touts stronger reasoning/agentic coding",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "1.1.3",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "2.1.2",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "2.2.6",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "2.2.7",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "3.1.4",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "3.1.7",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "4.1.1",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "4.3.2",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "5.1.2",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "5.4.1",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "6.1.1",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "6.2.2",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "6.4.1",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-06"
+  },
+  {
+   "url": "https://www.anthropic.com/news/claude-2",
+   "domain": "anthropic.com",
+   "note": "Claude 2 longer context could summarize candidate experiment writeups",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "1.1.3",
+     "snapshot": "2023-07"
+    },
+    {
+     "task": "1.2.2",
+     "snapshot": "2023-07"
+    },
+    {
+     "task": "2.2.5",
+     "snapshot": "2023-07"
+    },
+    {
+     "task": "3.1.7",
+     "snapshot": "2023-07"
+    },
+    {
+     "task": "5.4.1",
+     "snapshot": "2023-07"
+    },
+    {
+     "task": "6.1.1",
+     "snapshot": "2023-07"
+    },
+    {
+     "task": "6.2.2",
+     "snapshot": "2023-07"
+    },
+    {
+     "task": "6.3.2",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-07"
+  },
+  {
+   "url": "https://claude.com/blog/how-anthropic-teams-use-claude-code",
+   "domain": "claude.com",
+   "note": "Infra team uses Claude Code for debugging/automation, not core systems design",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "2.2.6",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "3.1.4",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "4.1.2",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "4.3.1",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "4.3.1",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "6.2.2",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-07"
+  },
+  {
+   "url": "https://www.anthropic.com/research/clio",
+   "domain": "anthropic.com",
+   "note": "Clio used ahead of Nov'24 election and computer-use launch monitoring",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "5.3.1",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "5.3.1",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "5.3.1",
+     "snapshot": "2026-01"
+    },
+    {
+     "task": "5.3.2",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "5.3.2",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "5.3.3",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2024-12"
+  },
+  {
+   "url": "https://github.com/facebookresearch/metaseq/blob/main/projects/OPT/chronicles/OPT175B_Logbook.pdf",
+   "domain": "github.com",
+   "note": "on-call engineers manually handled loss spikes/divergence, no AI",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.1.2",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "4.1.3",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "4.1.3",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "4.2.2",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "4.2.3",
+     "snapshot": "2022-07"
+    }
+   ],
+   "date": "2022-05"
+  },
+  {
+   "url": "https://www.anthropic.com/research/claude-code-expertise",
+   "domain": "anthropic.com",
+   "note": "Anthropic engineers' Claude usage/productivity rose sharply into 2025",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "4.3.2",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "5.1.2",
+     "snapshot": "2026-01"
+    },
+    {
+     "task": "6.1.1",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "6.1.1",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2025-09"
+  },
+  {
+   "url": "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
+   "domain": "anthropic.com",
+   "note": "RSP (first formal ship-decision framework) not published until Sept 2023",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "1.2.1",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "1.2.1",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "1.2.1",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-09"
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/ChatGPT",
+   "domain": "en.wikipedia.org",
+   "note": "ChatGPT launched Nov 2022, after this date",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.3",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "2.2.3",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "5.4.1",
+     "snapshot": "2022-07"
+    }
+   ],
+   "date": "2022-11"
+  },
+  {
+   "url": "https://arxiv.org/abs/2310.12931",
+   "domain": "arxiv.org",
+   "note": "Eureka: LLM-authored reward code for RL, shows nascent algorithm-design assist",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.3",
+     "snapshot": "2023-07"
+    },
+    {
+     "task": "2.2.4",
+     "snapshot": "2023-07"
+    },
+    {
+     "task": "2.2.4",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2023-10"
+  },
+  {
+   "url": "https://github.com/features/copilot",
+   "domain": "github.com",
+   "note": "Copilot GA mid-2022, code-completion only, no systems-design use",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.6",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "3.1.5",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "4.3.1",
+     "snapshot": "2022-07"
+    }
+   ],
+   "date": "2022-06"
+  },
+  {
+   "url": "https://github.blog/news-insights/product-news/github-copilot-is-generally-available-to-all-developers/",
+   "domain": "github.blog",
+   "note": "Copilot GA, autocomplete-level code suggestions",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.1",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "3.1.3",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "6.1.4",
+     "snapshot": "2022-07"
+    }
+   ],
+   "date": "2022-06"
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/GitHub_Copilot",
+   "domain": "en.wikipedia.org",
+   "note": "Copilot GA subscription June 2022, autocomplete only",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.2",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "3.1.2",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "4.1.1",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2022-06"
+  },
+  {
+   "url": "https://venturebeat.com/technology/anthropic-says-80-of-its-new-production-code-is-now-authored-by-claude-how-your-enterprise-can-keep-up",
+   "domain": "venturebeat.com",
+   "note": ">80% of May'25 merged production code authored by Claude (org-wide, not infra-specific)",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "3.1.2",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "3.1.3",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "3.1.3",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-05"
+  },
+  {
+   "url": "https://www.anthropic.com/news/claude-4",
+   "domain": "anthropic.com",
+   "note": "Claude 4 (May25) raises agentic coding ceiling further",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.7",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "5.1.2",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "6.4.1",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-05"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2407.21783",
+   "domain": "arxiv.org",
+   "note": "Meta describes 1M synthetic coding dialogues w/ execution feedback",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.2.2",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "4.2.2",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "4.2.3",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-07"
+  },
+  {
+   "url": "https://www.anthropic.com/engineering/a-postmortem-of-three-recent-issues",
+   "domain": "anthropic.com",
+   "note": "Aug 2025 serving bugs root-caused via manual/traditional debugging, not AI",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.3.1",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "4.3.1",
+     "snapshot": "2026-01"
+    },
+    {
+     "task": "6.1.4",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-09"
+  },
+  {
+   "url": "https://openai.com/index/introducing-openai-o1-preview/",
+   "domain": "openai.com",
+   "note": "o1 reasoning model, Sept 2024, better multi-step analysis",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.1.2",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "5.4.1",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "6.4.1",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2024-09"
+  },
+  {
+   "url": "https://openai.com/index/using-gpt-4-for-content-moderation/",
+   "domain": "openai.com",
+   "note": "OpenAI pilots GPT-4 to speed up moderation policy iteration",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.3.1",
+     "snapshot": "2023-07"
+    },
+    {
+     "task": "5.3.2",
+     "snapshot": "2023-07"
+    },
+    {
+     "task": "5.3.2",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2023-08"
+  },
+  {
+   "url": "https://www.datadoghq.com/blog/engineering/llms-for-postmortems/",
+   "domain": "datadoghq.com",
+   "note": "Later retrospective shows no tooling this early",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "6.1.4",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "6.1.4",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "6.1.4",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2024-09"
+  },
+  {
+   "url": "https://time.com/6248707/survey-chatgpt-ai-use-at-work/",
+   "domain": "time.com",
+   "note": "early 2023 workplace ChatGPT adoption still nascent, ~30%",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "1.1.1",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "6.3.1",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-02"
+  },
+  {
+   "url": "https://openai.com/index/introducing-deep-research/",
+   "domain": "openai.com",
+   "note": "OpenAI Deep Research launched, usable for competitive/landscape scans",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "1.1.1",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "6.1.2",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-02"
+  },
+  {
+   "url": "https://arxiv.org/abs/2303.08774",
+   "domain": "arxiv.org",
+   "note": "GPT-4 report shows reasoning/synthesis gains enabling brainstorming use",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "1.1.2",
+     "snapshot": "2023-07"
+    },
+    {
+     "task": "1.1.3",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-03"
+  },
+  {
+   "url": "https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research/",
+   "domain": "deepmind.google",
+   "note": "AI co-scientist accelerates hypothesis generation, human scientists still decide",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "1.1.2",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "2.1.1",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2025-02"
+  },
+  {
+   "url": "https://www.anthropic.com/responsible-scaling-policy",
+   "domain": "anthropic.com",
+   "note": "Responsible Scaling Officer approves deployment based on capability evals",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "1.2.1",
+     "snapshot": "2024-01"
+    },
+    {
+     "task": "1.2.1",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2023-09"
+  },
+  {
+   "url": "https://alignment.anthropic.com/2025/bloom-auto-evals/",
+   "domain": "alignment.anthropic.com",
+   "note": "Automated behavioral eval tool assists analysis, not the decision",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "1.2.1",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "5.2.3",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2025-01"
+  },
+  {
+   "url": "https://www.cnbc.com/2023/04/25/chatgpt-and-ai-are-talent-recruitment-and-retention-game-changers.html",
+   "domain": "cnbc.com",
+   "note": "describes ChatGPT recruiting use as emerging in early 2023",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "1.3.2",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "1.3.2",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-04"
+  },
+  {
+   "url": "https://dailyai.com/2024/01/researchers-make-gpt-4-better-at-brainstorming-new-ideas/",
+   "domain": "dailyai.com",
+   "note": "Academic work improving GPT-4 idea diversity, still assistive/lookup tier",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.1.1",
+     "snapshot": "2024-01"
+    },
+    {
+     "task": "2.1.2",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2024-01"
+  },
+  {
+   "url": "https://github.com/sakanaai/ai-scientist",
+   "domain": "github.com",
+   "note": "Automated idea-to-paper pipeline demoed but mixed quality/reliability",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.1.1",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "5.1.1",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-08"
+  },
+  {
+   "url": "https://arxiv.org/abs/2407.21783",
+   "domain": "arxiv.org",
+   "note": "Llama 3 uses LLM-based classifiers to build data-mix categories/proportions",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.1",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "4.2.4",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-07"
+  },
+  {
+   "url": "https://toloka.ai/blog/how-frontier-labs-build-pre-training-datasets/",
+   "domain": "toloka.ai",
+   "note": "LLM rephrasing/curation standard by 2026, but spec-writing itself still human-led",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "2.2.1",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "2.2.1",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-01"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2407.16216",
+   "domain": "arxiv.org",
+   "note": "RLHF/RL post-training survey shows recipes still hand-designed by researchers in this era",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "2.2.3",
+     "snapshot": "2024-01"
+    },
+    {
+     "task": "2.2.3",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-07"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2501.12948",
+   "domain": "arxiv.org",
+   "note": "DeepSeek-R1 paper: hand-specified GRPO hyperparameters and schedule, no AI-authorship claim",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.3",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "3.2.2",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-01"
+  },
+  {
+   "url": "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report",
+   "domain": "anthropic.com",
+   "note": "Economic Index era shows heavy but human-supervised AI use in technical work",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "2.2.3",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "6.1.1",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2026-01"
+  },
+  {
+   "url": "https://www.anthropic.com/engineering/writing-tools-for-agents",
+   "domain": "anthropic.com",
+   "note": "Uses Claude Code to auto-optimize tools against an eval; human-directed",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "2.2.4",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "2.2.5",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-09"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2212.08073",
+   "domain": "arxiv.org",
+   "note": "Constitutional AI paper (submitted late 2022) describes human-authored principles",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.5",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "3.2.2",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2022-12"
+  },
+  {
+   "url": "https://www.anthropic.com/constitution",
+   "domain": "anthropic.com",
+   "note": "describes original constitution as human-compiled from external sources",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "2.2.5",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "6.1.1",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2023-01"
+  },
+  {
+   "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/deepseeks-ai-breakthrough-bypasses-industry-standard-cuda-uses-assembly-like-ptx-programming-instead",
+   "domain": "tomshardware.com",
+   "note": "DeepSeek engineers manually wrote PTX, not LLM-generated",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.6",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "3.1.5",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-01"
+  },
+  {
+   "url": "https://codingscape.com/blog/how-anthropic-engineering-teams-use-claude-code-every-day",
+   "domain": "codingscape.com",
+   "note": "Infra team uses Claude Code routinely for infra/devops decisions",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "2.2.7",
+     "snapshot": "2026-01"
+    },
+    {
+     "task": "6.1.3",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-09"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2411.15114",
+   "domain": "arxiv.org",
+   "note": "RE-Bench (pub Nov'24) evaluated Claude 3.5/o1-preview on ML-eng tasks like this",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "3.1.2",
+     "snapshot": "2024-01"
+    },
+    {
+     "task": "3.1.2",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-11"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2303.08733",
+   "domain": "arxiv.org",
+   "note": "Copilot empirical study: weak on complex/large changes, context limits",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "3.1.4",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "3.1.4",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-03"
+  },
+  {
+   "url": "https://www.remio.ai/post/cognition-ai-built-a-coding-agent-with-a-15-success-rate-now-it-is-worth-25-billion",
+   "domain": "remio.ai",
+   "note": "Devin merge rate ~34% a year before Nov 2025 report",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "3.1.4",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "3.1.4",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2025-11"
+  },
+  {
+   "url": "https://newsletter.pragmaticengineer.com/p/how-claude-code-is-built",
+   "domain": "newsletter.pragmaticengineer.com",
+   "note": "Nov2024 internal rollout, 50% adoption by day 5, retrospective account",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "3.1.7",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "3.1.7",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-09"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2306.01116",
+   "domain": "arxiv.org",
+   "note": "RefinedWeb (mid-2023) pipeline uses only heuristics/fastText, reflects pre-2023 norm",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "3.2.1",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "3.2.1",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-06"
+  },
+  {
+   "url": "https://arxiv.org/abs/2306.11644",
+   "domain": "arxiv.org",
+   "note": "phi-1: GPT-4 annotates ~100k samples' educational value to train filter classifier",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.2.1",
+     "snapshot": "2023-07"
+    },
+    {
+     "task": "3.2.2",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-06"
+  },
+  {
+   "url": "https://arxiv.org/abs/2311.12022",
+   "domain": "arxiv.org",
+   "note": "GPQA questions written/validated entirely by domain experts, no AI role",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.2.3",
+     "snapshot": "2023-07"
+    },
+    {
+     "task": "3.2.3",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2023-11"
+  },
+  {
+   "url": "https://github.com/Jun-jie-Huang/awesome-LLM-AIOps",
+   "domain": "github.com",
+   "note": "growing catalogue of LLM-for-ops research through mid-2024",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.1.2",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "4.3.3",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2024-01"
+  },
+  {
+   "url": "https://www.usenix.org/system/files/nsdi24-jiang-ziheng.pdf",
+   "domain": "usenix.org",
+   "note": "MegaScale: heartbeat/heuristic anomaly detection, root-cause localization still manual",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.1.3",
+     "snapshot": "2024-01"
+    },
+    {
+     "task": "4.1.3",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-02"
+  },
+  {
+   "url": "https://engineering.fb.com/2025/07/22/data-infrastructure/how-meta-keeps-its-ai-hardware-reliable/",
+   "domain": "engineering.fb.com",
+   "note": "automated SDC tooling; humans still own root-cause and design decisions",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.2.2",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "4.2.4",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-07"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2503.20263",
+   "domain": "arxiv.org",
+   "note": "automated log analysis for training failures via LLM classification stage",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "4.2.2",
+     "snapshot": "2026-01"
+    },
+    {
+     "task": "5.1.3",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2024-04"
+  },
+  {
+   "url": "https://arxiv.org/abs/2410.21680",
+   "domain": "arxiv.org",
+   "note": "Meta FAIR: rule-based health checks added through spring 2023, no LLM use",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "4.2.3",
+     "snapshot": "2023-01"
+    },
+    {
+     "task": "4.2.3",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2024-10"
+  },
+  {
+   "url": "https://platform.claude.com/cookbook/claude-agent-sdk-03-the-site-reliability-agent",
+   "domain": "platform.claude.com",
+   "note": "production SRE agent pattern: autonomous investigation + scoped remediation",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "4.2.3",
+     "snapshot": "2026-01"
+    },
+    {
+     "task": "4.3.2",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-08"
+  },
+  {
+   "url": "https://dl.acm.org/doi/10.1145/3718958.3750537",
+   "domain": "dl.acm.org",
+   "note": "Confucius framework operational ~2 yrs before Aug-2025 pub",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "4.2.4",
+     "snapshot": "2023-07"
+    },
+    {
+     "task": "4.2.4",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-08"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2305.15778",
+   "domain": "arxiv.org",
+   "note": "Microsoft RCACopilot: LLM-based RCA for cloud incidents",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.2.4",
+     "snapshot": "2023-07"
+    },
+    {
+     "task": "4.2.4",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2023-05"
+  },
+  {
+   "url": "https://claude.com/blog/code-review",
+   "domain": "claude.com",
+   "note": "Multi-agent Code Review (launched 2026-03) catches bugs incl. auth-breaking change",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "5.1.1",
+     "snapshot": "2026-01"
+    },
+    {
+     "task": "6.2.1",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-03"
+  },
+  {
+   "url": "https://arxiv.org/abs/2203.15556",
+   "domain": "arxiv.org",
+   "note": "Chinchilla scaling law fit via classical statistical methods",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.1.4",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "5.1.4",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2022-03"
+  },
+  {
+   "url": "https://arxiv.org/abs/2410.21514",
+   "domain": "arxiv.org",
+   "note": "Sabotage evals paper describes Claude-based grading prompts analyzing transcripts",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.1",
+     "snapshot": "2024-07"
+    },
+    {
+     "task": "5.2.1",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2024-10"
+  },
+  {
+   "url": "https://alignment.anthropic.com/2025/openai-findings/",
+   "domain": "alignment.anthropic.com",
+   "note": "Claude Opus 4/Sonnet 4 scored & summarized 10,000+ pages of transcripts",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.1",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "5.2.1",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2025-08"
+  },
+  {
+   "url": "https://alignment.anthropic.com/2025/automated-auditing/",
+   "domain": "alignment.anthropic.com",
+   "note": "Adjacent auditing-agent trend shows large automated chunks, human review",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.4",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "5.2.5",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-07"
+  },
+  {
+   "url": "https://cdn.openai.com/papers/gpt-4-system-card.pdf",
+   "domain": "cdn.openai.com",
+   "note": "ARC evaluated GPT-4 for autonomous replication/deception, human-run",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.5",
+     "snapshot": "2023-07"
+    },
+    {
+     "task": "5.3.3",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-03"
+  },
+  {
+   "url": "https://arxiv.org/abs/2412.13678",
+   "domain": "arxiv.org",
+   "note": "Clio paper: automated topic clustering without human raw-data review",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.3.1",
+     "snapshot": "2025-01"
+    },
+    {
+     "task": "5.3.2",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2024-12"
+  },
+  {
+   "url": "https://www.nber.org/system/files/working_papers/w34255/w34255.pdf",
+   "domain": "nber.org",
+   "note": "OpenAI LLM-classifies 1.5M ChatGPT messages May'24-Jul'25",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "5.3.1",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "6.3.1",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2024-01"
+  },
+  {
+   "url": "https://www.emergentmind.com/topics/llama-guard",
+   "domain": "emergentmind.com",
+   "note": "LLM fine-tuned on curated jailbreak/adversarial safety taxonomy",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "5.3.3",
+     "snapshot": "2024-01"
+    },
+    {
+     "task": "5.3.3",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2023-12"
+  },
+  {
+   "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+   "domain": "anthropic.com",
+   "note": "Anthropic describes internal multi-agent research system",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.4.1",
+     "snapshot": "2025-07"
+    },
+    {
+     "task": "6.3.2",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-06"
+  },
+  {
+   "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+   "domain": "help.openai.com",
+   "note": "ChatGPT did not launch until Nov 2022",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.3.1",
+     "snapshot": "2022-07"
+    },
+    {
+     "task": "6.3.1",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2022-11"
+  },
+  {
+   "url": "https://www.gartner.com/en/newsroom/press-releases/2023-05-03-gartner-poll-finds-45-percent-of-executives-say-chatgpt-has-prompted-an-increase-in-ai-investment",
+   "domain": "gartner.com",
+   "note": "2023 exec survey: ChatGPT influencing investment/strategy conversations",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "1.1.1",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-05"
+  },
+  {
+   "url": "https://sakana.ai/ai-scientist/",
+   "domain": "sakana.ai",
+   "note": "End-to-end automated idea generation demoed, not standard lab workflow",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "1.1.2",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-08"
+  },
+  {
+   "url": "https://arxiv.org/html/2603.03338v2",
+   "domain": "arxiv.org",
+   "note": "Frontier researchers cite research taste/judgment as unresolved automation bottleneck",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "1.1.2",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-03"
+  },
+  {
+   "url": "https://openai.com/index/openai-safety-update/",
+   "domain": "openai.com",
+   "note": "Safety Advisory Group reviews reports, leadership decides, board oversight",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "1.2.1",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2024-01"
+  },
+  {
+   "url": "https://cdn.openai.com/pdf/18a02b5d-6b67-4cec-ab64-68cdfbddebcd/preparedness-framework-v2.pdf",
+   "domain": "cdn.openai.com",
+   "note": "Preparedness Framework v2 keeps leadership/board as final deciders",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "1.2.1",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-04"
+  },
+  {
+   "url": "https://www.anthropic.com/news/responsible-scaling-policy-v3",
+   "domain": "anthropic.com",
+   "note": "RSP v3 keeps human RSO/leadership approval as deployment gate",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "1.2.1",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-02"
+  },
+  {
+   "url": "https://lilianweng.github.io/posts/2024-11-28-reward-hacking/",
+   "domain": "lilianweng.github.io",
+   "note": "documents GPT-4-as-oracle use in RL research emerging 2023",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "1.2.3",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2024-11"
+  },
+  {
+   "url": "https://sakana.ai/rsi-lab/",
+   "domain": "sakana.ai",
+   "note": "AI Scientist (autumn 2024) automates idea-to-experiment-to-writeup loop as a demo",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "1.2.3",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2024-08"
+  },
+  {
+   "url": "https://metr.org/notes/2026-02-10-simpler-ai-timelines-model/",
+   "domain": "metr.org",
+   "note": "notes AI R&D automation still limited/early as of early 2026",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "1.2.3",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-02"
+  },
+  {
+   "url": "https://openai.com/blog/chatgpt",
+   "domain": "openai.com",
+   "note": "ChatGPT launch, general-purpose assistant not yet in exec workflows",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "1.3.1",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2022-11"
+  },
+  {
+   "url": "https://www.researchgate.net/publication/377429319_Application_of_ChatGPT_in_Business_Management_and_Strategic_Decision_Making",
+   "domain": "researchgate.net",
+   "note": "2023 accounts of execs using ChatGPT for planning/analysis support",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "1.3.1",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-07"
+  },
+  {
+   "url": "https://introl.com/blog/ai-infrastructure-capacity-planning-forecasting-gpu-2025-2030",
+   "domain": "introl.com",
+   "note": "Describes exec committees prioritizing infra demand, human-driven",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "1.3.1",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-01"
+  },
+  {
+   "url": "https://www.findem.ai/blog/ai-for-resume-screening",
+   "domain": "findem.ai",
+   "note": "reports rising AI resume-screening adoption through 2024",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "1.3.2",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-01"
+  },
+  {
+   "url": "https://fortune.com/2025/07/21/billion-dollar-giant-anthropic-ai-ban-hiring-policy-change-job-seekers-interview-process/",
+   "domain": "fortune.com",
+   "note": "Anthropic uses Claude across recruiting ops; bans AI in actual interviews/assessments",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "1.3.2",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-07"
+  },
+  {
+   "url": "https://www.sundeepteki.org/advice/how-to-get-hired-at-openai-anthropic-and-google-deepmind-in-2026",
+   "domain": "sundeepteki.org",
+   "note": "2026 guides describe human-driven, referral-heavy hiring processes at labs",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "1.3.2",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-01"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2310.10677",
+   "domain": "arxiv.org",
+   "note": "LLMs as potential brainstorming partners for math/science problems",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.1.1",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-10"
+  },
+  {
+   "url": "https://www.microsoft.com/en-us/research/publication/sparks-of-artificial-general-intelligence-early-experiments-with-gpt-4/",
+   "domain": "microsoft.com",
+   "note": "Sparks of AGI paper explores GPT-4 reasoning/creativity, Mar 2023",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.1.1",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-03"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2409.04109",
+   "domain": "arxiv.org",
+   "note": "Sep 2024 Stanford study shows LLM ideas rated novel but not lab-adopted",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.1.1",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-09"
+  },
+  {
+   "url": "https://www.analyticsvidhya.com/blog/2023/04/gpt-4-capable-of-doing-autonomous-scientific-research/",
+   "domain": "analyticsvidhya.com",
+   "note": "GPT-4 explored for scientific-research reasoning, experimental only",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.1.2",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-04"
+  },
+  {
+   "url": "https://arxiv.org/abs/2507.08038",
+   "domain": "arxiv.org",
+   "note": "AblationBench: LLMs below human-level at planning ablations",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.1.2",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-07"
+  },
+  {
+   "url": "https://arxiv.org/abs/2510.24891",
+   "domain": "arxiv.org",
+   "note": "Idea2Plan: LLMs still short of expert-level experiment planning",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.1.2",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2025-10"
+  },
+  {
+   "url": "https://www.anthropic.com/news/claude-science-ai-workbench",
+   "domain": "anthropic.com",
+   "note": "Claude Science (Jun 2026) still has researcher review draft plans",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.1.2",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-06"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2310.11458",
+   "domain": "arxiv.org",
+   "note": "GPT-4 as interface for researchers, mid-2023, assistive not autonomous",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.1.3",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-10"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2408.06292",
+   "domain": "arxiv.org",
+   "note": "Sakana AI Scientist auto-generates experiment plans, Aug 2024, research prototype",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.1.3",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-08"
+  },
+  {
+   "url": "https://arxiv.org/abs/2408.14033",
+   "domain": "arxiv.org",
+   "note": "MLR-Copilot: LLM agents draft experiment plans from papers, Aug 2024",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.1.3",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-08"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2507.08038",
+   "domain": "arxiv.org",
+   "note": "AblationBench: evaluating automated ablation planning, Jul 2025, still hard for LLMs",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.1.3",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-07"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2507.13300",
+   "domain": "arxiv.org",
+   "note": "AbGen: LLMs assist but underperform on ablation-study design, Jul 2025",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.1.3",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-07"
+  },
+  {
+   "url": "https://openai.com/index/gpt-4/",
+   "domain": "openai.com",
+   "note": "GPT-4 (Mar 2023) improves reasoning but no evidence of research-prediction use",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.1.4",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-03"
+  },
+  {
+   "url": "https://arxiv.org/abs/2502.18864",
+   "domain": "arxiv.org",
+   "note": "AI co-scientist generates/refines hypotheses for expert review, Feb 2025",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.1.4",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-02"
+  },
+  {
+   "url": "https://arxiv.org/abs/2506.00794",
+   "domain": "arxiv.org",
+   "note": "Generic o3 no better than random on predicting AI research outcomes, Jun 2025",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.1.4",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-06"
+  },
+  {
+   "url": "https://arxiv.org/abs/2204.02311",
+   "domain": "arxiv.org",
+   "note": "PaLM paper describes manually-set training mixture, no AI assist",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.1",
+     "snapshot": "2022-07"
+    }
+   ],
+   "date": "2022-04"
+  },
+  {
+   "url": "https://openreview.net/forum?id=lXuByUeHhd",
+   "domain": "openreview.net",
+   "note": "DoReMi automated-mixture research only submitted mid-2023",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.1",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2023-05"
+  },
+  {
+   "url": "https://arxiv.org/abs/2305.10429",
+   "domain": "arxiv.org",
+   "note": "DoReMi: automated domain reweighting proposed as research, not yet lab-standard",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.1",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-05"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2312.01700",
+   "domain": "arxiv.org",
+   "note": "Survey shows data-mixture decisions still largely manual/heuristic in practice",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.1",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2023-12"
+  },
+  {
+   "url": "https://arxiv.org/abs/2407.01492",
+   "domain": "arxiv.org",
+   "note": "RegMix: regression-based automated mixture prediction published",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.1",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-07"
+  },
+  {
+   "url": "https://arxiv.org/abs/2501.11747",
+   "domain": "arxiv.org",
+   "note": "LLM-estimated utility cuts mixture-design compute ~200x, still human-directed",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.1",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-01"
+  },
+  {
+   "url": "https://openai.com/index/gpt-4-research/",
+   "domain": "openai.com",
+   "note": "GPT-4 capability jump enables research-assistant style use",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.2",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-03"
+  },
+  {
+   "url": "https://www.anthropic.com/news/the-anthropic-economic-index",
+   "domain": "anthropic.com",
+   "note": "Feb 2025 index: augmentation (brainstorming/refining) dominant AI use mode",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.2",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-02"
+  },
+  {
+   "url": "https://arxiv.org/abs/2507.18074",
+   "domain": "arxiv.org",
+   "note": "ASI-Arch shows autonomous architecture discovery is feasible but not standard lab practice",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.2",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-07"
+  },
+  {
+   "url": "https://arxiv.org/abs/2603.08640",
+   "domain": "arxiv.org",
+   "note": "Autonomous agents on full post-training pipeline lag expert-designed recipes",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.3",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-03"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2203.02155",
+   "domain": "arxiv.org",
+   "note": "InstructGPT RM/eval pipeline described, entirely human-authored",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.4",
+     "snapshot": "2022-07"
+    }
+   ],
+   "date": "2022-03"
+  },
+  {
+   "url": "https://www-cdn.anthropic.com/7512771452629584566b6303311496c262da1006/Anthropic_ConstitutionalAI_v2.pdf",
+   "domain": "www-cdn.anthropic.com",
+   "note": "Constitution/principles human-written; AI only applies them",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.4",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2022-12"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2404.08555",
+   "domain": "arxiv.org",
+   "note": "Survey documents LLM-as-judge rubric use in RLHF pipelines by mid-2024",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.4",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-04"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2410.14872v1",
+   "domain": "arxiv.org",
+   "note": "Reward-model eval methodology still largely human-designed late 2024",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.4",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2024-10"
+  },
+  {
+   "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+   "domain": "anthropic.com",
+   "note": "PMs use Claude Code for eval PRs; humans define success criteria, calibrate graders",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.4",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-01"
+  },
+  {
+   "url": "https://openai.com/index/introducing-the-model-spec/",
+   "domain": "openai.com",
+   "note": "Model Spec draws on pre-existing internal documentation used for RLHF",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "2.2.5",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2024-05"
+  },
+  {
+   "url": "https://www.anthropic.com/research/claude-character",
+   "domain": "anthropic.com",
+   "note": "training pipeline uses only synthetic data generated by Claude itself",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.5",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-06"
+  },
+  {
+   "url": "https://cdn.openai.com/spec/model-spec-2024-05-08.html",
+   "domain": "cdn.openai.com",
+   "note": "first public Model Spec draft, human+research compiled",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.5",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-05"
+  },
+  {
+   "url": "https://model-spec.openai.com/2025-02-12.html",
+   "domain": "model-spec.openai.com",
+   "note": "Feb 2025 Model Spec revision; no stated evidence of AI-authored drafting",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.5",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-02"
+  },
+  {
+   "url": "https://www.anthropic.com/research/automated-alignment-researchers",
+   "domain": "anthropic.com",
+   "note": "LLMs scale general alignment research, not specifically behavior-spec drafting",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.5",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2024-12"
+  },
+  {
+   "url": "https://model-spec.openai.com/2025-09-12.html",
+   "domain": "model-spec.openai.com",
+   "note": "continued iterative Model Spec updates through 2025",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "2.2.5",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-09"
+  },
+  {
+   "url": "https://www.anthropic.com/news/claude-new-constitution",
+   "domain": "anthropic.com",
+   "note": "80-page Constitution released Jan 22 2026",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.5",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-01"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2605.02087",
+   "domain": "arxiv.org",
+   "note": "Model Spec Midtraining: AI-generated character info shapes behavior, humans corroborate",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "2.2.5",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-05"
+  },
+  {
+   "url": "https://github.com/nvidia/megatron-lm",
+   "domain": "github.com",
+   "note": "Megatron-LM configs written/tuned manually, no LLM tooling mentioned",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.6",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2023-01"
+  },
+  {
+   "url": "https://gjbex.github.io/ChatGPT-for-HPC/",
+   "domain": "gjbex.github.io",
+   "note": "Contemporary HPC training material treats ChatGPT/Copilot as lookup aids, not designers",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.6",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-01"
+  },
+  {
+   "url": "https://github.com/deepspeedai/Megatron-DeepSpeed",
+   "domain": "github.com",
+   "note": "Distributed-training frameworks still hand-configured by infra teams in this era",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.6",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2024-01"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2505.09343",
+   "domain": "arxiv.org",
+   "note": "Insights into DeepSeek-V3 describes manual PTX-level kernel tuning by engineers",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "2.2.6",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-01"
+  },
+  {
+   "url": "https://developer.nvidia.com/blog/automating-gpu-kernel-generation-with-deepseek-r1-and-inference-time-scaling/",
+   "domain": "developer.nvidia.com",
+   "note": "NVIDIA demos R1 auto-generating attention kernels via closed loop verifier",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.6",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-04"
+  },
+  {
+   "url": "https://huggingface.co/blog/custom-cuda-kernels-agent-skills",
+   "domain": "huggingface.co",
+   "note": "Agents write kernels given human-specified targets/specs, not the spec itself",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.6",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-01"
+  },
+  {
+   "url": "https://martinfowler.com/articles/2023-chatgpt-tech-writing.html",
+   "domain": "martinfowler.com",
+   "note": "Contemporaneous account of GPT-4 as technical writing assistant, human-reviewed",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.7",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-07"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2305.09781",
+   "domain": "arxiv.org",
+   "note": "SpecInfer-era research on serving design still human-authored, not AI-drafted",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "2.2.7",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2023-05"
+  },
+  {
+   "url": "https://visualstudiomagazine.com/articles/2023/03/22/gpt-4-copilot-azure.aspx",
+   "domain": "visualstudiomagazine.com",
+   "note": "GPT-4 powers Copilot Chat, chat-based code help",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.1",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-03"
+  },
+  {
+   "url": "https://sourcegraph.com/blog/cody-in-sourcegraph-5-1",
+   "domain": "sourcegraph.com",
+   "note": "codebase-aware assistants emerging but not agentic",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.1",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2023-06"
+  },
+  {
+   "url": "https://arxiv.org/abs/2411.15114",
+   "domain": "arxiv.org",
+   "note": "RE-Bench: agents 4x human at 2h, humans win at 32h horizon",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.1",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-11"
+  },
+  {
+   "url": "https://metr.org/blog/2025-07-14-how-does-time-horizon-vary-across-domains/",
+   "domain": "metr.org",
+   "note": "time horizons doubling ~4mo in 2024-25, still bounded on research tasks",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "3.1.1",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-07"
+  },
+  {
+   "url": "https://fortune.com/2026/01/29/100-percent-of-code-at-anthropic-and-openai-is-now-ai-written-boris-cherny-roon/",
+   "domain": "fortune.com",
+   "note": "Anthropic/OpenAI engineers: AI writes ~100% of code, humans review",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.1",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-01"
+  },
+  {
+   "url": "https://techcrunch.com/2023/03/22/githubs-copilot-goes-beyond-code-completion-adds-a-chat-mode-and-more/",
+   "domain": "techcrunch.com",
+   "note": "Copilot Chat added Mar 2023, general coding aid not infra-specific",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.2",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-03"
+  },
+  {
+   "url": "https://www-cdn.anthropic.com/58284b19e702b49db9302d5b6f135ad8871e7658.pdf",
+   "domain": "www-cdn.anthropic.com",
+   "note": "Data infra team using Claude Code for ops/debugging tasks",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.2",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-07"
+  },
+  {
+   "url": "https://www.anthropic.com/news/claude-opus-4-5",
+   "domain": "anthropic.com",
+   "note": "Opus 4.5 (Nov'25) first model to outperform human candidates on Anthropic's engineering assessment",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.2",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2025-11"
+  },
+  {
+   "url": "https://arxiv.org/abs/2410.18334",
+   "domain": "arxiv.org",
+   "note": "Retrospective: 2023-2025 devs copy-pasted brief AI snippets manually",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "3.1.3",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2024-10"
+  },
+  {
+   "url": "https://arxiv.org/abs/2302.06590",
+   "domain": "arxiv.org",
+   "note": "Copilot productivity studies show snippet-completion gains, not architecture design",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.3",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2023-02"
+  },
+  {
+   "url": "https://cloudnativenow.com/editorial-calendar/best-of-2025/how-anthropic-dogfoods-on-claude-code-2/",
+   "domain": "cloudnativenow.com",
+   "note": "Names 'reinforcement learning engineering' among internal Claude Code adopters",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.3",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-01"
+  },
+  {
+   "url": "https://research.google/blog/looking-back-at-speculative-decoding/",
+   "domain": "research.google",
+   "note": "Speculative decoding technique itself only just introduced",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "3.1.4",
+     "snapshot": "2022-07"
+    }
+   ],
+   "date": "2022-11"
+  },
+  {
+   "url": "https://www.zenml.io/llmops-database/autonomous-software-development-agent-for-production-code-generation",
+   "domain": "zenml.io",
+   "note": "Devin announced Mar 2024 as early autonomous coding agent attempt",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.4",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2024-03"
+  },
+  {
+   "url": "https://www.anthropic.com/engineering/building-c-compiler",
+   "domain": "anthropic.com",
+   "note": "Parallel Claude agents build large systems codebase with light human oversight",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.4",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-02"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2306.15121",
+   "domain": "arxiv.org",
+   "note": "Codex scores well on mature CUDA/OpenMP kernel patterns",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.5",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-06"
+  },
+  {
+   "url": "https://github.com/linkedin/Liger-Kernel",
+   "domain": "github.com",
+   "note": "Efficient Triton kernels for LLM training still hand-authored",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.5",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-10"
+  },
+  {
+   "url": "https://scalingintelligence.stanford.edu/blogs/kernelbench/",
+   "domain": "scalingintelligence.stanford.edu",
+   "note": "LLMs struggle with correctness+speedup on real kernels",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.5",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2024-12"
+  },
+  {
+   "url": "https://sakana.ai/ai-cuda-engineer/",
+   "domain": "sakana.ai",
+   "note": "Agentic CUDA kernel generation system, needs human verification vs reward hacking",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.5",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-02"
+  },
+  {
+   "url": "https://crfm.stanford.edu/2025/05/28/fast-kernels.html",
+   "domain": "crfm.stanford.edu",
+   "note": "LLM-generated kernels rival experts on simple ops, 'early sign of life'",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.5",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-05"
+  },
+  {
+   "url": "https://www.marktechpost.com/2025/05/20/meta-introduces-kernelllm-an-8b-llm-that-translates-pytorch-modules-into-efficient-triton-gpu-kernels/",
+   "domain": "marktechpost.com",
+   "note": "KernelLLM automates PyTorch-to-Triton translation, still limited accuracy",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.5",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-05"
+  },
+  {
+   "url": "https://www.together.ai/blog/parallelkernelbench",
+   "domain": "together.ai",
+   "note": "Frontier LLMs can't write fast multi-GPU kernels yet, best model <1/3 solved",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.5",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-01"
+  },
+  {
+   "url": "https://blogs.microsoft.com/blog/2023/12/05/celebrating-the-first-year-of-copilot-with-significant-new-innovations/",
+   "domain": "blogs.microsoft.com",
+   "note": "Copilot 2022 lab study: boilerplate/autocomplete focus",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "3.1.6",
+     "snapshot": "2022-07"
+    }
+   ],
+   "date": "2023-12"
+  },
+  {
+   "url": "https://www.researchgate.net/publication/378414685_Measuring_GitHub_Copilot's_Impact_on_Productivity",
+   "domain": "researchgate.net",
+   "note": "Copilot productivity gains concentrated in boilerplate, not design logic",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.6",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2023-01"
+  },
+  {
+   "url": "https://github.com/openai/evals",
+   "domain": "github.com",
+   "note": "Evals framework release, templated benchmark scaffolding",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.6",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-03"
+  },
+  {
+   "url": "https://arxiv.org/html/2501.13282v1",
+   "domain": "arxiv.org",
+   "note": "Copilot use for boilerplate/tests at ZoomInfo, into 2024",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "3.1.6",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2025-01"
+  },
+  {
+   "url": "https://techcrunch.com/2025/09/21/silicon-valley-bets-big-on-environments-to-train-ai-agents/",
+   "domain": "techcrunch.com",
+   "note": "Engineers paid $500k+ to build robust RL envs; not automated",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.6",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-09"
+  },
+  {
+   "url": "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents",
+   "domain": "anthropic.com",
+   "note": "Human-designed two-part harness; Claude builds within it",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.6",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2025-11"
+  },
+  {
+   "url": "https://www.anthropic.com/engineering/managed-agents",
+   "domain": "anthropic.com",
+   "note": "Human-designed session/harness/sandbox architecture for agents",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.6",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2025-12"
+  },
+  {
+   "url": "https://github.blog/2022-09-07-research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/",
+   "domain": "github.blog",
+   "note": "GitHub 2022 study: Copilot cut task time ~56%, still human-driven",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.7",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2022-09"
+  },
+  {
+   "url": "https://devops.com/measuring-github-copilots-impact-on-engineering-productivity/",
+   "domain": "devops.com",
+   "note": "Copilot Chat / multi-file assist widely adopted by early 2024",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.1.7",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2024-01"
+  },
+  {
+   "url": "https://www.oreilly.com/radar/everyones-an-engineer-now/",
+   "domain": "oreilly.com",
+   "note": "Cat Wu: ~90% of Anthropic codebase written via Claude Code (Apr26 talk, retrospective on prior months)",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "3.1.7",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-04"
+  },
+  {
+   "url": "https://arxiv.org/abs/2112.11446",
+   "domain": "arxiv.org",
+   "note": "Gopher/MassiveText pipeline: heuristic + classifier filters, no LLM-in-loop",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.2.1",
+     "snapshot": "2022-07"
+    }
+   ],
+   "date": "2021-12"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2402.00159",
+   "domain": "arxiv.org",
+   "note": "Dolma paper: fasttext LID + Jigsaw classifier + heuristics, no LLM annotation stage",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.2.1",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2024-01"
+  },
+  {
+   "url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu",
+   "domain": "huggingface.co",
+   "note": "Llama3-70B-Instruct scores samples; classifier filters 1.3T-token corpus",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.2.1",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-05"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2406.17557",
+   "domain": "arxiv.org",
+   "note": "FineWeb paper details LLM-annotation-based quality classifier pipeline",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.2.1",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-06"
+  },
+  {
+   "url": "https://arxiv.org/abs/2412.02595",
+   "domain": "arxiv.org",
+   "note": "LLM-based quality scoring + synthetic rephrasing used to build 6.3T-token corpus",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.2.1",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2024-12"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2506.20920",
+   "domain": "arxiv.org",
+   "note": "FineWeb2 (2025) extends LLM-annotation-driven pipeline across languages",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.2.1",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-06"
+  },
+  {
+   "url": "https://www.datologyai.com/blog/technical-deep-dive-curating-our-way-to-a-state-of-the-art-text-dataset",
+   "domain": "datologyai.com",
+   "note": "Industry data-curation vendor describes LLM-assisted classifier pipelines as norm",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "3.2.1",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2024-10"
+  },
+  {
+   "url": "https://arxiv.org/abs/2203.14465",
+   "domain": "arxiv.org",
+   "note": "STaR: model generates rationales, filters by correctness",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.2.2",
+     "snapshot": "2022-07"
+    }
+   ],
+   "date": "2022-05"
+  },
+  {
+   "url": "https://www.microsoft.com/en-us/research/blog/phi-2-the-surprising-power-of-small-language-models/",
+   "domain": "microsoft.com",
+   "note": "Phi-2 scales synthetic textbook-style training data",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.2.2",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2023-12"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2509.25047",
+   "domain": "arxiv.org",
+   "note": "Scaling synthetic task generation for agents via exploration",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "3.2.2",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-09"
+  },
+  {
+   "url": "https://arxiv.org/html/2602.10090v1",
+   "domain": "arxiv.org",
+   "note": "Infinity synthetic environments for agentic RL, continuing 2025 trend",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "3.2.2",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-02"
+  },
+  {
+   "url": "https://cdn.openai.com/papers/Training_language_models_to_follow_instructions_with_human_feedback.pdf",
+   "domain": "cdn.openai.com",
+   "note": "Manual contractor hiring, hand-written task instructions, no AI tooling",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.2.3",
+     "snapshot": "2022-07"
+    }
+   ],
+   "date": "2022-03"
+  },
+  {
+   "url": "https://www.theregister.com/2022/04/09/openai_gpt3_contractors/",
+   "domain": "theregister.com",
+   "note": "Contractor-based labeling described as manual process",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.2.3",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2022-04"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2310.01377",
+   "domain": "arxiv.org",
+   "note": "UltraFeedback shows AI-feedback scaling trend feeding into data pipelines",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.2.3",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2023-10"
+  },
+  {
+   "url": "https://safe.ai/blog/humanitys-last-exam",
+   "domain": "safe.ai",
+   "note": "Questions must stump frontier LLMs before passing to human reviewers",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.2.3",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2024-09"
+  },
+  {
+   "url": "https://scale.com/blog/humanitys-last-exam-results",
+   "domain": "scale.com",
+   "note": "Scale's Outlier expert reviewers score post-LLM-filtered submissions",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.2.3",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-01"
+  },
+  {
+   "url": "https://epoch.ai/frontiermath/the-benchmark",
+   "domain": "epoch.ai",
+   "note": "Automated verifier scripts check vendor-commissioned math problems at scale",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.2.3",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2024-11"
+  },
+  {
+   "url": "https://labelyourdata.com/articles/llm-as-a-judge",
+   "domain": "labelyourdata.com",
+   "note": "Hybrid LLM-judge + human-sampling pipelines described as mature default",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "3.2.3",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-01"
+  },
+  {
+   "url": "https://techcrunch.com/2022/06/21/copilot-githubs-ai-powered-programming-assistant-is-now-generally-available/",
+   "domain": "techcrunch.com",
+   "note": "Copilot GA for code completion, not run orchestration",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.1.1",
+     "snapshot": "2022-07"
+    }
+   ],
+   "date": "2022-06"
+  },
+  {
+   "url": "https://www.encora.com/en-US/insights/what-we-learned-from-using-github-copilot-to-develop-a-machine-learning-project",
+   "domain": "encora.com",
+   "note": "Copilot aids ML coding subtasks, not run launch/monitor loop",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.1.1",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-06"
+  },
+  {
+   "url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+   "domain": "anthropic.com",
+   "note": "Claude Code research preview Feb 2025, GA by May 2025",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.1.1",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-05"
+  },
+  {
+   "url": "https://metr.org/blog/2026-1-29-time-horizon-1-1/",
+   "domain": "metr.org",
+   "note": "Agent time-horizon doubling ~4.5mo, on track past 12hr by late 2026, exceeding scoped launch/verify tasks",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.1.1",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-01"
+  },
+  {
+   "url": "https://typefully.com/altryne/state-of-gpt-may-2023-altryne",
+   "domain": "typefully.com",
+   "note": "Karpathy: 'use GPT-4' for coding/debugging help, no run-monitoring mention",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.1.2",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-05"
+  },
+  {
+   "url": "https://www.researchgate.net/publication/379998668_Automatic_Root_Cause_Analysis_via_Large_Language_Models_for_Cloud_Incidents",
+   "domain": "researchgate.net",
+   "note": "EuroSys 2024 paper on LLM-based cloud incident RCA",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.1.2",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2024-04"
+  },
+  {
+   "url": "https://metr.org/time-horizons/",
+   "domain": "metr.org",
+   "note": "agent task-length capability rising into 2025, context for adoption pace",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.1.2",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-03"
+  },
+  {
+   "url": "https://arxiv.org/abs/2511.18397",
+   "domain": "arxiv.org",
+   "note": "Anthropic: classifier-based reward-hacking detection used in production RL",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.1.2",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2025-11"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2204.02311",
+   "domain": "arxiv.org",
+   "note": "PaLM: manual ablations to find spike cause, checkpoint rewind",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.1.3",
+     "snapshot": "2022-07"
+    }
+   ],
+   "date": "2022-04"
+  },
+  {
+   "url": "https://arxiv.org/abs/2305.15778",
+   "domain": "arxiv.org",
+   "note": "Microsoft RCACopilot: GPT-based root-cause analysis for cloud incidents",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.1.3",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-05"
+  },
+  {
+   "url": "https://arxiv.org/abs/2503.20263",
+   "domain": "arxiv.org",
+   "note": "L4: automated log-based failure localization for LLM training clusters",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.1.3",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-03"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2502.05413",
+   "domain": "arxiv.org",
+   "note": "Flare: anomaly diagnostics for divergent LLM training runs",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.1.3",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-02"
+  },
+  {
+   "url": "https://www.techtarget.com/searchitoperations/news/365532540/How-ChatGPT-and-generative-AI-will-affect-IT-operations",
+   "domain": "techtarget.com",
+   "note": "Early discussion of ChatGPT's effect on IT operations work",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.2.1",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2023-01"
+  },
+  {
+   "url": "https://www.gitclear.com/coding_on_copilot_data_shows_ais_downward_pressure_on_code_quality",
+   "domain": "gitclear.com",
+   "note": "2023 called Copilot's breakout year for general coding assistance",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "4.2.1",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-01"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2312.12621",
+   "domain": "arxiv.org",
+   "note": "Blox: modular deep-learning scheduler toolkit, classical ML/systems, no LLM agent",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.2.1",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2023-12"
+  },
+  {
+   "url": "https://research.google/blog/solving-virtual-machine-puzzles-how-ai-is-optimizing-cloud-computing/",
+   "domain": "research.google",
+   "note": "NILAS ML predictor 'running in production since early 2024'",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "4.2.1",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2025-10"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2408.08586",
+   "domain": "arxiv.org",
+   "note": "Rubick deep-learning cluster scheduler research, human-designed systems",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.2.1",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2024-08"
+  },
+  {
+   "url": "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/",
+   "domain": "deepmind.google",
+   "note": "AlphaEvolve-discovered Borg heuristic live in production over a year",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "4.2.1",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-05"
+  },
+  {
+   "url": "https://devopstoolkit.live/ai/claude-code-ai-agent-for-devops-sre-and-platform-engineering/index.html",
+   "domain": "devopstoolkit.live",
+   "note": "Claude Code positioned as DevOps/SRE assistant, human still directs",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.2.1",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2025-09"
+  },
+  {
+   "url": "https://www.databricks.com/blog/mpt-7b",
+   "domain": "databricks.com",
+   "note": "automated (non-AI) fault-tolerant training platform, zero manual restarts",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.2.2",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-05"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2312.11805",
+   "domain": "arxiv.org",
+   "note": "deterministic-replay fault isolation, proactive SDC scanners, hot standbys",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.2.2",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2023-12"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2411.05349",
+   "domain": "arxiv.org",
+   "note": "LLM-agent based autonomous cluster diagnosis system proposed",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.2.2",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2024-11"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2509.16293",
+   "domain": "arxiv.org",
+   "note": "ByteDance robust LLM training infra: engineered resilience, not AI-decision-driven",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.2.2",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2025-09"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2406.11213",
+   "domain": "arxiv.org",
+   "note": "2023 papers: log-parsing/anomaly LLM research emerging, pre-production",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "4.2.3",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2024-06"
+  },
+  {
+   "url": "https://imbue.com/research/70b-infrastructure/",
+   "domain": "imbue.com",
+   "note": "imbue open-sources scripted GPU stress-test/health-check tools",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.2.3",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-05"
+  },
+  {
+   "url": "https://dl.acm.org/doi/10.1145/3627673.3680016",
+   "domain": "dl.acm.org",
+   "note": "RCAgent: tool-augmented LLM agent for cloud root-cause analysis, CIKM 2024",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.2.3",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2024-10"
+  },
+  {
+   "url": "https://platform.claude.com/cookbook/managed-agents-sre-incident-responder",
+   "domain": "platform.claude.com",
+   "note": "Claude managed SRE agent: investigates, root-causes, remediates infra incidents",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "4.2.3",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2026-02"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2512.16381",
+   "domain": "arxiv.org",
+   "note": "cites Alibaba BiAn: 95.5% accuracy localizing faults across 357 incidents",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "4.2.4",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-12"
+  },
+  {
+   "url": "https://techcommunity.microsoft.com/blog/azurepaasblog/introducing-azure-sre-agent/4414569",
+   "domain": "techcommunity.microsoft.com",
+   "note": "Azure SRE Agent preview (Build 2025): LLM RCA/mitigation for cloud ops",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.2.4",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2025-05"
+  },
+  {
+   "url": "https://medium.com/@kirann.bobby/%EF%B8%8F-25-powerful-chatgpt-prompts-every-sre-devops-engineer-should-know-and-use-daily-aca48b8de798",
+   "domain": "medium.com",
+   "note": "Industry accounts of ChatGPT-for-SRE prompts emerge post-launch",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "4.3.1",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2023-01"
+  },
+  {
+   "url": "https://aiopssre.com/chatgpt-ai-transforming-sre-practices/",
+   "domain": "aiopssre.com",
+   "note": "SRE community describes ChatGPT as ad-hoc aid, not workflow change",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "4.3.1",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-07"
+  },
+  {
+   "url": "https://github.com/k8sgpt-ai/k8sgpt",
+   "domain": "github.com",
+   "note": "K8sGPT launched Mar 2023, AI explains k8s errors in plain English",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.3.2",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-03"
+  },
+  {
+   "url": "https://palark.com/blog/k8sgpt-ai-troubleshooting-kubernetes/",
+   "domain": "palark.com",
+   "note": "K8sGPT accepted to CNCF Sandbox Dec 2023, growing adoption",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "4.3.2",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2023-12"
+  },
+  {
+   "url": "https://www.arcade.dev/blog/claude-code-ai-sre-oncall-workflows/",
+   "domain": "arcade.dev",
+   "note": "Claude Code SRE workflows: companion reads/correlates/drafts, human decides",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "4.3.2",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-09"
+  },
+  {
+   "url": "https://yisusvii.github.io/posts/claude-code-codex-skills-devops-sre-cloud-2026/",
+   "domain": "yisusvii.github.io",
+   "note": "2026 piece: Claude Skills reshaping SRE/DevOps infra engineering",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.3.2",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-01"
+  },
+  {
+   "url": "https://www.pythian.com/blog/business-insights/exploring-chatgpt-as-an-incident-response-tool",
+   "domain": "pythian.com",
+   "note": "early exploratory posts on ChatGPT for IR, no lab-specific adoption",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.3.3",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2023-01"
+  },
+  {
+   "url": "https://www.microsoft.com/en-us/research/blog/large-language-models-for-automatic-cloud-incident-management/",
+   "domain": "microsoft.com",
+   "note": "GPT-3/3.5 RCA suggestions, 70% usefulness rating, research not deployed",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.3.3",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-05"
+  },
+  {
+   "url": "https://engineering.fb.com/2024/06/24/data-infrastructure/leveraging-ai-for-efficient-incident-response/",
+   "domain": "engineering.fb.com",
+   "note": "Meta: fine-tuned Llama2-7B suggests RCA candidates, human verifies",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.3.3",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-06"
+  },
+  {
+   "url": "https://github.com/HolmesGPT/holmesgpt",
+   "domain": "github.com",
+   "note": "first commit May 30 2024, early open-source on-call AI agent",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.3.3",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-05"
+  },
+  {
+   "url": "https://www.zenml.io/llmops-database/ai-powered-incident-response-system-with-multi-agent-investigation",
+   "domain": "zenml.io",
+   "note": "multi-agent investigation systems maturing into 2025",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "4.3.3",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-01"
+  },
+  {
+   "url": "https://www.datadoghq.com/blog/bits-ai-sre/",
+   "domain": "datadoghq.com",
+   "note": "Bits AI SRE limited availability announced at DASH",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.3.3",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-06"
+  },
+  {
+   "url": "https://incident.io/ai-sre",
+   "domain": "incident.io",
+   "note": "AI SRE multi-agent investigation, used by OpenAI as customer",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.3.3",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-06"
+  },
+  {
+   "url": "https://www.helpnetsecurity.com/2025/12/03/datadog-bits-ai-sre-agent/",
+   "domain": "helpnetsecurity.com",
+   "note": "Bits AI SRE general availability, automates alert investigation/RCA",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "4.3.3",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2025-12"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2311.04850",
+   "domain": "arxiv.org",
+   "note": "Rethinking benchmark contamination detection: manual statistical methods, no AI agent",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.1.1",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-11"
+  },
+  {
+   "url": "https://arxiv.org/html/2404.00699v5",
+   "domain": "arxiv.org",
+   "note": "Survey shows contamination detection tooling maturing but human-analyst driven",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.1.1",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2024-04"
+  },
+  {
+   "url": "https://www.datanami.com/2023/07/11/openai-releases-chatgpt-code-interpreter-your-personal-data-analyst/",
+   "domain": "datanami.com",
+   "note": "Code Interpreter beta rollout begins July 2023",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.1.2",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-07"
+  },
+  {
+   "url": "https://arxiv.org/html/2402.17644v1",
+   "domain": "arxiv.org",
+   "note": "QRData benchmark: GPT-4+interpreter only 58% on quantitative reasoning w/ data",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.1.2",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2024-02"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2304.09871",
+   "domain": "arxiv.org",
+   "note": "Adam instability root-cause analysis (Chowdhery et al.) done via human ML expertise, not LLMs",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.1.3",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-04"
+  },
+  {
+   "url": "https://www.anthropic.com/research/long-running-claude",
+   "domain": "anthropic.com",
+   "note": "autonomous agents good at well-scoped debug tasks vs reference impl, not open-ended diagnosis",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "5.1.3",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-03"
+  },
+  {
+   "url": "https://arxiv.org/html/2303.08774v6",
+   "domain": "arxiv.org",
+   "note": "OpenAI fit scaling laws manually to predict GPT-4 loss/HumanEval",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.1.4",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-03"
+  },
+  {
+   "url": "https://arxiv.org/abs/2311.12415",
+   "domain": "arxiv.org",
+   "note": "ChatGPT Code Interpreter shown capable of line-fitting experimental data",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "5.1.4",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-11"
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11224898/",
+   "domain": "pmc.ncbi.nlm.nih.gov",
+   "note": "Data science via natural language with Code Interpreter, human-directed",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.1.4",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2024-01"
+  },
+  {
+   "url": "https://arxiv.org/html/2405.10938v3",
+   "domain": "arxiv.org",
+   "note": "Observational scaling laws paper reflects still-manual fitting norms",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.1.4",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-05"
+  },
+  {
+   "url": "https://arxiv.org/html/2502.18969v1",
+   "domain": "arxiv.org",
+   "note": "Survey of scaling-law fitting techniques, still human-centric methodology",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.1.4",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-02"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2507.21184",
+   "domain": "arxiv.org",
+   "note": "Notes typical scaling-law discovery is still human-driven as of mid-2025",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.1.4",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-07"
+  },
+  {
+   "url": "https://lilianweng.github.io/posts/2026-06-24-scaling-laws/",
+   "domain": "lilianweng.github.io",
+   "note": "Manual fitting norms persist; ChatGPT used only for auxiliary visualization",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.1.4",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-06"
+  },
+  {
+   "url": "https://www-cdn.anthropic.com/bd2a28d2535bfb0494cc8e2a3bf135d2e7523226/Model-Card-Claude-2.pdf",
+   "domain": "www-cdn.anthropic.com",
+   "note": "automated harmlessness test regularly checked manually",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.1",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-07"
+  },
+  {
+   "url": "https://arxiv.org/abs/2306.05685",
+   "domain": "arxiv.org",
+   "note": "MT-Bench/Chatbot Arena LLM-as-judge methodology established mid-2023",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.1",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2023-06"
+  },
+  {
+   "url": "https://arxiv.org/abs/2211.00593",
+   "domain": "arxiv.org",
+   "note": "IOI circuit found via manual causal interventions, no AI assist",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.2",
+     "snapshot": "2022-07"
+    }
+   ],
+   "date": "2022-11"
+  },
+  {
+   "url": "https://www.alignmentforum.org/posts/3ecs6duLmTfyra3Gp/some-lessons-learned-from-studying-indirect-object",
+   "domain": "alignmentforum.org",
+   "note": "researchers describe manual, laborious circuit analysis process",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "5.2.2",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2022-12"
+  },
+  {
+   "url": "https://openai.com/index/language-models-can-explain-neurons-in-language-models/",
+   "domain": "openai.com",
+   "note": "GPT-4 auto-writes and scores neuron explanations for GPT-2",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.2",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-05"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2304.14997",
+   "domain": "arxiv.org",
+   "note": "automated circuit discovery (ACDC) framework emerging mid-2023",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.2",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-04"
+  },
+  {
+   "url": "https://transformer-circuits.pub/2023/monosemantic-features",
+   "domain": "transformer-circuits.pub",
+   "note": "SAE features on toy model; humans manually rate 70% interpretable",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.2",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2023-10"
+  },
+  {
+   "url": "https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html",
+   "domain": "transformer-circuits.pub",
+   "note": "Claude 3 Opus generates feature explanations, predicts activations",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.2",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-05"
+  },
+  {
+   "url": "https://blog.eleuther.ai/autointerp/",
+   "domain": "blog.eleuther.ai",
+   "note": "open pipeline auto-generates/scores SAE feature explanations cheaply",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.2",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-07"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2410.13928",
+   "domain": "arxiv.org",
+   "note": "automatically interpreting millions of features, scaling auto-interp",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.2",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2024-10"
+  },
+  {
+   "url": "https://multimodal-interpretability.csail.mit.edu/maia/",
+   "domain": "multimodal-interpretability.csail.mit.edu",
+   "note": "MAIA agent automates neuron-level hypothesis testing",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "5.2.2",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2023-12"
+  },
+  {
+   "url": "https://www.anthropic.com/research/open-source-circuit-tracing",
+   "domain": "anthropic.com",
+   "note": "open-sourced attribution-graph tooling for circuit tracing",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.2",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-05"
+  },
+  {
+   "url": "https://github.com/multimodal-interpretability/maia",
+   "domain": "github.com",
+   "note": "MAIA 2.0 (Jun 2025) adds free-form code execution for agentic interp",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.2",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-06"
+  },
+  {
+   "url": "https://arxiv.org/abs/2510.14936",
+   "domain": "arxiv.org",
+   "note": "circuit explanation phase still largely manual, needs human oversight",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.2",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2025-10"
+  },
+  {
+   "url": "https://arxiv.org/abs/2211.01910",
+   "domain": "arxiv.org",
+   "note": "APE paper: AI can write prompts as well as humans, still academic idea",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.3",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2022-11"
+  },
+  {
+   "url": "https://github.com/Significant-Gravitas/AutoGPT",
+   "domain": "github.com",
+   "note": "AutoGPT (Mar 2023) popularizes autonomous scaffold concept as a tool, not yet lab practice",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.3",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-03"
+  },
+  {
+   "url": "https://arxiv.org/abs/2310.03714",
+   "domain": "arxiv.org",
+   "note": "DSPy automates prompt/pipeline optimization; new framework, not yet standard",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.3",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2023-10"
+  },
+  {
+   "url": "https://metr.org/blog/2024-03-15-guidelines-for-capability-elicitation/",
+   "domain": "metr.org",
+   "note": "Manual iterative elicitation process described; no AI-driven design of prompts/scaffolds",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.3",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-03"
+  },
+  {
+   "url": "https://metr.org/blog/2025-02-14-measuring-automated-kernel-engineering/",
+   "domain": "metr.org",
+   "note": "Manual scaffold+prompt tuning by engineers over weeks, not automated elicitation",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.3",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-02"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2502.02180",
+   "domain": "arxiv.org",
+   "note": "Elicitation Game paper: prompting/steering techniques studied, human-designed",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.3",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-02"
+  },
+  {
+   "url": "https://www.anthropic.com/product/claude-code",
+   "domain": "anthropic.com",
+   "note": "Claude Code GA May 2025 enables agentic iteration on harness/scaffold code",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.3",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-05"
+  },
+  {
+   "url": "https://arxiv.org/html/2602.14690v5",
+   "domain": "arxiv.org",
+   "note": "Harness-engineering study on agentic coding tools automating scaffold design",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.3",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-02"
+  },
+  {
+   "url": "https://stafforini.com/works/perez-2022-red-teaming-language.html",
+   "domain": "stafforini.com",
+   "note": "LM-generated red-teaming existed as research, not lab safety-eval practice",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.4",
+     "snapshot": "2022-07"
+    }
+   ],
+   "date": "2022-02"
+  },
+  {
+   "url": "https://evals.alignment.org/blog/2023-03-18-update-on-recent-evals/",
+   "domain": "evals.alignment.org",
+   "note": "ARC Evals describes manual pre-deployment autonomy/replication testing of GPT-4",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.4",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2023-03"
+  },
+  {
+   "url": "https://boards.greenhouse.io/anthropic/jobs/4136414008",
+   "domain": "boards.greenhouse.io",
+   "note": "Frontier Red Team CBRN role describes manual expert-designed evaluations",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.4",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-07"
+  },
+  {
+   "url": "https://openai.com/index/building-an-early-warning-system-for-llm-aided-biological-threat-creation/",
+   "domain": "openai.com",
+   "note": "Human-expert uplift trial design, AI only as subject not evaluator",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.4",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2024-01"
+  },
+  {
+   "url": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+   "domain": "www-cdn.anthropic.com",
+   "note": "Model-graded few-shot scoring of CBRN eval responses, human-verified",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.4",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-03"
+  },
+  {
+   "url": "https://metr.org/blog/2024-03-13-autonomy-evaluation-resources/",
+   "domain": "metr.org",
+   "note": "METR task suite + tooling for automated dangerous-capability elicitation",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.4",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2024-03"
+  },
+  {
+   "url": "https://openai.com/index/openai-o1-system-card/",
+   "domain": "openai.com",
+   "note": "o1 system card automated CBRN/persuasion evals across categories",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.4",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2024-09"
+  },
+  {
+   "url": "https://www-cdn.anthropic.com/6be99a52cb68eb70eb9572b4cafad13df32ed995.pdf",
+   "domain": "www-cdn.anthropic.com",
+   "note": "Automated evals w/ agentic harnesses, iteratively refined prompts",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.4",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-05"
+  },
+  {
+   "url": "https://cdn.openai.com/gpt-5-system-card.pdf",
+   "domain": "cdn.openai.com",
+   "note": "GPT-5 treated High capability on biology via automated eval suite",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.4",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2025-08"
+  },
+  {
+   "url": "https://www.apolloresearch.ai/blog/the-first-year-of-apollo-research/",
+   "domain": "apolloresearch.ai",
+   "note": "Apollo Research founded 2023 to test deceptive alignment",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "5.2.5",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2024-05"
+  },
+  {
+   "url": "https://www.anthropic.com/research/probes-catch-sleeper-agents",
+   "domain": "anthropic.com",
+   "note": "Anthropic sleeper-agents deceptive-alignment experiment",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.5",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2024-01"
+  },
+  {
+   "url": "https://arxiv.org/abs/2406.07358",
+   "domain": "arxiv.org",
+   "note": "AI Sandbagging paper formalizes strategic-underperformance evals",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.5",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-06"
+  },
+  {
+   "url": "https://cdn.openai.com/o1-system-card-20241205.pdf",
+   "domain": "cdn.openai.com",
+   "note": "Apollo scheming/eval-awareness evals of o1, human-run w/ some auto grading",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.5",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2024-12"
+  },
+  {
+   "url": "https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf",
+   "domain": "assets.anthropic.com",
+   "note": "Model-graded sandbagging eval over 1,000 transcripts",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.2.5",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2025-11"
+  },
+  {
+   "url": "https://developers.openai.com/api/docs/guides/moderation",
+   "domain": "developers.openai.com",
+   "note": "Moderation API launched 2022 for classifying content",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.3.1",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2022-08"
+  },
+  {
+   "url": "https://alignment.anthropic.com/2025/introducing-safeguards-research-team/",
+   "domain": "alignment.anthropic.com",
+   "note": "Team continues building efficient Clio-based monitoring tools",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.3.1",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-01"
+  },
+  {
+   "url": "https://www.christopherspenn.com/2023/01/you-ask-i-answer-what-does-chatgpt-learn/",
+   "domain": "christopherspenn.com",
+   "note": "thumbs feedback mechanism discussed as human-reviewed signal",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.3.2",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2023-01"
+  },
+  {
+   "url": "https://www-cdn.anthropic.com/9e6a1044980d8c4ed85669faf9c2a8342e2e9f1e/Claude%20Sonnet%205%20System%20Card.pdf",
+   "domain": "www-cdn.anthropic.com",
+   "note": "over-refusal reports auto-summarized by internal analysis tool, manual trend review",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.3.2",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-06"
+  },
+  {
+   "url": "https://openai.com/index/new-and-improved-content-moderation-tooling/",
+   "domain": "openai.com",
+   "note": "2022 moderation endpoint targets hate/violence/sexual, not jailbreaks",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.3.3",
+     "snapshot": "2022-07"
+    }
+   ],
+   "date": "2022-08"
+  },
+  {
+   "url": "https://openai.com/transparency-and-content-moderation/",
+   "domain": "openai.com",
+   "note": "moderation API used for filtering, not novel-attack discovery",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.3.3",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2023-01"
+  },
+  {
+   "url": "https://www.anthropic.com/research/constitutional-classifiers",
+   "domain": "anthropic.com",
+   "note": "prompted Claude classifiers trained to block jailbreaks in production",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.3.3",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-02"
+  },
+  {
+   "url": "https://www.anthropic.com/news/building-safeguards-for-claude",
+   "domain": "anthropic.com",
+   "note": "fine-tuned Claude classifiers detect policy violations in real time",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.3.3",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-08"
+  },
+  {
+   "url": "https://www.anthropic.com/news/detecting-and-countering-malicious-uses-of-claude-march-2025",
+   "domain": "anthropic.com",
+   "note": "classifier-flagged accounts banned for influence/malware ops",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.3.3",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-04"
+  },
+  {
+   "url": "https://www.anthropic.com/news/disrupting-AI-espionage",
+   "domain": "anthropic.com",
+   "note": "Claude used extensively to analyze enormous data in misuse investigation",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.3.3",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2025-11"
+  },
+  {
+   "url": "https://arxiv.org/html/2601.04603v1",
+   "domain": "arxiv.org",
+   "note": "Constitutional Classifiers++: 40x cheaper, production-grade jailbreak defense",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.3.3",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-01"
+  },
+  {
+   "url": "https://scisummary.com/",
+   "domain": "scisummary.com",
+   "note": "Paper-summarizer tools spun up right after ChatGPT launch",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.4.1",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2023-03"
+  },
+  {
+   "url": "https://arxiv.org/html/2401.06795v2",
+   "domain": "arxiv.org",
+   "note": "Survey on generative AI for research discovery/summarization",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.4.1",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2024-01"
+  },
+  {
+   "url": "https://www.nature.com/articles/d41586-025-00377-9",
+   "domain": "nature.com",
+   "note": "OpenAI Deep Research reviewed for scientific literature use",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.4.1",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-02"
+  },
+  {
+   "url": "https://www.anthropic.com/news",
+   "domain": "anthropic.com",
+   "note": "No lab account of AI autonomously judging external-paper importance",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "5.4.1",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-01"
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/GPT-3",
+   "domain": "en.wikipedia.org",
+   "note": "GPT-3/Codex API available but writing use was niche, not lab-standard",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.1.1",
+     "snapshot": "2022-07"
+    }
+   ],
+   "date": "2022-03"
+  },
+  {
+   "url": "https://www.nature.com/articles/d41586-023-03235-8",
+   "domain": "nature.com",
+   "note": "Early 2023 accounts of researchers using ChatGPT for writing help",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "6.1.1",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2023-09"
+  },
+  {
+   "url": "https://www.nature.com/articles/d41586-023-02298-x",
+   "domain": "nature.com",
+   "note": "\"ChatGPT can write a paper in an hour\" - contemporaneous writing-assist reporting",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.1.1",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-03"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2403.16887",
+   "domain": "arxiv.org",
+   "note": "LLM-influenced text detectable in scholarly writing by early 2024, still minority",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.1.1",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2024-03"
+  },
+  {
+   "url": "https://www.tandfonline.com/doi/full/10.1080/15228959.2023.2224125",
+   "domain": "tandfonline.com",
+   "note": "Elicit.org literature review tool discussed in academic press",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.1.2",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2023-01"
+  },
+  {
+   "url": "https://venturebeat.com/ai/anthropic-unveils-claude-2-an-ai-model-that-produces-longer-safer-responses",
+   "domain": "venturebeat.com",
+   "note": "Claude 2 100k context enables long-doc summarization use cases",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.1.2",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-07"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2402.08565",
+   "domain": "arxiv.org",
+   "note": "Survey: AI for literature reviews, opportunities/challenges as of early 2024",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.1.2",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2024-02"
+  },
+  {
+   "url": "https://www.semanticscholar.org/paper/Elicit:-AI-literature-review-research-assistant-Whitfield-Hofmann/9a249103bde3347fe18210df2ca84d5175cc896f",
+   "domain": "semanticscholar.org",
+   "note": "Elicit widely used for evidence synthesis/research matrices by mid-2024",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.1.2",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2023-01"
+  },
+  {
+   "url": "https://github.blog/ai-and-ml/github-copilot/what-can-github-copilot-do-examples/",
+   "domain": "github.blog",
+   "note": "Copilot launched June 2022, code-completion focused",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "6.1.3",
+     "snapshot": "2022-07"
+    }
+   ],
+   "date": "2022-06"
+  },
+  {
+   "url": "https://leaddev.com/software-quality/will-chatgpt-and-generative-ai-replace-internal-code-documentation",
+   "domain": "leaddev.com",
+   "note": "engineers cautioned against pasting proprietary code into ChatGPT",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.1.3",
+     "snapshot": "2023-01"
+    }
+   ],
+   "date": "2023-01"
+  },
+  {
+   "url": "https://www.codecademy.com/resources/blog/how-software-engineers-use-chatgpt-for-productivity",
+   "domain": "codecademy.com",
+   "note": "engineers using ChatGPT for docstrings/explanations mid-2023",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.1.3",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-07"
+  },
+  {
+   "url": "https://www.secondtalent.com/resources/ai-coding-assistant-statistics/",
+   "domain": "secondtalent.com",
+   "note": "40% of devs used AI tools to document code (2023 survey)",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "6.1.3",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2024-01"
+  },
+  {
+   "url": "https://dev.to/docker/the-rise-of-ai-in-software-development-key-insights-from-the-2024-docker-ai-trends-report-22dh",
+   "domain": "dev.to",
+   "note": "DORA 2024: AI use improves documentation speed",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.1.3",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-01"
+  },
+  {
+   "url": "https://newsletter.pragmaticengineer.com/p/ai-tooling-2024",
+   "domain": "newsletter.pragmaticengineer.com",
+   "note": "AI tooling reality-check: assistive, not autonomous, through 2024",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.1.3",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2024-01"
+  },
+  {
+   "url": "https://dev.to/nasrulhazim/introducing-claude-code-documentation-standards-automated-documentation-with-built-in-linting-51c",
+   "domain": "dev.to",
+   "note": "automated documentation framework built on Claude Code",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.1.3",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-01"
+  },
+  {
+   "url": "https://incident.io/blog/gpt4-hackathon",
+   "domain": "incident.io",
+   "note": "GPT-4 incident-summary prototype not shipped to production",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.1.4",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-07"
+  },
+  {
+   "url": "https://engineering.zalando.com/posts/2025/09/dead-ends-or-data-goldmines-ai-powered-postmortem-analysis.html",
+   "domain": "engineering.zalando.com",
+   "note": "Two-year program implies start ~2023, ongoing into 2024",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "6.1.4",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2025-09"
+  },
+  {
+   "url": "https://www.anthropic.com/engineering/april-23-postmortem",
+   "domain": "anthropic.com",
+   "note": "Detailed engineering postmortem, human-driven investigation and writeup",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.1.4",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2026-04"
+  },
+  {
+   "url": "https://blog.research.google/2023/05/resolving-code-review-comments-with-ml.html",
+   "domain": "blog.research.google",
+   "note": "Google ML suggests edits for 7.5% of review comments",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.2.1",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-05"
+  },
+  {
+   "url": "https://github.com/qodo-ai/pr-agent",
+   "domain": "github.com",
+   "note": "CodiumAI PR-Agent: GPT-4-powered automated PR review tool",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.2.1",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-07"
+  },
+  {
+   "url": "https://www.coderabbit.ai/",
+   "domain": "coderabbit.ai",
+   "note": "CodeRabbit founded 2023, early-stage automated review product",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "6.2.1",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2023-01"
+  },
+  {
+   "url": "https://github.blog/ai-and-ml/github-copilot/whats-new-with-github-copilot-july-2024/",
+   "domain": "github.blog",
+   "note": "Jul 2024 Copilot update, no code-review-on-PR feature yet",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.2.1",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-07"
+  },
+  {
+   "url": "https://github.blog/changelog/2025-02-26-code-review-in-github-copilot-is-now-in-public-preview/",
+   "domain": "github.blog",
+   "note": "Copilot code review public preview announced",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.2.1",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-02"
+  },
+  {
+   "url": "https://github.com/newsroom/press-releases/github-universe-2024",
+   "domain": "github.com",
+   "note": "Universe 2024 unveils Copilot code review capability",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.2.1",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2024-10"
+  },
+  {
+   "url": "https://github.blog/changelog/2025-04-04-copilot-code-review-now-generally-available/",
+   "domain": "github.blog",
+   "note": "Copilot code review GA, 1M+ developers used it",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.2.1",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-04"
+  },
+  {
+   "url": "https://cursor.com/blog/building-bugbot",
+   "domain": "cursor.com",
+   "note": "Bugbot exits beta Jul 2025; 52% is dev-fixed rate on flagged bugs, not autofix (human still decides)",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.2.1",
+     "snapshot": "2025-07"
+    }
+   ],
+   "date": "2025-07"
+  },
+  {
+   "url": "https://techcrunch.com/2023/12/29/github-makes-copilot-chat-generally-available-letting-devs-ask-questions-about-code/",
+   "domain": "techcrunch.com",
+   "note": "Copilot Chat GA, devs ask questions about code",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.2.2",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2023-12"
+  },
+  {
+   "url": "https://ar5iv.labs.arxiv.org/html/2304.13187",
+   "domain": "ar5iv.labs.arxiv.org",
+   "note": "GPT-4-assisted coding/analysis experiments show early research-support use",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.2.3",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-04"
+  },
+  {
+   "url": "https://www.jonkrohn.com/posts/2024/8/25/the-ai-scientist-towards-fully-automated-open-ended-scientific-discovery",
+   "domain": "jonkrohn.com",
+   "note": "AI Scientist claims near-human-accuracy automated paper review",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.2.3",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-08"
+  },
+  {
+   "url": "https://arxiv.org/pdf/2504.09737",
+   "domain": "arxiv.org",
+   "note": "20K-review ICLR 2025 study: LLM feedback assists, doesn't replace reviewer judgment",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.2.3",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-04"
+  },
+  {
+   "url": "https://www.salesforce.com/news/stories/slack-ai-news-update/",
+   "domain": "salesforce.com",
+   "note": "Slack AI Recap (daily digest of channel activity) rolled out",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.3.1",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-04"
+  },
+  {
+   "url": "https://slack.com/marketplace/A44PZQW83-dailybot-standups-surveys-ai",
+   "domain": "slack.com",
+   "note": "AI standup bots summarizing work updates for teams",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.3.1",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-01"
+  },
+  {
+   "url": "https://survey.stackoverflow.co/2024/",
+   "domain": "survey.stackoverflow.co",
+   "note": "40% of devs use AI to help document their code/work by 2023",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "6.3.2",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2024-01"
+  },
+  {
+   "url": "https://cognition.com/blog/introducing-devin",
+   "domain": "cognition.com",
+   "note": "Devin reports progress in real time via a work log for humans to follow",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.3.2",
+     "snapshot": "2024-07"
+    }
+   ],
+   "date": "2024-03"
+  },
+  {
+   "url": "https://code.claude.com/docs/en/agent-sdk/todo-tracking",
+   "domain": "code.claude.com",
+   "note": "Claude Code task management upgraded Jan 23 2025 with dependencies/blockers",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.3.2",
+     "snapshot": "2025-01"
+    }
+   ],
+   "date": "2025-01"
+  },
+  {
+   "url": "https://claudefa.st/blog/guide/development/task-management",
+   "domain": "claudefa.st",
+   "note": "Multi-session Claude Code task coordination in routine use by early 2026",
+   "retrospective": true,
+   "citedBy": [
+    {
+     "task": "6.3.2",
+     "snapshot": "2026-01"
+    }
+   ],
+   "date": "2025-01"
+  },
+  {
+   "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-in-2023-generative-ais-breakout-year",
+   "domain": "mckinsey.com",
+   "note": "1/3 of orgs using genAI regularly by mid-2023",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.4.1",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-06"
+  },
+  {
+   "url": "https://www.notion.com/blog/introducing-notion-ai",
+   "domain": "notion.com",
+   "note": "Notion AI writing assistant launched Feb 2023",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.4.1",
+     "snapshot": "2023-07"
+    }
+   ],
+   "date": "2023-02"
+  },
+  {
+   "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2023/09/21/announcing-microsoft-365-copilot-general-availability-and-microsoft-365-chat/",
+   "domain": "microsoft.com",
+   "note": "M365 Copilot GA enterprise-wide Nov 2023",
+   "retrospective": false,
+   "citedBy": [
+    {
+     "task": "6.4.1",
+     "snapshot": "2024-01"
+    }
+   ],
+   "date": "2023-09"
+  }
+ ],
+ "uplift": [
+  {
+   "topic": "epoch-onet",
+   "findings": [
+    {
+     "claim": "Stated purpose: build a task-based taxonomy of frontier-lab AI R&D work to give an additional, more direct signal of AI R&D automation progress, complementing benchmarks.",
+     "url": "https://epoch.ai/gradient-updates/toward-an-onet-for-ai-rnd",
+     "author": "Jean-Stanislas Denain, Joe Kwon, Anson Ho",
+     "date": "2026-06"
+    },
+    {
+     "claim": "The 0-5 rating scale definitions (verbatim from the linked full taxonomy doc, near-identical wording appears in the gradient-updates post)",
+     "url": "https://epoch.ai/gradient-updates/toward-an-onet-for-ai-rnd",
+     "author": "Denain, Kwon & Ho",
+     "date": "2026-06"
+    },
+    {
+     "claim": "Who assigned ratings and how (methodology)",
+     "url": "https://epoch.ai/gradient-updates/toward-an-onet-for-ai-rnd",
+     "author": "Denain, Kwon & Ho",
+     "date": "2026-06"
+    },
+    {
+     "claim": "Explicit self-description of the ratings' epistemic status in the full taxonomy document",
+     "url": "https://docs.google.com/document/d/1mDZyulXNojM5uAna-HzSeAEnE0tUNqNOTmBCfPx_M78/edit",
+     "author": "Denain, Kwon & Ho",
+     "date": "2026-06"
+    },
+    {
+     "claim": "Every caveat stated about the ratings (consolidated)",
+     "url": "https://epoch.ai/gradient-updates/toward-an-onet-for-ai-rnd",
+     "author": "Denain, Kwon & Ho",
+     "date": "2026-06"
+    },
+    {
+     "claim": "Explicit refusal to translate task-automation ratings into an aggregate R&D speedup/uplift number, and the exact reasoning for why",
+     "url": "https://epoch.ai/gradient-updates/toward-an-onet-for-ai-rnd",
+     "author": "Denain, Kwon & Ho",
+     "date": "2026-06"
+    },
+    {
+     "claim": "The modest, deliberately limited framing they give instead of an aggregate speedup estimate",
+     "url": "https://epoch.ai/gradient-updates/toward-an-onet-for-ai-rnd",
+     "author": "Denain, Kwon & Ho",
+     "date": "2026-06"
+    },
+    {
+     "claim": "Proposed future work, including researcher surveys on per-task uplift",
+     "url": "https://epoch.ai/gradient-updates/toward-an-onet-for-ai-rnd",
+     "author": "Denain, Kwon & Ho",
+     "date": "2026-06"
+    },
+    {
+     "claim": "Related/linked Epoch and external work: earlier researcher-interview study on AI R&D automation",
+     "url": "https://epoch.ai/blog/interviewing-ai-researchers-on-automation-of-ai-rnd",
+     "author": "David Owen",
+     "date": "2024-08"
+    },
+    {
+     "claim": "Other linked external work: METR time-horizon metric and Frontier Risk Report",
+     "url": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
+     "author": "METR (linked by Denain, Kwon & Ho)",
+     "date": "2025-03"
+    },
+    {
+     "claim": "Broader Epoch research program context: intelligence-explosion motivation for tracking AI R&D automation",
+     "url": "https://epoch.ai/gradient-updates/toward-an-onet-for-ai-rnd",
+     "author": "Denain, Kwon & Ho (paraphrase from search-indexed summary of the piece)",
+     "date": "2026-06"
+    },
+    {
+     "claim": "Comparison of the doc's 2026-07 anchor ratings (data/taxonomy.json) against Epoch's published ratings",
+     "url": "https://epoch.ai/gradient-updates/toward-an-onet-for-ai-rnd",
+     "author": "comparison performed by this analysis",
+     "date": "2026-07"
+    }
+   ]
+  },
+  {
+   "topic": "formal-models",
+   "findings": [
+    {
+     "claim": "Davidson's original compute-centric takeoff model (2023) defines an 'effective FLOP gap' -- the multiplier on training compute needed to go from AI that can automate 20% of cognitive tasks to AGI (100%) -- and estimates it at 10,000x, with wide uncertainty.",
+     "url": "https://www.alignmentforum.org/posts/Gc9FGtdXhK9sCSEYu/what-a-compute-centric-framework-says-about-ai-takeoff",
+     "author": "Tom Davidson (Open Philanthropy)",
+     "date": "2023-06"
+    },
+    {
+     "claim": "Davidson's Full Takeoff Model (interactive playground at takeoffspeeds.com) has a slider parameter called 'R&D parallelization penalty' whose preset best-guess value, per an external review, is 0.7 on the playground's scale (the reviewer argued this should be far higher based on Besiroglu et al. duplication-of-labor estimates of ~0.02-0.13% returns).",
+     "url": "https://www.lesswrong.com/posts/ikWvhgGFYnwY5nWyk/review-report-of-davidson-on-takeoff-speeds-2023",
+     "author": "review of Davidson's takeoff model (LessWrong, 2023)",
+     "date": "2023-08"
+    },
+    {
+     "claim": "Davidson's takeoff model uses a 'returns to software R&D' parameter: each doubling of cumulative software R&D spending drives approximately 1.25 doublings of software efficiency.",
+     "url": "https://www.lesswrong.com/posts/ikWvhgGFYnwY5nWyk/review-report-of-davidson-on-takeoff-speeds-2023",
+     "author": "review of Davidson's takeoff model (LessWrong, 2023)",
+     "date": "2023-08"
+    },
+    {
+     "claim": "Davidson's 2023 model designates 20% automation of cognitive tasks (weighted by 2020 output share) as the key milestone ('20%-AI'), and asks how long it takes to go from 20%-AI to 100%-AI ('takeoff duration'); Monte Carlo median AGI date ~2043-2045 with median takeoff duration ~3-3.6 years.",
+     "url": "https://www.lesswrong.com/posts/ykJ8Ku7tKeSCe9fFo/when-will-ai-automate-all-mental-work-and-how-fast",
+     "author": "Tom Davidson",
+     "date": "2023-06"
+    },
+    {
+     "claim": "GATE (Epoch AI's Growth and AI Transition Endogenous model) parameterizes task bottlenecking with a CES 'substitution parameter' rho < 0 across tasks; default central estimate rho = -0.65, producing large near-term growth accelerations.",
+     "url": "https://epoch.ai/gradient-updates/ai-and-explosive-growth-redux",
+     "author": "Epoch AI",
+     "date": "2025-04"
+    },
+    {
+     "claim": "GATE's automation-fraction -> growth-rate mapping (from Epoch's own simulation): even 30% task automation can push growth rates above 20%/year; 'explosive growth' (>30%/yr, the classic threshold) requires roughly 50-70% of tasks automated; at 40% automation GATE predicts ~12% GWP growth.",
+     "url": "https://epoch.ai/gradient-updates/ai-and-explosive-growth-redux",
+     "author": "Epoch AI",
+     "date": "2025-04"
+    },
+    {
+     "claim": "GATE combines a compute-to-capability module (extensive margin: fraction of tasks automatable; intensive margin: efficiency per task, i.e. 'digital worker' count) with a semi-endogenous growth model; conservative hardware/software return assumptions imply full task automation is reachable within ~20 years, with automation eventually enabling 30-100% annual GDP growth.",
+     "url": "https://epoch.ai/blog/announcing-gate",
+     "author": "Epoch AI",
+     "date": "2025-03"
+    },
+    {
+     "claim": "AI-2027's 'Superhuman Coder' (SC) milestone is explicitly defined via a compute/parallelism multiplier: an AI system that a lab could run, using 5% of its compute budget, as 30x as many agent-copies as it has human researchers, each coding at 30x human speed.",
+     "url": "https://ai-2027.com/research/takeoff-forecast",
+     "author": "Daniel Kokotajlo, Scott Alexander, Thomas Larsen, Eli Lifland, Romeo Dean (AI Futures Project)",
+     "date": "2025-04"
+    },
+    {
+     "claim": "AI-2027 assigns explicit 'AI R&D progress multiplier' values at each of four capability milestones: Superhuman Coder (SC) 5x, Superhuman AI Researcher (SAR) 25x, Superintelligent AI Researcher (SIAR) 250x, Artificial Superintelligence (ASI) 2,000x algorithmic-progress speedup relative to unaided human researchers.",
+     "url": "https://ai-2027.com/research/takeoff-forecast",
+     "author": "Daniel Kokotajlo et al. (AI Futures Project)",
+     "date": "2025-04"
+    },
+    {
+     "claim": "AI-2027's concrete 2027 deployment scenario: at Superhuman Coder milestone with ~10 million H100-equivalents, 5% compute allocation to inference yields 200,000 parallel AI researcher copies, equivalent to 50,000 agents at 30x human task speed (each processing ~400 tokens/second).",
+     "url": "https://ai-2027.com/research/takeoff-forecast",
+     "author": "Daniel Kokotajlo et al. (AI Futures Project)",
+     "date": "2025-04"
+    },
+    {
+     "claim": "AI-2027 estimates 'human-only' (no AI assistance) time gaps between milestones -- SC to SAR: 4 years median (80% CI 1.5-10y); SAR to SIAR: 19 years median (80% CI 2.3-380y); SIAR to ASI: 95 years median (80% CI 2.4-1,000,000y) -- versus actual (AI-assisted) forecast gaps of 0.3y, 0.3y, and 0.16y respectively, i.e. the R&D-speedup multipliers compress each gap roughly 10-600x.",
+     "url": "https://ai-2027.com/research/takeoff-forecast",
+     "author": "Daniel Kokotajlo et al. (AI Futures Project)",
+     "date": "2025-04"
+    },
+    {
+     "claim": "Davidson, Halperin, Houlden & Korinek (NBER WP 35155, April 2026) give an explicit closed-form CES/Cobb-Douglas 'explosion condition' for algorithmic progress: growth becomes hyperbolic (finite-time singularity) iff f_Y + f_S(1/beta_S) + f_H(1/beta_H) + f_A(1/(1-alpha))(1/beta_A) > 1, where f_i is the AI-automated task share in sector i (Y=output, S=software, H=hardware, A=general TFP/ideas) and beta_i is the degree of diminishing returns to research in that sector.",
+     "url": "https://www.nber.org/papers/w35155 (PDF: https://www.nber.org/system/files/working_papers/w35155/w35155.pdf)",
+     "author": "Tom Davidson, Basil Halperin, Thomas Houlden, Anton Korinek",
+     "date": "2026-04"
+    },
+    {
+     "claim": "The NBER paper's central calibration table (Table 3): labor share in production 1-alpha = 0.6; returns-to-research parameter r_S (software) ≈ 1 (from Erdil, Besiroglu & Ho 2024, chess-engine data); r_H (hardware) = 5 (from Bloom et al. 2020); r_A (aggregate TFP) = 0.32 (from Bloom et al. 2020, i.e. beta_A = 3.1 'ideas getting harder to find' economy-wide, with hardware showing the least diminishing returns at beta_H = 0.2).",
+     "url": "https://www.nber.org/system/files/working_papers/w35155/w35155.pdf",
+     "author": "Tom Davidson, Basil Halperin, Thomas Houlden, Anton Korinek",
+     "date": "2026-04"
+    },
+    {
+     "claim": "The NBER paper's headline quantitative result: automating research uniformly across all four sectors (software, hardware, general TFP, final-goods production) requires only 13% task automation to cross the hyperbolic-growth threshold; automating only software+hardware research requires 17%; hardware automation alone requires 20%; fully automating software research alone (with ~0% elsewhere) sits almost exactly at the knife-edge threshold (EC=1.00).",
+     "url": "https://www.nber.org/system/files/working_papers/w35155/w35155.pdf",
+     "author": "Tom Davidson, Basil Halperin, Thomas Houlden, Anton Korinek",
+     "date": "2026-04"
+    },
+    {
+     "claim": "The NBER paper's simulation: starting from a balanced growth path and calibrating to Epoch AI (2026)'s measured 2026 growth rates of software efficiency (110%/yr) and hardware efficiency (37%/yr), a one-time automation shock of full software-R&D automation (f_S=1) plus just 5% automation elsewhere is enough to cross the explosive threshold and produces a finite-time 'singularity' within roughly six years; a uniform 13% automation shock across all sectors is the double-exponential knife-edge, with 15%/20% uniform automation producing singularities in ~16/~9 years respectively.",
+     "url": "https://www.nber.org/system/files/working_papers/w35155/w35155.pdf",
+     "author": "Tom Davidson, Basil Halperin, Thomas Houlden, Anton Korinek",
+     "date": "2026-04"
+    },
+    {
+     "claim": "The NBER paper's formal CES generalization for bottlenecks (Section 6): effective labor in each sector is a CES aggregate of human labor L and AI labor C with parameter theta<1 (theta->1 recovers Cobb-Douglas/no-bottleneck); the AI-elasticity of effective labor is eta_i = 1/(1 + x_i^(1/theta) (C_i/L_i)^((1-theta)/theta)) where x_i=(1-f_i)/f_i, and eta_i -> 0 as C_i/L_i -> infinity for any theta<1, i.e. bottlenecks generically prevent a singularity unless automation share f_i -> 1.",
+     "url": "https://www.nber.org/system/files/working_papers/w35155/w35155.pdf",
+     "author": "Tom Davidson, Basil Halperin, Thomas Houlden, Anton Korinek",
+     "date": "2026-04"
+    },
+    {
+     "claim": "Erdil & Besiroglu's task-based CES growth model (predecessor to GATE) finds that whether automation produces 'explosive' growth depends critically on the CES substitution parameter rho across tasks: rho=-1 implies output could increase ~100-fold (very likely explosive unless spread over much longer than a decade), whereas blocking massive output increases requires rho below about -2, which the authors consider implausibly strong complementarity (stronger than currently believed to hold between capital and labor).",
+     "url": "https://arxiv.org/pdf/2309.11690",
+     "author": "Ege Erdil (and Tamay Besiroglu), Epoch AI",
+     "date": "2023-09"
+    }
+   ]
+  },
+  {
+   "topic": "greenblatt",
+   "findings": [
+    {
+     "claim": "Serial research-engineering speedup at OpenAI/Anthropic rose from ~1.4x (start of 2026) to ~1.6x (as of the April 2026 post)",
+     "url": "https://blog.redwoodresearch.org/p/my-picture-of-the-present-in-ai",
+     "author": "Ryan Greenblatt",
+     "date": "2026-04"
+    },
+    {
+     "claim": "Indifference-based definition of 'speedup': the multiplier on your own working speed that would make you indifferent to having the AI tools instead",
+     "url": "https://blog.redwoodresearch.org/p/my-picture-of-the-present-in-ai",
+     "author": "Ryan Greenblatt",
+     "date": "2026-04"
+    },
+    {
+     "claim": "Overall AI-progress speedup is much smaller than the serial engineering speedup because engineering speedup must be discounted through several compounding factors",
+     "url": "https://blog.redwoodresearch.org/p/my-picture-of-the-present-in-ai",
+     "author": "Ryan Greenblatt",
+     "date": "2026-04"
+    },
+    {
+     "claim": "Algorithmic progress's share of overall AI progress (the rest being driven by scaling training compute and data spend)",
+     "url": "https://blog.redwoodresearch.org/p/my-picture-of-the-present-in-ai",
+     "author": "Ryan Greenblatt",
+     "date": "2026-04"
+    },
+    {
+     "claim": "Task-level speedup range for specific engineering/research tasks now leveraging AI",
+     "url": "https://blog.redwoodresearch.org/p/my-picture-of-the-present-in-ai",
+     "author": "Ryan Greenblatt",
+     "date": "2026-04"
+    },
+    {
+     "claim": "5-hour / 50% internal task-sampling claim: the human-task-duration at which AI output quality matches a randomly selected AI-company engineer",
+     "url": "https://blog.redwoodresearch.org/p/my-picture-of-the-present-in-ai",
+     "author": "Ryan Greenblatt",
+     "date": "2026-04"
+    },
+    {
+     "claim": "Publicly deployed vs internal (unreleased) model capability gap, measured via METR-style 80%-reliability time horizon",
+     "url": "https://blog.redwoodresearch.org/p/my-picture-of-the-present-in-ai",
+     "author": "Ryan Greenblatt",
+     "date": "2026-04"
+    },
+    {
+     "claim": "Per-lab differences in engineering speedup: Anthropic > OpenAI > Google DeepMind (GDM)",
+     "url": "https://blog.redwoodresearch.org/p/my-picture-of-the-present-in-ai",
+     "author": "Ryan Greenblatt",
+     "date": "2026-04"
+    },
+    {
+     "claim": "Companion-post (Sept 2025) formal model: Cobb-Douglas mapping from engineering speedup to AI R&D acceleration to overall AI progress speedup, with worked examples",
+     "url": "https://www.lesswrong.com/posts/uRdJio8pnTqHpWa4t/",
+     "author": "Ryan Greenblatt (ryan_greenblatt)",
+     "date": "2025-09"
+    },
+    {
+     "claim": "Definition/threshold of '8-hour AI' and forecast for when it arrives",
+     "url": "https://www.lesswrong.com/posts/uRdJio8pnTqHpWa4t/",
+     "author": "Ryan Greenblatt (ryan_greenblatt)",
+     "date": "2025-09"
+    },
+    {
+     "claim": "Forecast for 'superhuman coder' arrival, with and without AI-driven R&D feedback acceleration",
+     "url": "https://www.lesswrong.com/posts/uRdJio8pnTqHpWa4t/",
+     "author": "Ryan Greenblatt (ryan_greenblatt)",
+     "date": "2025-09"
+    },
+    {
+     "claim": "Time-horizon gap between publicly available models and a harder internal task distribution (ESNI: 'easy-and-cheap-to-verify' SWE tasks) is much larger than expected",
+     "url": "https://www.lesswrong.com/posts/dKpC6wHFqDrGZwnah/",
+     "author": "Ryan Greenblatt (ryan_greenblatt)",
+     "date": "2026-04"
+    },
+    {
+     "claim": "Prediction (dated): probability of a fully autonomous end-to-end cyber exploit within 6 months",
+     "url": "https://blog.redwoodresearch.org/p/my-picture-of-the-present-in-ai",
+     "author": "Ryan Greenblatt",
+     "date": "2026-04"
+    },
+    {
+     "claim": "Prediction (dated): probability of moderately-coherent scheming rising several-fold by end of year",
+     "url": "https://blog.redwoodresearch.org/p/my-picture-of-the-present-in-ai",
+     "author": "Ryan Greenblatt",
+     "date": "2026-04"
+    }
+   ]
+  },
+  {
+   "topic": "lab-statements",
+   "findings": [
+    {
+     "claim": "Anthropic: share of merged production code authored by Claude reached >80% by May 2026, up from low single digits pre-Feb 2025 (Claude Code research preview launch)",
+     "url": "https://www.anthropic.com/institute/recursive-self-improvement",
+     "author": "Anthropic (institutional post, 'When AI builds itself')",
+     "date": "2026-06"
+    },
+    {
+     "claim": "Anthropic leadership also cite a looser ~90%+ figure for code including scripts and experimental (non-production) code",
+     "url": "https://www.anthropic.com/institute/recursive-self-improvement",
+     "author": "Anthropic leadership (paraphrase in institute post)",
+     "date": "2026-06"
+    },
+    {
+     "claim": "Anthropic: engineer code-output volume increased 8x per engineer per day by Q2 2026 vs. 2021-2024 baseline",
+     "url": "https://www.anthropic.com/institute/recursive-self-improvement",
+     "author": "Anthropic",
+     "date": "2026-06"
+    },
+    {
+     "claim": "Anthropic internal poll (March 2026, n=130 employees): median self-reported ~4x output multiplier from access to 'Mythos Preview' (an internal-only more capable model) vs. no AI access",
+     "url": "https://www.anthropic.com/institute/recursive-self-improvement",
+     "author": "Anthropic (internal employee poll, n=130)",
+     "date": "2026-03"
+    },
+    {
+     "claim": "Anthropic AI R&D capability evals: Claude Opus 4.6 achieved 427x speedup on a kernel-optimization eval using a novel scaffold, exceeding the 300x threshold used to rule out AI R&D-4",
+     "url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf",
+     "author": "Anthropic, Claude Opus 4.6 System Card",
+     "date": "2026-02"
+    },
+    {
+     "claim": "Anthropic Opus 4.6 System Card: internal survey of intensive users reported wide range of self-estimated productivity uplift, mean 152%, median 100% (i.e., 'twice as productive' on average by mean, or 'doubled' by median)",
+     "url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf",
+     "author": "Anthropic, Claude Opus 4.6 System Card (internal survey of Claude Code power users)",
+     "date": "2026-02"
+    },
+    {
+     "claim": "Anthropic Opus 4.5 System Card: internal survey of 18 intensive Claude Code users -- 9 of 18 reported >=100% productivity improvement (i.e., work at least doubled); median 100%, mean 220%; none believed the model could fully automate an entry-level remote-only research/engineering role",
+     "url": "https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf",
+     "author": "Anthropic, Claude Opus 4.5 System Card",
+     "date": "2025-11"
+    },
+    {
+     "claim": "Anthropic Opus 4.5 System Card: model's autonomous research judgment matched/exceeded human researcher choices in a comparison exercise",
+     "url": "https://www.anthropic.com/institute/recursive-self-improvement",
+     "author": "Anthropic",
+     "date": "2026-06"
+    },
+    {
+     "claim": "Anthropic institute post: autonomous Claude agents recovered 97% of a performance gap over 800 cumulative hours using $18,000 of compute, vs. two human researchers recovering ~23% of the same gap in about a week",
+     "url": "https://www.anthropic.com/institute/recursive-self-improvement",
+     "author": "Anthropic",
+     "date": "2026-06"
+    },
+    {
+     "claim": "Anthropic: code-quality gap between Claude-written and human-written code has closed over time",
+     "url": "https://www.anthropic.com/institute/recursive-self-improvement",
+     "author": "Anthropic",
+     "date": "2026-06"
+    },
+    {
+     "claim": "Anthropic: automated Claude code review would have caught ~1/3 of bugs behind past production incidents on claude.ai",
+     "url": "https://www.anthropic.com/institute/recursive-self-improvement",
+     "author": "Anthropic",
+     "date": "2026-06"
+    },
+    {
+     "claim": "Anthropic: long-horizon task capability roughly doubling every ~7 months, illustrated by internal/benchmark milestones",
+     "url": "https://www.anthropic.com/institute/recursive-self-improvement",
+     "author": "Anthropic",
+     "date": "2026-06"
+    },
+    {
+     "claim": "Boris Cherny (creator/lead of Claude Code, Anthropic): AI writes 100% of his own code; company-wide Anthropic spokesperson figure is 70-90%",
+     "url": "https://fortune.com/2026/01/29/100-percent-of-code-at-anthropic-and-openai-is-now-ai-written-boris-cherny-roon/",
+     "author": "Boris Cherny (Anthropic) and unnamed Anthropic spokesperson, via Fortune",
+     "date": "2026-01"
+    },
+    {
+     "claim": "Dario Amodei (Anthropic CEO), Council on Foreign Relations, March 2025: predicted AI would write 90% of code within 3-6 months, ~100% within 12 months",
+     "url": "https://blog.redwoodresearch.org/p/is-90-of-code-at-anthropic-being",
+     "author": "Dario Amodei, Anthropic CEO, remarks at Council on Foreign Relations",
+     "date": "2025-03"
+    },
+    {
+     "claim": "Redwood Research independent/skeptical reconstruction: Anthropic company-wide AI-authored-merged-code share was closer to ~50% (not 90%) as of late 2025, and the true productivity multiplier from AI is 'much less than 10x, probably less than 2x'",
+     "url": "https://blog.redwoodresearch.org/p/is-90-of-code-at-anthropic-being",
+     "author": "Redwood Research (blog post, independent AI safety org, not affiliated with Anthropic)",
+     "date": "2025-10"
+    },
+    {
+     "claim": "Skeptical analysis (Redwood Research) of the internal Anthropic 'Mythos Preview 4x productivity' poll: flagged as implausibly high given no corresponding acceleration observed in Anthropic's actual research output pace",
+     "url": "https://blog.redwoodresearch.org/",
+     "author": "Redwood Research (blog)",
+     "date": "2026"
+    },
+    {
+     "claim": "Anthropic AI R&D capability threshold determinations (safety framework): Opus 4.5 and Opus 4.6 both assessed as NOT crossing the 'AI R&D-4' autonomous-research capability threshold, though some Opus 4.6 survey respondents believed it might already qualify with sufficiently powerful scaffolding",
+     "url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf",
+     "author": "Anthropic, Opus 4.5 and Opus 4.6 System Cards",
+     "date": "2025-11 to 2026-02"
+    },
+    {
+     "claim": "Google: share of new code at Google that is AI-generated rose from >25% (Oct 2024) to >30% (Apr 2025) to ~50% (late 2025) to 75% (Apr 2026), per CEO Sundar Pichai on quarterly earnings calls",
+     "url": "https://fortune.com/2024/10/30/googles-code-ai-sundar-pichai/",
+     "author": "Sundar Pichai, CEO, Alphabet/Google, quarterly earnings calls",
+     "date": "2024-10"
+    },
+    {
+     "claim": "Google DeepMind AlphaEvolve: in production for over a year, continuously recovers on average 0.7% of Google's worldwide compute resources via a data-center job-scheduling algorithm redesign",
+     "url": "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/",
+     "author": "Google DeepMind (official blog)",
+     "date": "2025-05"
+    },
+    {
+     "claim": "AlphaEvolve sped up a key kernel in Gemini's architecture by 23%, yielding a 1% reduction in Gemini's overall training time; compressed kernel-optimization engineering effort from 'weeks of expert effort to days of automated experiments'",
+     "url": "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/",
+     "author": "Google DeepMind",
+     "date": "2025-05"
+    },
+    {
+     "claim": "AlphaEvolve achieved up to a 32.5% speedup for the FlashAttention kernel implementation used in Transformer-based AI models, and found a Verilog circuit simplification adopted into an upcoming Google TPU",
+     "url": "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/",
+     "author": "Google DeepMind",
+     "date": "2025-05"
+    },
+    {
+     "claim": "AlphaEvolve mathematical/algorithmic discovery hit-rate across a broad internal problem set: rediscovered SOTA in ~75% of cases and improved on SOTA in ~20% of cases",
+     "url": "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/",
+     "author": "Google DeepMind",
+     "date": "2025-05"
+    },
+    {
+     "claim": "OpenAI: internal employee usage of Codex agents rose from ~40% (Aug 2025) to 97.9% of employees (as of ~June 2026); average worker spent <10% of tokens on Codex through Aug 2025, rising to near-total reliance by mid-2026",
+     "url": "https://www.theregister.com/ai-and-ml/2026/06/25/openai-says-979-percent-of-its-employees-are-now-using-agents/5262499",
+     "author": "OpenAI ('How agents are transforming work' / accompanying research paper 'The Shift to Agentic AI: Evidence from Codex'), reported by The Register",
+     "date": "2026-06"
+    },
+    {
+     "claim": "OpenAI: non-developer (e.g., legal, recruiting, finance) usage of Codex rose sharply; legal/recruiting crossed to majority-Codex use around April 2026; average OpenAI lawyer/recruiter now generates >85% of output tokens via Codex; legal team's monthly output tokens (Codex+ChatGPT) 13x higher in June 2026 vs Nov 2025",
+     "url": "https://www.theregister.com/ai-and-ml/2026/06/25/openai-says-979-percent-of-its-employees-are-now-using-agents/5262499",
+     "author": "OpenAI, reported by The Register",
+     "date": "2026-06"
+    },
+    {
+     "claim": "OpenAI: share of individual Codex users submitting at least one task estimated to take an experienced human >8 hours rose nearly 10x since the start of 2026",
+     "url": "https://www.theregister.com/ai-and-ml/2026/06/25/openai-says-979-percent-of-its-employees-are-now-using-agents/5262499",
+     "author": "OpenAI, reported by The Register",
+     "date": "2026-06"
+    },
+    {
+     "claim": "Roon (pseudonymous OpenAI researcher, X/Twitter): reports writing 0% of own code personally ('100%, I don't write code anymore')",
+     "url": "https://fortune.com/2026/01/29/100-percent-of-code-at-anthropic-and-openai-is-now-ai-written-boris-cherny-roon/",
+     "author": "Roon, OpenAI researcher (pseudonymous X account), via Fortune",
+     "date": "2026-01"
+    },
+    {
+     "claim": "Dario Amodei at Davos/WEF, January 2026: some Anthropic engineers report they 'don't write code anymore,' and industry may be 6-12 months from AI doing 'most, maybe all' of what software engineers do end-to-end",
+     "url": "https://www.entrepreneur.com/business-news/ai-ceo-says-software-engineers-could-be-replaced-in-months/502087",
+     "author": "Dario Amodei, Anthropic CEO, World Economic Forum Davos panel",
+     "date": "2026-01"
+    }
+   ]
+  },
+  {
+   "topic": "metr-horizons",
+   "findings": [
+    {
+     "claim": "Original METR time-horizon paper: 50%-reliability time horizon has been doubling approximately every 7 months since 2019.",
+     "url": "https://arxiv.org/abs/2503.14499",
+     "author": "METR (Kwa, West, Barnes et al.)",
+     "date": "2025-03"
+    },
+    {
+     "claim": "Claude 3.7 Sonnet 50% time horizon at TH1.0 release (March 2025).",
+     "url": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
+     "author": "METR",
+     "date": "2025-03"
+    },
+    {
+     "claim": "80%-reliability time horizons are roughly 5x shorter than 50%-reliability horizons, but have a similar doubling time.",
+     "url": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
+     "author": "METR",
+     "date": "2025-03"
+    },
+    {
+     "claim": "Time horizon varies hugely by domain; agentic computer-use tasks lag far behind software/reasoning tasks.",
+     "url": "https://metr.org/blog/2025-07-14-how-does-time-horizon-vary-across-domains/",
+     "author": "METR",
+     "date": "2025-07"
+    },
+    {
+     "claim": "METR's RCT found that allowing experienced open-source developers to use early-2025 AI tools (Cursor Pro + Claude 3.5/3.7 Sonnet) made them 19% SLOWER on real tasks in mature codebases, despite the same models having ~1-hour time horizons -- directly relevant to reconciling time-horizon trend with real R&D uplift.",
+     "url": "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
+     "author": "METR",
+     "date": "2025-07"
+    },
+    {
+     "claim": "METR's own explanation for the gap between rising time horizons (implying strong capability) and the measured 19% RCT slowdown: 'algorithmic' benchmark scoring (does the code pass tests) overstates real usability because it ignores the large amount of surrounding work (tests, docs, lint, review, integration) needed to make AI output mergeable.",
+     "url": "https://metr.org/blog/2025-08-12-research-update-towards-reconciling-slowdown-with-time-horizons/",
+     "author": "METR",
+     "date": "2025-08"
+    },
+    {
+     "claim": "METR explicitly states that doubling the time horizon does NOT double the degree of task automation / real-world uplift, because of nonlinear failure modes and because time horizon measures serial human-labor replacement, not autonomous operation length.",
+     "url": "https://metr.org/notes/2026-01-22-time-horizon-limitations/",
+     "author": "METR",
+     "date": "2026-01"
+    },
+    {
+     "claim": "METR flags severe task-distribution and selection-bias caveats: benchmark tasks are deliberately chosen to be near the frontier of current capability, are self-contained/low-context/well-defined, and don't require the collaboration or context-accumulation that most real months-long projects need.",
+     "url": "https://metr.org/notes/2026-01-22-time-horizon-limitations/",
+     "author": "METR",
+     "date": "2026-01"
+    },
+    {
+     "claim": "Time Horizon 1.1 (Jan 2026 methodology update): expanded and re-curated task suite, producing tighter estimates especially at longer horizons, and revising the doubling-time trend upward (faster) for the post-2023 period.",
+     "url": "https://x.com/METR_Evals/status/2016976660474843635",
+     "author": "METR (@METR_Evals)",
+     "date": "2026-01"
+    },
+    {
+     "claim": "Time Horizon 1.1 current 50%-horizon estimates for top models (as of the Jan 2026 update / its data as fetched mid-2026).",
+     "url": "https://metr.org/blog/2026-1-29-time-horizon-1-1/",
+     "author": "METR",
+     "date": "2026-01"
+    },
+    {
+     "claim": "Greenblatt's mid-2026 read of the frontier: 50%-reliability METR benchmark has effectively saturated (too easy to be a reliable discriminator among top models); the live signal is now the 80%-reliability horizon, where public models lag internal/frontier-lab-internal models.",
+     "url": "https://blog.redwoodresearch.org/p/my-picture-of-the-present-in-ai",
+     "author": "Ryan Greenblatt (Redwood Research)",
+     "date": "2026-04"
+    },
+    {
+     "claim": "Independent tracking (LessWrong/Substack analysis, Feb 2026) of the TH1.1 update: the rate of frontier time-horizon growth increased to ~10x/year (about every 3.5 months) for the most recent period, up from ~3x/year (~7 month doubling) pre-2024.",
+     "url": "https://www.lesswrong.com/posts/EYb2K9acKfyG2bome/metr-time-horizons-now-10x-year",
+     "author": "John C (LessWrong/Read the OOM, third-party analysis of METR data)",
+     "date": "2026-02"
+    },
+    {
+     "claim": "METR's own TH1.1 update quantifies the doubling-time trend across three windows, showing acceleration over time.",
+     "url": "https://metr.org/blog/2026-1-29-time-horizon-1-1/",
+     "author": "METR",
+     "date": "2026-01"
+    }
+   ]
+  },
+  {
+   "topic": "metr-rct",
+   "findings": [
+    {
+     "claim": "Headline result: AI tool access caused a 19% INCREASE in task completion time (slowdown), not a speedup, for experienced open-source developers on their own mature repos.",
+     "url": "https://arxiv.org/abs/2507.09089",
+     "author": "Joel Becker, Nate Rush, Beth Barnes, David Rein (METR)",
+     "date": "2025-07"
+    },
+    {
+     "claim": "Perceived vs actual gap: developers forecast AI would speed them up before the study, still believed they had been sped up afterward, despite actually being slowed down.",
+     "url": "https://arxiv.org/abs/2507.09089",
+     "author": "Joel Becker, Nate Rush, Beth Barnes, David Rein (METR)",
+     "date": "2025-07"
+    },
+    {
+     "claim": "External expert forecasters (ML researchers and economists) overestimated AI speedup even more than the developers themselves.",
+     "url": "https://arxiv.org/abs/2507.09089",
+     "author": "Joel Becker, Nate Rush, Beth Barnes, David Rein (METR)",
+     "date": "2025-07"
+    },
+    {
+     "claim": "Exact RCT design and sample.",
+     "url": "https://arxiv.org/abs/2507.09089",
+     "author": "Joel Becker, Nate Rush, Beth Barnes, David Rein (METR)",
+     "date": "2025-07"
+    },
+    {
+     "claim": "Developer and repository characteristics: highly experienced developers, large/mature high-quality codebases.",
+     "url": "https://arxiv.org/abs/2507.09089",
+     "author": "Joel Becker, Nate Rush, Beth Barnes, David Rein (METR)",
+     "date": "2025-07"
+    },
+    {
+     "claim": "AI tools/models used were Feb-June 2025 frontier tools, primarily Cursor Pro + Claude 3.5/3.7 Sonnet; developers had substantial general LLM experience but limited experience with this specific tool.",
+     "url": "https://arxiv.org/abs/2507.09089",
+     "author": "Joel Becker, Nate Rush, Beth Barnes, David Rein (METR)",
+     "date": "2025-07"
+    },
+    {
+     "claim": "The paper's own headline finding on the perception/behavior mechanism: when using AI, developers shift time away from active coding/searching toward reviewing AI output, prompting, waiting on AI, and idling.",
+     "url": "https://arxiv.org/abs/2507.09089",
+     "author": "Joel Becker, Nate Rush, Beth Barnes, David Rein (METR)",
+     "date": "2025-07"
+    },
+    {
+     "claim": "Authors' own list of factors that could explain non-generalization to other settings (e.g. frontier labs, less mature codebases) -- factors found LIKELY to contribute to slowdown in this specific study.",
+     "url": "https://arxiv.org/abs/2507.09089",
+     "author": "Joel Becker, Nate Rush, Beth Barnes, David Rein (METR)",
+     "date": "2025-07"
+    },
+    {
+     "claim": "Authors' explicit Key Caveats section: results should NOT be over-generalized because the two main drivers (developer familiarity, repo size/maturity) are specific to this setting.",
+     "url": "https://arxiv.org/abs/2507.09089",
+     "author": "Joel Becker, Nate Rush, Beth Barnes, David Rein (METR)",
+     "date": "2025-07"
+    },
+    {
+     "claim": "Authors' second caveat: current tool/model limitations (latency, reliability, elicitation) may not persist; better scaffolding, more inference compute, or domain fine-tuning could produce positive speedup in this same setting.",
+     "url": "https://arxiv.org/abs/2507.09089",
+     "author": "Joel Becker, Nate Rush, Beth Barnes, David Rein (METR)",
+     "date": "2025-07"
+    },
+    {
+     "claim": "Authors' third caveat / most direct 'lab response'-relevant finding: preliminary (forthcoming at publication) evidence that fully autonomous AI agents (not just IDE-copilot-style assistance) can often correctly implement the core functionality of these same repositories' issues, though failing on secondary requirements.",
+     "url": "https://arxiv.org/abs/2507.09089",
+     "author": "Joel Becker, Nate Rush, Beth Barnes, David Rein (METR)",
+     "date": "2025-07"
+    },
+    {
+     "claim": "Study explicitly distinguishes itself from prior literature that found speedups, attributing the difference to task realism, fixed (pre-registered) outcome measures, and using genuinely experienced developers on their own high-standard codebases.",
+     "url": "https://arxiv.org/abs/2507.09089",
+     "author": "Joel Becker, Nate Rush, Beth Barnes, David Rein (METR)",
+     "date": "2025-07"
+    },
+    {
+     "claim": "METR follow-up: a larger, late-2025 attempted replication with more developers and newer AI tools was compromised by severe selection effects and abandoned/redesigned rather than yielding a clean updated estimate.",
+     "url": "https://metr.org/blog/2026-02-24-uplift-update/",
+     "author": "METR",
+     "date": "2026-02"
+    },
+    {
+     "claim": "METR follow-up quote illustrating the selection-effect mechanism: developers increasingly did not want to be randomized away from AI access.",
+     "url": "https://metr.org/blog/2026-02-24-uplift-update/",
+     "author": "METR (quoting a study participant)",
+     "date": "2026-02"
+    },
+    {
+     "claim": "Other RCT: GitHub Copilot controlled experiment -- large, statistically strong speedup on a synthetic/self-contained coding task.",
+     "url": "https://arxiv.org/abs/2302.06590",
+     "author": "Sida Peng, Eirini Kalliamvakou, Peter Cihon, Mert Demirer (Microsoft/GitHub)",
+     "date": "2023-02"
+    },
+    {
+     "claim": "Other RCT: Google-internal enterprise RCT on real internal codebase task -- moderate speedup, NOT statistically significant at conventional threshold.",
+     "url": "https://arxiv.org/html/2410.12944v1",
+     "author": "Elise Paradis, Kate Grey, Quinn Madison, Daye Nam, Andrew Macvean, Nan Zhang, Ben Ferrari-Church, Satish Chandra (Google)",
+     "date": "2024-10"
+    }
+   ]
+  },
+  {
+   "topic": "serial-structure",
+   "findings": [
+    {
+     "claim": "Greenblatt's central Amdahl-style datapoint: current AI-driven engineering speedup at frontier labs (~1.6x) is much larger than the resulting overall AI progress speedup (~1.15-1.2x), because engineering labor is only one input among several that don't speed up as much.",
+     "url": "https://blog.redwoodresearch.org/p/my-picture-of-the-present-in-ai",
+     "author": "Ryan Greenblatt (Redwood Research)",
+     "date": "2026-05"
+    },
+    {
+     "claim": "Greenblatt: AI-written code in current frontier AI R&D is 'sloppier, less reliable, and less well understood' than human-written code, creating an understanding/verification gap, though this is often tolerable because R&D projects are small and self-contained.",
+     "url": "https://blog.redwoodresearch.org/p/my-picture-of-the-present-in-ai",
+     "author": "Ryan Greenblatt (Redwood Research)",
+     "date": "2026-05"
+    },
+    {
+     "claim": "Industry survey (Sonar 'State of Code' 2026): developers do not fully trust AI-generated code and often skip review despite this, and a substantial minority say AI-code review is *more* effortful than reviewing human code -- direct proxy for a 'verification tax' on AI-written code.",
+     "url": "https://www.sonarsource.com/company/press-releases/sonar-data-reveals-critical-verification-gap-in-ai-coding/",
+     "author": "Sonar (SonarSource), 'State of Code' developer survey",
+     "date": "2026-01"
+    },
+    {
+     "claim": "METR's RCT: giving experienced open-source developers early-2025 AI coding tools made them 19% SLOWER on real tasks in mature codebases -- attributed substantially to time spent reviewing/correcting AI output -- despite developers believing (both before and after) that AI had sped them up.",
+     "url": "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
+     "author": "METR",
+     "date": "2025-07"
+    },
+    {
+     "claim": "METR's simplified AI-timelines model formally applies Amdahl's law to AI R&D automation: once fraction f of tasks is automated (and automated tasks are much faster than manual ones), overall speedup is capped at 1/(1-f), so un-automated/serial tasks dominate wall-clock time as f rises.",
+     "url": "https://metr.org/notes/2026-02-10-simpler-ai-timelines-model/",
+     "author": "Thomas Kwa / METR",
+     "date": "2026-02"
+    },
+    {
+     "claim": "Epoch AI: final training runs are only a small fraction of total AI R&D compute spending at three frontier-ish labs -- most compute goes to the many smaller experiments, ablations, and failed runs that precede a final training run -- and R&D/experiment workloads have lower GPU utilization than final runs due to overhead (waiting between runs, failed jobs, debugging, idle time).",
+     "url": "https://epoch.ai/gradient-updates/r-and-d-vs-training-compute",
+     "author": "Ben Denain & Yafah Edelman / Epoch AI",
+     "date": "2026-03"
+    },
+    {
+     "claim": "Epoch AI: training run durations are structurally capped in practice (rarely exceeding ~6 months), and further scaling faces a compute-scale ceiling around 2e28 FLOP if runs must stay under ~3 months, because data-movement time begins to dominate arithmetic time -- i.e. training itself has a hard wall-clock floor that automation of coding/labor cannot shrink.",
+     "url": "https://epoch.ai/gradient-updates/data-movement-bottlenecks-scaling-past-1e28-flop",
+     "author": "Epoch AI",
+     "date": "2026"
+    },
+    {
+     "claim": "Sholto Douglas (then Google DeepMind, now Anthropic): writing code is 'a small fraction of the job' in frontier ML research; labs are 'somewhat compute bound' with 'always more experiments you could run'; the actual bottlenecks are interpreting/understanding experimental results and research 'taste' (prioritization under uncertainty), not code volume.",
+     "url": "https://www.dwarkesh.com/p/sholto-douglas-trenton-bricken",
+     "author": "Sholto Douglas & Trenton Bricken, interviewed by Dwarkesh Patel",
+     "date": "2024-03"
+    },
+    {
+     "claim": "Survey of 25 frontier-lab researchers/forecasters on automating AI R&D: multiple participants independently identify human oversight/approval and 'research taste'/idea-evaluation as the bottlenecks that persist after coding is automated, and expect the org to actively try to remove the human bottleneck.",
+     "url": "https://arxiv.org/abs/2603.03338",
+     "author": "survey of AI researchers/forecasters (arXiv 2603.03338)",
+     "date": "2026-03"
+    },
+    {
+     "claim": "Tom Davidson / Forethought formal model of a software intelligence explosion: training-run duration and experiment-compute availability are the two candidate hard serial bottlenecks that could cap a software-only intelligence explosion even with unlimited automated research labor; the model's central parameter is r (returns to software R&D), with r>1 required for an explosion.",
+     "url": "https://www.forethought.org/research/will-ai-r-and-d-automation-cause-a-software-intelligence-explosion",
+     "author": "Tom Davidson / Forethought (related formal writeup: Whitfill & Wu, arXiv:2507.23181)",
+     "date": "2025"
+    },
+    {
+     "claim": "Epoch/Davidson-style compute-bottleneck argument: training compute is enormously more scarce than inference compute, so a fully-automated research workforce running on 'saved' inference compute is not itself compute-constrained the way training/experimentation is -- but experiment throughput (not final-model inference) is the actual bottleneck once coding is automated.",
+     "url": "https://www.forethought.org/research/will-ai-r-and-d-automation-cause-a-software-intelligence-explosion",
+     "author": "Tom Davidson / Forethought",
+     "date": "2025"
+    },
+    {
+     "claim": "Institutional/decision-latency bottleneck: rigid social, political, and organizational decision-making schedules act as a serial bottleneck on AI-accelerated progress because these processes cannot themselves be sped up by faster AI cognition -- 'accelerating technological progress is like slowing the processes which don't accelerate along with it.'",
+     "url": "https://www.forethought.org/research/preparing-for-the-intelligence-explosion",
+     "author": "Will MacAskill & Fin Moorhouse / Forethought",
+     "date": "2025"
+    },
+    {
+     "claim": "Amodei's 'Machines of Loving Grace' analogy: even a fully competent virtual biologist/researcher is bottlenecked by the physical, serial nature of real-world experimentation (running assays, waiting for biological/clinical timelines) unless AI also helps redesign the experimental paradigm itself (e.g. in-vitro proxies for in-vivo, faster instruments, regulatory/trial reform).",
+     "url": "https://darioamodei.com/essay/machines-of-loving-grace",
+     "author": "Dario Amodei (Anthropic)",
+     "date": "2024-10"
+    }
+   ]
+  },
+  {
+   "topic": "time-use",
+   "findings": [
+    {
+     "claim": "Epoch's 'Toward an O*NET for AI R&D' piece does not contain any time-use percentages, importance weights, or empirical data on how researchers/engineers allocate time across the 6 categories or 62 tasks -- it is purely a taxonomy proposal, not a time-use study.",
+     "url": "https://epoch.ai/gradient-updates/toward-an-onet-for-ai-rnd",
+     "author": "Epoch AI",
+     "date": "2025-01"
+    },
+    {
+     "claim": "General software developers spend well under half their workweek writing/improving code; the remainder splits across code maintenance, testing, security, and meetings/operational work. Role matters: pure developers spend more time coding than DevOps/managers.",
+     "url": "https://www.sonarsource.com/blog/how-much-time-do-developers-spend-actually-writing-code/",
+     "author": "Sonar (SonarSource), State of Code Developer Survey",
+     "date": "2024-01"
+    },
+    {
+     "claim": "Developers report spending a large minority of their week on technical debt/maintenance rather than new code/features -- an independent, earlier data point corroborating the Sonar split.",
+     "url": "https://stripe.com/files/reports/the-developer-coefficient.pdf",
+     "author": "Stripe, 'The Developer Coefficient'",
+     "date": "2018-09"
+    },
+    {
+     "claim": "Knowledge workers broadly (not developer-specific) report spending the majority of their time on coordination overhead rather than skilled or strategic work.",
+     "url": "https://asana.com/resources/why-work-about-work-is-bad",
+     "author": "Asana, Anatomy of Work Index",
+     "date": "2023-01"
+    },
+    {
+     "claim": "In Anthropic's internal August 2025 survey of engineers/researchers, Claude usage grew sharply and its use-mix shifted from low-level coding tasks toward higher-level design/planning and larger feature work -- a proxy for how the underlying human work composition is (or isn't) changing.",
+     "url": "https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic",
+     "author": "Anthropic",
+     "date": "2025-08"
+    },
+    {
+     "claim": "Anthropic engineers self-report a qualitative shift in role composition toward reviewing/revising AI output rather than authoring code from scratch.",
+     "url": "https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic",
+     "author": "Anthropic",
+     "date": "2025-08"
+    },
+    {
+     "claim": "Across the general Claude.ai + API traffic (not lab-internal), Computer & Mathematical / programming-type tasks are the single largest occupational task cluster, and are especially concentrated in programmatic (API) use, consistent with 'Build' work dominating automatable task-mix for technical roles.",
+     "url": "https://www.anthropic.com/news/the-anthropic-economic-index",
+     "author": "Anthropic Economic Index",
+     "date": "2025-01"
+    },
+    {
+     "claim": "METR's early-2025 RCT on experienced open-source developers measured time at ~10-second resolution via 143 hours of manually-labeled screen recordings (29% of total study hours), but METR's public writeup reports only the AI-vs-no-AI time delta (AI made developers 19% slower), not a full activity-category breakdown (coding vs. testing vs. planning vs. review) for the general workday.",
+     "url": "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
+     "author": "METR",
+     "date": "2025-07"
+    },
+    {
+     "claim": "Research-engineer (RE) and research-scientist (RS) roles at frontier labs are described in job postings and hiring guides as differing in primary orientation -- RE toward implementation/scaling/infrastructure, RS toward novel methods/experimentation/publication -- but the boundary is explicitly described as blurred at Anthropic, OpenAI, and DeepMind, i.e. there is no clean, stable time-use split by title.",
+     "url": "https://www.sundeepteki.org/company-guides.html",
+     "author": "Sundeep Teki (AI Research Engineer/Scientist interview guides, drawing on public lab career pages)",
+     "date": "2026-01"
+    }
+   ]
+  }
+ ]
+}

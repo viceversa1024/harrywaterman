@@ -14,6 +14,7 @@
       <button class="view-btn active" data-view="current" role="tab" aria-selected="true">Current</button>
       <button class="view-btn" data-view="timeline" role="tab" aria-selected="false">Timeline</button>
       <button class="view-btn" data-view="uplift" role="tab" aria-selected="false">Uplift</button>
+      <button class="view-btn" data-view="sources" role="tab" aria-selected="false">Sources</button>
     </nav>
   </div>
   <p class="subtitle">Categories of work that researchers/engineers at frontier AI companies do</p>
@@ -21,11 +22,38 @@
     <summary>Rating scale 0–5</summary>
     <div id="rubric-body"></div>
   </details>
+  <details class="rubric">
+    <summary>Methodology</summary>
+    <div class="method-body">
+      <p><b>Current ratings (2026-07)</b> are Epoch AI&rsquo;s published author judgments from
+      <a href="https://epoch.ai/gradient-updates/toward-an-onet-for-ai-rnd">&ldquo;Toward an O*NET for AI R&amp;D&rdquo;</a>
+      (Denain, Kwon &amp; Ho) &mdash; self-described &ldquo;best-guess starting points,&rdquo; describing typical
+      frontier-lab practice rather than maximum elicitation.</p>
+      <p><b>Historical ratings (2022-07 &ndash; 2026-01, semiannual)</b> are an independent AI-assisted reconstruction.
+      One research agent per task traced its full trajectory under an evidence rule: every rating must cite dated
+      evidence &mdash; no interpolation backwards from the 2026 anchor. Contemporaneous sources were preferred
+      (lab engineering posts, system cards, measured studies such as METR and SWE-bench); retrospective testimony
+      was admissible but flagged and down-weighted. Ratings are non-decreasing by default, and tasks that did not
+      yet exist as jobs are rated 0 by construction.</p>
+      <p><b>Verification:</b> per-category consistency review plus blind spot-checks of a 15% sample
+      (checkers committed to independent ratings before reading the file). Eight flags were raised and individually
+      adjudicated; the dominant error classes were future-dated evidence supporting earlier snapshots and early
+      ratings inflated toward high 2026 anchors. Each rating&rsquo;s rationale and evidence are visible by
+      expanding its task row.</p>
+      <p><b>Uplift tab:</b> a Monte Carlo model mapping rating levels to labor-time multipliers, weighting tasks
+      by estimated time-use, aggregating Amdahl-style, and applying a Cobb-Douglas labor/compute chain
+      (parameters after Greenblatt 2025; Davidson et al. 2026). Bands are p10&ndash;p90. No direct frontier-lab
+      time-use data exists; the weights are triangulated from adjacent surveys and are the model&rsquo;s
+      weakest input.</p>
+      <p><b>Caveats:</b> pre-2024 internal lab practice is thinly documented (low confidence is common in early
+      snapshots); tasks new since 2022 inflate apparent growth; labs publicize automation wins, not failures.</p>
+    </div>
+  </details>
 </header>
 <main id="app" aria-live="polite"></main>
 <footer>
   <div id="foot"></div>
-  <p class="credit">Taxonomy and current ratings: <a href="https://epoch.ai/gradient-updates/toward-an-onet-for-ai-rnd">&ldquo;Toward an O*NET for AI R&amp;D&rdquo;</a>, Denain, Kwon &amp; Ho, Epoch AI (2026) · visual style after <a href="https://epoch.ai">epoch.ai</a> · 2022&ndash;2026 backfill is independent, not Epoch&rsquo;s</p>
+  <p class="credit">Taxonomy and current ratings: <a href="https://epoch.ai/gradient-updates/toward-an-onet-for-ai-rnd">&ldquo;Toward an O*NET for AI R&amp;D&rdquo;</a>, Denain, Kwon &amp; Ho, Epoch AI (2026) · 2022&ndash;2026 backfill is independent, not Epoch&rsquo;s</p>
 </footer>
 <div id="tooltip" role="status" hidden></div>
 <script src="app.js"></script>
