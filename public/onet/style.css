@@ -128,6 +128,7 @@ svg .gridline { stroke: var(--charcoal-100); }
 
 footer { margin-top: 48px; border-top: 1px solid var(--charcoal-200); padding-top: 10px; font: 12px var(--mono); color: var(--charcoal-500); }
 footer a { color: var(--charcoal-700); }
+footer .credit { margin-top: 6px; }
 
 @media (max-width: 600px) {
   body { padding: 24px 14px 60px; }
