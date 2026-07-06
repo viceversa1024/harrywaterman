@@ -11,9 +11,9 @@ interface LayerInfo {
 }
 
 const layers: LayerInfo[] = [
-  { text: 'meet with me', href: 'https://calendar.app.google/RJz5GmyK3fpELsz66' },
+  { text: 'meet with me', href: '/meet' },
   { text: 'email (copy)' },
-  { text: 'zine-a-thon', href: 'https://zineathon.com' },
+  { text: 'feedback', href: '/feedback' },
 ];
 
 const layerCenterPct = [14, 48, 82];
@@ -138,7 +138,7 @@ export default function HomeContent({ altBios }: HomeContentProps) {
               }
             `}</style>
             <a
-              href="https://calendar.app.google/RJz5GmyK3fpELsz66"
+              href="/meet"
               target="_blank"
               rel="noopener noreferrer"
               className="layer-link"
@@ -157,11 +157,11 @@ export default function HomeContent({ altBios }: HomeContentProps) {
               <polygon points="279,63 401,17 396,288 275,328" />
             </a>
             <a
-              href="https://zineathon.com"
+              href="/feedback"
               target="_blank"
               rel="noopener noreferrer"
               className="layer-link"
-              onMouseMove={(e) => { if (!isTouchDevice()) setTooltip({ x: e.clientX, y: e.clientY, text: 'zine-a-thon' }); }}
+              onMouseMove={(e) => { if (!isTouchDevice()) setTooltip({ x: e.clientX, y: e.clientY, text: 'feedback' }); }}
               onMouseLeave={() => setTooltip(null)}
               onClick={(e) => handlePolygonClick(2, e)}
             >
