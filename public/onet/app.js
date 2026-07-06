@@ -251,6 +251,11 @@ function renderUplift() {
           </div>`;
         }).join('')}
       </div>
+      ${UPLIFT.comparisons ? `<div class="comparisons">
+        <h3>Comparison: AI Futures Project</h3>
+        ${UPLIFT.comparisons.map(c =>
+          `<p>${esc(c.text)} <a href="${esc(c.url)}">${urlDomain(c.url)}</a></p>`).join('')}
+      </div>` : ''}
     </div>`;
 }
 

@@ -242,5 +242,19 @@
    "value": 1.175,
    "source": "Greenblatt: overall AI-progress speedup 1.15-1.2x, Apr 2026"
   }
+ ],
+ "comparisons": [
+  {
+   "text": "AI Futures Project takeoff forecast (Kokotajlo & Lifland, Apr 2025): the superhuman-coder milestone carries a ~5x AI R&D progress multiplier (then SAR 25x, SIAR 250x, ASI 2,000x). Our implied algorithmic-progress speedup of 1.32x at 2026-07 sits well below their first milestone — consistent with SC not yet reached.",
+   "url": "https://ai-2027.com/research/takeoff-forecast"
+  },
+  {
+   "text": "AI Futures Model (Dec 2025 revision; Kokotajlo, Lifland, Halstead & Kastner): superhuman-coder median moved from Jan 2027 to ~Dec 2031, partly from becoming less bullish on pre-full-automation AI R&D speedups — directionally consistent with the sub-1.5x algorithmic curve here.",
+   "url": "https://blog.aifutures.org/p/ai-futures-model-dec-2025-update"
+  },
+  {
+   "text": "Their multipliers attach to capability milestones, not calendar dates, and they publish no present-day multiplier estimate — so these are shown as comparisons rather than plotted points.",
+   "url": "https://aifuturesmodel.com"
+  }
  ]
 }
