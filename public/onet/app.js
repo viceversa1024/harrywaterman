@@ -2,6 +2,7 @@
 
 const CAT_COLORS = ['#009af1', '#e62c11', '#00a5a6', '#6a3ecb', '#ea8d00', '#1d7a22']; // validated fixed order
 let DATA = null;
+let UPLIFT = null;
 let view = 'current';
 const expanded = new Set();
 
@@ -80,7 +81,14 @@ function chip(rating, display, extraClass = '') {
 /* ---------- current view ---------- */
 
 function render() {
-  $('#app').innerHTML = view === 'current' ? renderCurrent() : renderTimeline();
+  if (view === 'uplift' && !UPLIFT) {
+    $('#app').innerHTML = '';
+    fetch('data/uplift.json').then(r => r.json()).then(u => { UPLIFT = u; render(); })
+      .catch(e => { $('#app').textContent = 'Failed to load data/uplift.json — ' + e; });
+    return;
+  }
+  $('#app').innerHTML = view === 'current' ? renderCurrent()
+    : view === 'timeline' ? renderTimeline() : renderUplift();
   if (view === 'current') bindRows();
   bindTooltips();
 }
@@ -217,6 +225,70 @@ function lineChart(dates, series, w, h, mini = false) {
 
   return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" style="max-width:100%">
     <g class="axis">${grid}</g>${xLabels}${marks}</svg>`;
+}
+
+/* ---------- uplift view ---------- */
+
+function renderUplift() {
+  return `<div class="chart-block">
+      <h2>Implied speedup from task ratings</h2>
+      <p class="chart-note">${esc(UPLIFT.note)}</p>
+      <div class="legend">
+        <span><span class="key" style="background:#009af1"></span>model median (band p10–p90)</span>
+        <span><span class="key key-anchor"></span>external estimate</span>
+      </div>
+      <div class="uplift-grid">
+        ${UPLIFT.metrics.map(m => {
+          const anchors = UPLIFT.anchors.filter(a => a.metric === m.key);
+          return `<div class="sm-cell">
+            <div class="sm-title">${esc(m.name)}</div>
+            ${bandChart(UPLIFT.dates, m.series, anchors, 440, 200)}
+          </div>`;
+        }).join('')}
+      </div>
+    </div>`;
+}
+
+function bandChart(dates, series, anchors, w, h) {
+  const pad = { t: 10, r: 14, b: 22, l: 34 };
+  const iw = w - pad.l - pad.r, ih = h - pad.t - pad.b;
+  const vals = dates.flatMap(d => [series[d].p10, series[d].p90])
+    .concat(anchors.map(a => a.value));
+  const lo = Math.min(0.95, ...vals), hi = Math.max(1.3, ...vals) * 1.04;
+  const x = i => pad.l + (i / (dates.length - 1)) * iw;
+  const y = v => pad.t + ih - ((v - lo) / (hi - lo)) * ih;
+
+  const ticks = [];
+  for (let v = Math.ceil(lo * 2) / 2; v <= hi; v += 0.5) ticks.push(v);
+  const grid = ticks.map(v =>
+    `<line class="gridline" ${v === 1 ? 'stroke-dasharray="3 3"' : ''} x1="${pad.l}" y1="${y(v)}" x2="${w - pad.r}" y2="${y(v)}"/>
+     <text x="${pad.l - 6}" y="${y(v) + 3.5}" text-anchor="end">${v.toFixed(1)}x</text>`).join('');
+
+  const xLabels = dates.map((d, i) => i % 2 === 0 ?
+    `<text x="${x(i)}" y="${h - 6}" text-anchor="${i === 0 ? 'start' : i === dates.length - 1 ? 'end' : 'middle'}">${d.slice(0, 4)}</text>` : '').join('');
+
+  const band = 'M' + dates.map((d, i) => `${x(i)},${y(series[d].p90)}`).join(' L') +
+    ' L' + dates.slice().reverse().map((d, i) => `${x(dates.length - 1 - i)},${y(series[d].p10)}`).join(' L') + ' Z';
+  const median = 'M' + dates.map((d, i) => `${x(i)},${y(series[d].p50)}`).join(' L');
+
+  const dots = dates.map((d, i) =>
+    `<circle cx="${x(i)}" cy="${y(series[d].p50)}" r="3.5" fill="#009af1" stroke="#fff" stroke-width="2"
+      data-tip="${d} · ${series[d].p50.toFixed(2)}x [${series[d].p10.toFixed(2)}–${series[d].p90.toFixed(2)}]"/>`).join('');
+
+  const marks = anchors.map(a => {
+    const i = dates.indexOf(a.date);
+    if (i < 0) return '';
+    const ax = x(i), ay = y(a.value);
+    return `<path d="M${ax},${ay - 5} L${ax + 5},${ay} L${ax},${ay + 5} L${ax - 5},${ay} Z"
+      fill="#212a2a" stroke="#fff" stroke-width="1.5"
+      data-tip="${a.value}x — ${esc(a.source)}"/>`;
+  }).join('');
+
+  return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" style="max-width:100%">
+    <g class="axis">${grid}</g>${xLabels}
+    <path d="${band}" fill="#009af1" opacity="0.13"/>
+    <path d="${median}" fill="none" stroke="#009af1" stroke-width="2"/>
+    ${dots}${marks}</svg>`;
 }
 
 /* ---------- tooltip ---------- */
