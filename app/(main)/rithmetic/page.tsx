@@ -6,6 +6,7 @@ export default function Rithmetic() {
         <h2>Projects</h2>
         <div>
           <p><a href="/fieldmap" target="_blank" rel="noopener noreferrer">AI Safety Field Map</a></p>
+          <p><a href="/onet" target="_blank" rel="noopener noreferrer">O*NET for AI R&amp;D</a></p>
         </div>
 
         <h2>Fun</h2>
