@@ -14,7 +14,7 @@ export default function Docs() {
     <>
       <meta httpEquiv="refresh" content={`0; url=${DOCS_URL}`} />
       <p>
-        Redirecting to <a href={DOCS_URL}>doc</a>…
+        Redirecting to <a href={DOCS_URL}>masterdoc</a>…
       </p>
     </>
   );
