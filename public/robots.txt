@@ -1,0 +1,3 @@
+User-agent: Slackbot
+Disallow: /feedback
+Disallow: /docs
