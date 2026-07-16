@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lateral Workshop</title>
+<meta name="description" content="A weekend retreat for mid-career professionals entering AI safety. September 11–13, 2026, San Francisco Bay Area.">
+<meta property="og:title" content="Lateral Workshop">
+<meta property="og:description" content="A weekend retreat for mid-career professionals entering AI safety. September 11–13, 2026, San Francisco Bay Area.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+/* LATERAL WORKSHOP — faithful to the banner: print left, wordmark right, white ground.
+   The hero's 46/54 split is the spine; every section below hangs its heading in the
+   left (print) column and its text in the right (wordmark) column. */
+
+@font-face { font-family: 'Archivo'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('assets/fonts/archivo-400.woff2') format('woff2'); }
+
+* { box-sizing: border-box; margin: 0; }
+
+body {
+  background: #fff;
+  color: #111;
+  font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  font-size: clamp(1rem, 0.95rem + 0.35vw, 1.2rem);
+  line-height: 1.65;
+}
+
+img { display: block; }
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 46% 54%;
+  position: relative;
+}
+
+/* art bleeds off the top and bottom edges, as in the banner.
+   The print is rebuilt from its collage layers: the city ground, the blue crane,
+   and the black tower, overprinted live with multiply. On scroll each layer
+   drifts at its own rate, so the collage comes apart the way it was made. */
+.art {
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+}
+.art .layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 0;
+  will-change: transform;
+}
+.art .layer + .layer { mix-blend-mode: multiply; }
+/* hero shows the whole print, bottom paper included — the paper's white
+   merges with the page ground, so it floats rather than crops */
+.page .art .layer { object-fit: contain; }
+/* layer colors stay untouched; the cranes multiply at 85% so overlaps
+   read as overprint rather than compounding to black */
+.art .layer-blue,
+.art .layer-black { opacity: 0.85; }
+
+.type {
+  display: flex;
+  flex-direction: column;
+  padding: 6vh 4vw 3vh 0;
+}
+
+.wordmark {
+  display: flex;
+  flex-direction: column;
+  font-weight: 850;
+  color: #0a0a0a;
+  line-height: 1.05;
+}
+.wm-lateral {
+  font-size: clamp(1.9rem, 5.5vw, 6.65rem);
+  letter-spacing: 0.38em;
+}
+.wm-workshop {
+  font-size: clamp(2.28rem, 7vw, 8.55rem);
+  letter-spacing: 0.02em;
+  align-self: flex-end;
+}
+
+/* the banner's empty lower-right, put to work */
+.details {
+  margin-top: auto;
+  align-self: flex-end;
+  text-align: right;
+  max-width: 34ch;
+  font-size: clamp(0.95rem, 1.15vw, 1.15rem);
+  line-height: 1.55;
+}
+.when {
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+.apply {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  color: #0a0a0a;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 2px;
+}
+.apply:hover { text-decoration-thickness: 4px; }
+
+.cue {
+  position: absolute;
+  left: 50%;
+  bottom: 2.4rem;
+  transform: translate(-50%, 0);
+  z-index: 2;
+  font-size: 1.35rem;
+  line-height: 1;
+  padding: 0.4rem 0.6rem;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.25s cubic-bezier(0.22, 1, 0.36, 1), transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.cue:hover { color: #0a0a0a; transform: translate(-50%, 4px); }
+
+/* ————— the plan, on the same spine ————— */
+
+.section {
+  display: grid;
+  grid-template-columns: 46% 54%;
+  padding-block: clamp(5rem, 13vh, 9.5rem);
+}
+.section + .section { padding-top: 0; }
+
+.section-label {
+  grid-column: 1;
+  align-self: start;
+  position: sticky;
+  top: clamp(1.5rem, 6vh, 4rem);
+  text-align: right;
+  padding-right: clamp(1.75rem, 3.5vw, 3.5rem);
+  font-weight: 850;
+  font-size: clamp(0.95rem, 0.8rem + 0.7vw, 1.35rem);
+  letter-spacing: 0.38em;
+  line-height: 1.9;
+  text-transform: uppercase;
+  color: #0a0a0a;
+  text-wrap: balance;
+}
+
+.section-body {
+  grid-column: 2;
+  max-width: 60ch;
+  padding-right: 4vw;
+}
+.section-body > * + * { margin-top: 1.4em; }
+
+/* goals: inked squares, no numbers — the goals aren't a sequence */
+.goals {
+  list-style: none;
+  padding: 0;
+}
+.goals li {
+  position: relative;
+  padding-left: 1.9em;
+}
+.goals li + li { margin-top: 1.5em; }
+.goals li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.52em;
+  width: 0.5em;
+  height: 0.5em;
+  background: #0a0a0a;
+}
+
+/* questions: plain stacked pairs, no accordions */
+.faq { margin: 0; }
+.faq dt { font-weight: 700; }
+.faq dd { margin: 0.6em 0 0; }
+.faq div + div { margin-top: 2.4em; }
+
+.bet {
+  font-size: clamp(1.25rem, 1.05rem + 1vw, 1.7rem);
+  font-weight: 700;
+  line-height: 1.45;
+  text-wrap: balance;
+}
+
+/* ————— close: the banner, mirrored ————— */
+
+.closing {
+  display: grid;
+  grid-template-columns: 54% 46%;
+  min-height: 92vh;
+}
+/* closing crops to a clean rectangle: oversized boxes push the visible
+   window inside the print's ink, past the ragged paper edges */
+.closing .art .layer {
+  top: -12.5%;
+  left: -12.5%;
+  width: 125%;
+  height: 125%;
+  object-position: 50% 80%;
+}
+.outro {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 6vh 4vw 9vh 4vw;
+  max-width: 44ch;
+}
+.outro .when { margin-top: 1.4rem; }
+.outro .apply { font-size: clamp(1.2rem, 1rem + 1vw, 1.6rem); }
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2.2rem 4vw;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: #555;
+}
+.foot b {
+  font-weight: 850;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #0a0a0a;
+}
+
+:focus-visible { outline: 3px solid #0a0a0a; outline-offset: 3px; }
+
+/* ————— motion: content is visible by default; JS only adds the entrance ————— */
+
+html.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+html.js [data-reveal].in { opacity: 1; transform: none; }
+html.js .section-body[data-reveal] { transition-delay: 0.08s; }
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html.js [data-reveal] { opacity: 1; transform: none; transition: none; }
+  .cue { transition: none; }
+  .cue:hover { transform: translate(-50%, 0); }
+}
+
+@media (max-width: 700px) {
+  .page { grid-template-columns: 1fr; }
+  .art { aspect-ratio: 1085 / 1571; }
+  .type { padding: 3rem 1.5rem; }
+  .wm-lateral { font-size: clamp(1.71rem, 8.55vw, 2.85rem); letter-spacing: 0.27em; }
+  .wm-workshop { font-size: clamp(2.2rem, 11.5vw, 3.8rem); }
+  .details { margin-top: 4rem; }
+
+  .section {
+    grid-template-columns: 1fr;
+    padding-block: clamp(4rem, 10vh, 6rem);
+  }
+  .section-label {
+    position: static;
+    text-align: left;
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .section-body { padding: 0 1.5rem; }
+
+  .closing { grid-template-columns: 1fr; min-height: 0; }
+  .closing .art { order: -1; height: 55vh; aspect-ratio: auto; }
+  .outro { padding: 3.5rem 1.5rem; max-width: none; }
+  .foot { padding: 2rem 1.5rem; flex-wrap: wrap; }
+}
+</style>
+</head>
+<body>
+
+<main>
+  <section class="page" aria-label="Lateral Workshop">
+    <div class="art" data-drift="scatter" role="img" aria-label="Monoprint collage of a black crane tower and blue crane over ochre and rust city blocks">
+      <img class="layer layer-city" src="assets/layers/city.webp" alt="" data-sy="0" data-sx="0">
+      <img class="layer layer-blue" src="assets/layers/crane-blue.webp" alt="" data-sy="-0.09" data-sx="-0.022">
+      <img class="layer layer-black" src="assets/layers/tower-black.webp" alt="" data-sy="0.16" data-sx="0.018">
+    </div>
+    <div class="type">
+      <h1 class="wordmark">
+        <span class="wm-lateral">LATERAL</span>
+        <span class="wm-workshop">WORKSHOP</span>
+      </h1>
+      <div class="details">
+        <p>A weekend retreat for mid-career professionals entering AI&nbsp;safety.</p>
+        <p class="when">September 11–13, 2026 · San Francisco Bay Area</p>
+        <a class="apply" href="#apply">Apply</a>
+      </div>
+    </div>
+    <a class="cue" href="#premise" aria-label="Read more about the workshop">↓</a>
+  </section>
+
+  <section class="section" id="premise" aria-labelledby="premise-label">
+    <h2 class="section-label" id="premise-label" data-reveal>Premise</h2>
+    <div class="section-body" data-reveal>
+      <p class="bet">AI may soon surpass human capabilities, no one yet knows how to control systems like that, and failure could be permanent, for everyone.</p>
+      <p>The harder question is where you fit. For experienced professionals, a move means navigating family, finances, status, and a network built in another field. The field needs people who have managed teams, run operations, and scaled organizations, and it has almost no path in for them.</p>
+      <p>Lateral Workshop brings together a small cohort of mid-career professionals, people already doing the work, and a structured transition process, so you leave with a concrete plan and people who will help you follow it.</p>
+    </div>
+  </section>
+
+  <section class="section" id="weekend" aria-labelledby="weekend-label">
+    <h2 class="section-label" id="weekend-label" data-reveal>The weekend</h2>
+    <div class="section-body" data-reveal>
+      <p>A working weekend, structured around the decision in front of you:</p>
+      <ul class="goals">
+        <li>Candid conversations with practitioners about what the work is actually like, where teams need experienced people, and what commonly goes wrong in a transition.</li>
+        <li>Role mapping that translates your experience into concrete paths across research, engineering, policy, operations, product, and management.</li>
+        <li>Transition planning that pressure-tests options against your real constraints and turns a broad intention into sequenced next steps.</li>
+        <li>A peer cohort that makes a difficult move less isolating.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="after" aria-labelledby="after-label">
+    <h2 class="section-label" id="after-label" data-reveal>Afterward</h2>
+    <div class="section-body" data-reveal>
+      <p class="bet">Most of the program happens after the weekend.</p>
+      <p>Retreat energy usually fades once ordinary work resumes, so the program is built for follow-through:</p>
+      <ul class="goals">
+        <li>Recurring cohort check-in calls to review commitments, unblock decisions, and revise plans as things develop.</li>
+        <li>Introductions to people and organizations relevant to your transition path.</li>
+        <li>Help identifying and pursuing career transition funding when it would make a move possible. Grants are not guaranteed; we help you navigate what exists.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="fit" aria-labelledby="fit-label">
+    <h2 class="section-label" id="fit-label" data-reveal>Who it&rsquo;s for</h2>
+    <div class="section-body" data-reveal>
+      <ul class="goals">
+        <li>You&rsquo;re several years into a career in engineering, product, operations, policy, research, management, or another relevant field.</li>
+        <li>You have a grounding in AI risk: a BlueDot course, comparable study, or relevant work.</li>
+        <li>You&rsquo;re taking the possibility of a near-term transition seriously.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="questions" aria-labelledby="questions-label">
+    <h2 class="section-label" id="questions-label" data-reveal>Questions</h2>
+    <div class="section-body" data-reveal>
+      <dl class="faq">
+        <div>
+          <dt>Do I need a technical background?</dt>
+          <dd>No. The field is short on operators, managers, policy people, and communicators as much as engineers. Technical and non-technical paths are both in scope.</dd>
+        </div>
+        <div>
+          <dt>I haven&rsquo;t done a BlueDot course. Can I apply?</dt>
+          <dd>Yes. A BlueDot course is the most common way applicants build context, but comparable self-study or work experience counts. Tell us how you built your grounding when you apply.</dd>
+        </div>
+        <div>
+          <dt>Why only a weekend?</dt>
+          <dd>A weekend fits people balancing established jobs, families, and other commitments. The longer work happens in the follow-through program.</dd>
+        </div>
+        <div>
+          <dt>How big is the cohort?</dt>
+          <dd>Small by design: the right dozen people beat the wrong forty. Selection prioritizes serious intent and a mix of experience that lets the cohort help each other.</dd>
+        </div>
+        <div>
+          <dt>What does it cost?</dt>
+          <dd>Cost and travel support details will be published with the application. If money is the blocker, say so when you apply.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="closing" id="apply" aria-label="Apply">
+    <div class="outro">
+      <p>A focused weekend, a small cohort, and follow-through that continues after everyone goes home.</p>
+      <p class="when">September 11–13, 2026 · San Francisco Bay Area</p>
+      <a class="apply" href="#">Apply</a>
+    </div>
+    <div class="art" data-drift="gather" role="img" aria-label="Lower half of the monoprint collage: rust buildings and trees beneath the cranes">
+      <img class="layer layer-city" src="assets/layers/city.webp" alt="" data-sy="0" data-sx="0">
+      <img class="layer layer-blue" src="assets/layers/crane-blue.webp" alt="" data-sy="-0.09" data-sx="-0.022">
+      <img class="layer layer-black" src="assets/layers/tower-black.webp" alt="" data-sy="0.16" data-sx="0.018">
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <b>Lateral Workshop</b>
+  <span>September 11–13, 2026 · San Francisco Bay Area</span>
+</footer>
+
+<script>
+const io = new IntersectionObserver((entries) => {
+  for (const e of entries) {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }
+}, { rootMargin: '0px 0px -12% 0px' });
+document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+
+(() => {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const arts = [...document.querySelectorAll('.art[data-drift]')].map(el => ({
+    el,
+    mode: el.dataset.drift,
+    layers: [...el.querySelectorAll('.layer')].map(l => ({
+      l,
+      sy: parseFloat(l.dataset.sy),
+      sx: parseFloat(l.dataset.sx),
+    })),
+  }));
+
+  let ticking = false;
+  function apply() {
+    const vh = innerHeight;
+    for (const a of arts) {
+      const r = a.el.getBoundingClientRect();
+      // scatter: composed at the top of the page, comes apart as the hero scrolls away
+      // gather: enters misregistered, locks into place as it settles into view
+      const k = a.mode === 'scatter'
+        ? Math.min(Math.max(-r.top / vh, 0), 1.5)
+        : 1 - Math.min(Math.max((vh - r.top) / (vh * 0.9), 0), 1);
+      for (const { l, sy, sx } of a.layers) {
+        l.style.transform = 'translate(' + (k * sx * r.width).toFixed(1) + 'px,' + (k * sy * r.height).toFixed(1) + 'px)';
+      }
+    }
+    ticking = false;
+  }
+
+  addEventListener('scroll', () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(apply); }
+  }, { passive: true });
+  addEventListener('resize', apply);
+  apply();
+})();
+</script>
+
+</body>
+</html>
