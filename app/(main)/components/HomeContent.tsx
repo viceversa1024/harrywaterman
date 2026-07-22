@@ -12,7 +12,7 @@ interface LayerInfo {
 
 const layers: LayerInfo[] = [
   { text: 'meet with me', href: '/meet' },
-  { text: 'email (copy)' },
+  { text: 'signal (copy)' },
   { text: 'feedback', href: '/feedback' },
 ];
 
@@ -66,7 +66,7 @@ export default function HomeContent({ altBios }: HomeContentProps) {
       setMobileTooltip(mobileTooltip === index ? null : index);
     } else if (index === 1) {
       e.preventDefault();
-      navigator.clipboard.writeText('watermah@uci.edu');
+      navigator.clipboard.writeText('harry.01');
       setCopied(true);
     }
   };
@@ -150,7 +150,7 @@ export default function HomeContent({ altBios }: HomeContentProps) {
             </a>
             <a
               className="layer-link"
-              onMouseMove={(e) => { if (!isTouchDevice()) setTooltip({ x: e.clientX, y: e.clientY, text: 'email (copy)' }); }}
+              onMouseMove={(e) => { if (!isTouchDevice()) setTooltip({ x: e.clientX, y: e.clientY, text: 'signal (copy)' }); }}
               onMouseLeave={() => setTooltip(null)}
               onClick={(e) => handlePolygonClick(1, e)}
             >
@@ -197,7 +197,7 @@ export default function HomeContent({ altBios }: HomeContentProps) {
                 <span
                   style={{ color: 'white', textDecoration: 'underline', cursor: 'pointer' }}
                   onClick={() => {
-                    navigator.clipboard.writeText('watermah@uci.edu');
+                    navigator.clipboard.writeText('harry.01');
                     setCopied(true);
                   }}
                 >
@@ -241,7 +241,7 @@ export default function HomeContent({ altBios }: HomeContentProps) {
             zIndex: 1000,
           }}
         >
-          email copied to clipboard
+          signal username copied to clipboard
         </div>
       )}
       {universe === null ? (
