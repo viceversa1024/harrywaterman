@@ -51,7 +51,7 @@
 <div class="counter">
   <span class="big">11</span>
   <span class="what">members of Congress on the record about the incident</span>
-  <span class="cadence"><b>Auto-updated every 4 hours.</b><br>Last update: Jul 23, ~2:20pm PT</span>
+  <span class="cadence"><b>Auto-updated every 4 hours.</b><br>Last update: Jul 23, ~2:45pm PT</span>
 </div>
 <p class="tipline">Seen a statement that's missing? Signal: <b>harry.01</b></p>
 <p class="stamp">A tracker of every member of Congress on the record about the July 21, 2026 disclosure. An automated sweep re-checks news, official sites, and X every 4 hours and updates this page. Compiled by Harry Waterman with Claude. &nbsp;&middot;&nbsp; <a href="coverage/">Coverage map: every account being searched &rarr;</a></p>
@@ -151,6 +151,15 @@
 </table>
 </div>
 
+<h2>Amplified without comment (not counted above)</h2>
+<p class="small">A weaker signal than a statement: members who <b>retweeted one of the tracked incident posts</b> (Sanders', Casar's, Ogles', or the Lieu&ndash;Moran bill announcement) without adding their own words. Retweets are not statements, so these are <b>not counted</b> in the headline number, and because the four posts span opposite framings (alarm vs. "American AI dominance"), a retweet signals engagement, not a shared position.</p>
+<div class="counter" style="border-width:1px;">
+  <span class="big">93</span>
+  <span class="what">members amplified an incident post &mdash; <b>86 D, 6 R, 1 I</b>; 82 House, 11 Senate. A floor, not a total (see method).</span>
+</div>
+<p class="small">Notably, this includes senators who made no statement of their own &mdash; among them <b>Schumer, Warren, and Merkley</b> (D) and <b>Hagerty, Paul, and Tuberville</b> (R) &mdash; which is why the "not found" list below is worded carefully.</p>
+<p class="small"><b>Method &amp; limits:</b> retweeters of the four highest-reach incident posts were pulled via Apify (<code>getRetweeters</code>) and matched to the rosters. This is a <b>floor</b>: the pull was capped at 3,000 retweeters across the four posts (Sanders' alone had ~1,100), and to avoid misattribution from handle collisions it counts <b>only institutionally-unambiguous accounts</b> (Rep-/Sen-/Speaker-prefixed handles), dropping ~40 further likely-member accounts whose handles could not be verified on sight. Individual names beyond the notable senators are held back for the same reason.</p>
+
 <h2>Candidates for Congress (not counted above)</h2>
 <p class="small">Notable non-incumbents running for Congress who are on the record about the incident. This section is non-exhaustive by design: there is no practical way to sweep every declared candidate, so entries land here as they surface via news, the recurring sweep, or reader tips. The inclusion standard is the same: a primary source, linked.</p>
 <div class="tablewrap">
@@ -176,7 +185,7 @@
 
 <h2>Who is not on record</h2>
 <ul>
-  <li>No statement surfaced by this sweep, as of the last update, from the Senate's usual AI-oversight voices (Hawley, Blumenthal, Cruz, Blackburn, Schumer, Markey, Cantwell). Read this as "not found," not "confirmed silent": for several of them only the official account and news coverage were checked, not a verified personal account (see the <a href="coverage/">coverage map</a> for exactly whose personal account is and isn't swept).</li>
+  <li>No <em>statement</em> surfaced by this sweep, as of the last update, from several of the Senate's usual AI-oversight voices (Hawley, Blumenthal, Cruz, Markey, Cantwell) &mdash; though Schumer and Blackburn both <em>amplified</em> an incident post (see the section above), so "silent" is the wrong word even for some of these. Read this as "no statement found," not "confirmed silent": for several of them only the official account and news coverage were checked, not a verified personal account (see the <a href="coverage/">coverage map</a> for exactly whose personal account is and isn't swept).</li>
   <li>No committee statements (Senate Commerce, Senate/House Homeland Security, House Science checked) and no hearing announced as of the last update.</li>
   <li>Excluded as a different story: the Schiff–Banks–Latta–Whitesides "distillation attacks" bill (Jul 23) responds to the separate Moonshot/Anthropic model-distillation reporting, not this incident.</li>
 </ul>
