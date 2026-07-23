@@ -5048,5 +5048,15 @@
   "district": null,
   "bioguide": "S001150",
   "handle": "SenAdamSchiff"
+ },
+ {
+  "name": "Lance Gooden",
+  "last": "Gooden",
+  "chamber": "House",
+  "party": "R",
+  "state": "TX",
+  "district": 5,
+  "bioguide": "G000589",
+  "handle": "RepLanceGooden"
  }
 ]
