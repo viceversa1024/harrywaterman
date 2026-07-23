@@ -214,5 +214,12 @@
 <footer>Sources: X (C-SPAN Members of Congress list and member accounts), lieu.house.gov, warner.senate.gov, moran.house.gov, POLITICO via Yahoo News, Washington Examiner, Reuters via WSAU, Forbes, Al Jazeera, Fortune, Gizmodo, AP. Roster data: unitedstates/congress-legislators. Quotes are excerpts; follow links for full statements.</footer>
 
 </div>
+<script>
+  // Open external links (sources, X posts) in a new tab; keep internal nav in-page.
+  // Runs over all anchors so links added later by the auto-update routine are covered too.
+  for (const a of document.querySelectorAll('a[href]')) {
+    try { if (new URL(a.href, location.href).host !== location.host) { a.target = '_blank'; a.rel = 'noopener noreferrer'; } } catch (e) {}
+  }
+</script>
 </body>
 </html>

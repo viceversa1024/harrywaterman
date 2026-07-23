@@ -112,6 +112,11 @@ ${rows}
 </div>
 
 </div>
+<script>
+  for (const a of document.querySelectorAll('a[href]')) {
+    try { if (new URL(a.href, location.href).host !== location.host) { a.target = '_blank'; a.rel = 'noopener noreferrer'; } } catch (e) {}
+  }
+</script>
 </body>
 </html>
 `;
