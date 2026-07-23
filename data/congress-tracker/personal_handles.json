@@ -1,5 +1,5 @@
 {
- "_comment": "Personal/campaign X accounts of members of Congress. `verified` = high-confidence auto-match (name + bio role/followers/badge); `needs_review` = plausible but unconfirmed.",
+ "_comment": "Personal/campaign X accounts of members of Congress. `verified` = high-confidence auto-match (name + bio role/followers/badge); `needs_review` = plausible but unconfirmed. Numbered-lookalike handles are excluded: identity for auto-attribution must be name-handle + badge + role bio; unsure accounts stay out.",
  "verified": [
   {
    "name": "Mark Warner",
@@ -440,17 +440,6 @@
    "followers": 275568,
    "verified_badge": false,
    "bio": "Congressman, Organizer, Musician, & Floridian. personal account, @repmaxwellfrost for official updates \ud83e\udd18\ud83c\udffe"
-  },
-  {
-   "name": "Lance Gooden",
-   "party": "R",
-   "state": "TX",
-   "chamber": "House",
-   "bioguide": "G000589",
-   "handle": "Lancegooden",
-   "followers": 270905,
-   "verified_badge": true,
-   "bio": "Congressman from Texas | Husband | Father | America First \ud83c\uddfa\ud83c\uddf8"
   },
   {
    "name": "Darrell Issa",
@@ -1443,17 +1432,6 @@
    "bio": "Secretario General Nacional @PartidoCopei_  Legitimo ODCA / Concejal de Chacao 2013 - 2018 / Abogado / Esp. en Gerencia P\u00fablica / Pap\u00e1 de Claire y Miranda"
   },
   {
-   "name": "Adam Smith",
-   "party": "D",
-   "state": "WA",
-   "chamber": "House",
-   "bioguide": "S000510",
-   "handle": "AdamSmith912",
-   "followers": 32561,
-   "verified_badge": true,
-   "bio": "Professional Footballer for @afcbournemouth."
-  },
-  {
    "name": "Maxine Waters",
    "party": "D",
    "state": "CA",
@@ -1573,17 +1551,6 @@
    "followers": 25918,
    "verified_badge": true,
    "bio": "Congresswoman for Northeast Iowa. Iowa native. Wife to Matt and mother of two sons."
-  },
-  {
-   "name": "Jason Smith",
-   "party": "R",
-   "state": "MO",
-   "chamber": "House",
-   "bioguide": "S001195",
-   "handle": "JasonSmith929",
-   "followers": 25726,
-   "verified_badge": true,
-   "bio": "Host J&J @929espn, M-F, 9a-Noon | Host Grizz Beat @grindcitymedia, Wed, 2p | Former newspaper beat writer | Father | Husband | Brother | Servant #TGBTG \ud83d\ude4c\ud83c\udffd"
   },
   {
    "name": "Sara Jacobs",
@@ -1760,17 +1727,6 @@
    "followers": 20610,
    "verified_badge": false,
    "bio": "US Rep TX-29, Houston Region. Former TX State Senator, Harris County Commissioner, Houston City Controller & Judge. Native Texan. Catholic. 1 of 10 children."
-  },
-  {
-   "name": "Ted Cruz",
-   "party": "R",
-   "state": "TX",
-   "chamber": "Senate",
-   "bioguide": "C001098",
-   "handle": "TedCruz1072676",
-   "followers": 20126,
-   "verified_badge": true,
-   "bio": "Unlock your potential with AI, no-code, and tech tools \ud83d\ude80| Sharing tips for growing, earning, & innovating \ud83c\udf10 | DM for collabs \ud83d\udce9 tedc7761@gmail.com"
   },
   {
    "name": "Debbie Dingell",
@@ -2752,17 +2708,6 @@
    "bio": "A True Progressive Democrat Running for re-election to Congress in New Jersey's 12th District. https://t.co/Vz9L66nyig"
   },
   {
-   "name": "Rick Scott",
-   "party": "R",
-   "state": "FL",
-   "chamber": "Senate",
-   "bioguide": "S001217",
-   "handle": "RAIDERS916",
-   "followers": 3668,
-   "verified_badge": false,
-   "bio": "Oakland Raiders Representative  for Monster Director of Fandemonium 2009  #Raiders #RaiderNation\nhttps://t.co/P84UyUfZJh"
-  },
-  {
    "name": "Sean Casten",
    "party": "D",
    "state": "IL",
@@ -3047,17 +2992,6 @@
    "followers": 526,
    "verified_badge": true,
    "bio": "Brad Sherman is a pastor, businessman, husband, father, grandfather, former Republican Iowa State Representative, current candidate for Iowa Governor."
-  },
-  {
-   "name": "Lance Gooden",
-   "party": "R",
-   "state": "TX",
-   "chamber": "House",
-   "bioguide": "G000589",
-   "handle": "RepLanceGooden",
-   "followers": 431,
-   "verified_badge": true,
-   "bio": "Official press account for Congressman Lance Gooden (TX-05). Proudly serving on @JudiciaryGOP and @HASCRepublicans."
   }
  ],
  "needs_review": [
