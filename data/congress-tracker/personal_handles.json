@@ -1,0 +1,8 @@
+{
+  "_comment": "Personal/campaign X accounts of members of Congress, verified by hand or by the tracker routine. Grown over time; no canonical public dataset exists.",
+  "verified": [
+    {"name": "Bernie Sanders", "party": "I", "state": "VT", "chamber": "Senate", "handle": "BernieSanders"},
+    {"name": "Ted Lieu", "party": "D", "state": "CA", "chamber": "House", "handle": "tedlieu"},
+    {"name": "Mark Warner", "party": "D", "state": "VA", "chamber": "Senate", "handle": "MarkWarner"}
+  ]
+}
