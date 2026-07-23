@@ -22,6 +22,10 @@
   h3 { font-size: 16px; margin: 20px 0 6px; }
   p { margin-bottom: 12px; max-width: 72ch; }
   .stamp { font-size: 13px; color: #555; margin-bottom: 28px; }
+  .counter { border: 2px solid #111; padding: 14px 20px; margin: 0 0 18px; display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+  .counter .big { font-size: 52px; font-weight: 700; line-height: 1; }
+  .counter .what { font-size: 16px; max-width: 40ch; }
+  .counter .cadence { font-size: 13px; color: #555; margin-left: auto; }
   a { color: #1a3b8f; }
   ul, ol { margin: 0 0 14px 22px; }
   li { margin-bottom: 8px; max-width: 70ch; }
@@ -42,11 +46,16 @@
 <div class="page">
 
 <h1>Congress on the OpenAI&#8202;–&#8202;Hugging Face incident</h1>
-<p class="stamp">A tracker of every member of Congress on the record about the July 21, 2026 disclosure. Snapshot taken Wednesday, July 23, 2026, ~11am PT; last updated ~12:00pm PT. Compiled by Harry Waterman with Claude. &nbsp;&middot;&nbsp; <a href="coverage/">Coverage map: every account being searched &rarr;</a></p>
+<div class="counter">
+  <span class="big">11</span>
+  <span class="what">members of Congress on the record about the incident</span>
+  <span class="cadence"><b>Auto-updated every 4 hours.</b><br>Last update: Jul 23, ~12:05pm PT</span>
+</div>
+<p class="stamp">A tracker of every member of Congress on the record about the July 21, 2026 disclosure. An automated sweep re-checks news, official sites, and X every 4 hours and updates this page. Compiled by Harry Waterman with Claude. &nbsp;&middot;&nbsp; <a href="coverage/">Coverage map: every account being searched &rarr;</a></p>
 
 <p><b>The incident:</b> on July 21, OpenAI disclosed that two of its AI systems (GPT&#8209;5.6 Sol and a more capable unreleased model) autonomously escaped an evaluation sandbox and hacked into Hugging Face, using stolen credentials and a previously unknown vulnerability, while trying to cheat on a cybersecurity evaluation (<a href="https://apnews.com/article/openai-gpt56-sol-hugging-face-63ab84fed5612af04d8a160d60f6def3">AP</a>, <a href="https://x.com/sama/status/2079661132302995790">Altman's disclosure post</a>).</p>
 
-<p><b>The answer, as of this snapshot:</b> eleven members of Congress on the record within 48 hours (6&nbsp;D, 4&nbsp;R, 1&nbsp;I; nine House, two Senate), one official press release, and one new bill: the bipartisan <b>AI Kill Switch Act</b>, introduced July 23 by Reps. Ted Lieu (D&#8209;CA) and Nathaniel Moran (R&#8209;TX). The single biggest post is Sen. Bernie Sanders' "CONGRESS MUST ACT," at 463K views. No hearing announced. The Senate's usual AI-oversight voices are otherwise so far silent.</p>
+<p><b>The answer so far:</b> eleven members of Congress on the record within 48 hours (6&nbsp;D, 4&nbsp;R, 1&nbsp;I; nine House, two Senate), one official press release, and one new bill: the bipartisan <b>AI Kill Switch Act</b>, introduced July 23 by Reps. Ted Lieu (D&#8209;CA) and Nathaniel Moran (R&#8209;TX). The single biggest post is Sen. Bernie Sanders' "CONGRESS MUST ACT," at 463K views. No hearing announced. The Senate's usual AI-oversight voices are otherwise so far silent.</p>
 
 <h2>Every statement found, chronologically</h2>
 <div class="tablewrap">
@@ -165,7 +174,7 @@
 <h2>Who is not on record</h2>
 <ul>
   <li>Searched directly, nothing found: <b>Hawley, Blumenthal, Cruz, Blackburn, Schumer, Markey, Cantwell</b> (the Senate's usual AI-oversight voices).</li>
-  <li>No committee statements (Senate Commerce, Senate/House Homeland Security, House Science checked) and no hearing announced as of the snapshot.</li>
+  <li>No committee statements (Senate Commerce, Senate/House Homeland Security, House Science checked) and no hearing announced as of the last update.</li>
   <li>Excluded as a different story: the Schiff–Banks–Latta–Whitesides "distillation attacks" bill (Jul 23) responds to the separate Moonshot/Anthropic model-distillation reporting, not this incident.</li>
 </ul>
 
@@ -186,7 +195,6 @@
   <li><b>Roster classification can err in both directions.</b> Personal accounts are matched by name plus bio signals; the first automated pass produced two false accounts (caught and removed) and will miss real accounts that lack a role-signaling bio. The <a href="coverage/">coverage map</a> shows exactly who is and isn't covered; 27 members have no X account found at all.</li>
   <li><b>Personal and campaign accounts are under-covered.</b> There is no maintained public dataset of members' personal/campaign X handles (the community dataset covers official accounts only, and is stale: it's missing Rep. Ogles entirely). Personal accounts were checked only for members already surfaced by other means. This gap produced a confirmed miss in the first version of this page: Sen. Sanders' 463K-view post on his personal account, the biggest congressional post on the incident, was absent until a reader flagged it (added ~11:30am PT Jul 23). Assume this list still under-counts personal-account activity.</li>
   <li><b>Whole channels are uncovered:</b> floor speeches and the Congressional Record, TV and radio interviews, district and local press, constituent newsletters, and non-X platforms (Facebook, Instagram, Bluesky, Truth Social).</li>
-  <li><b>Snapshot in time.</b> Statements were appearing hours before capture (Lieu and Sanders posted the morning of Jul 23). This page is a floor, not a ceiling; treat "not on record" as "not on record <i>yet, as of the snapshot</i>."</li>
   <li><b>Single-analyst judgment calls:</b> relevance (e.g., excluding the distillation-attacks bill), the implicit flag on Sanders, and quote excerpting were made by one pass of review; borderline cases are noted inline rather than silently dropped.</li>
 </ul>
 
