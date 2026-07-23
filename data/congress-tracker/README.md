@@ -25,6 +25,8 @@ The routine's full instructions live **only in the routine config** (not in this
 | `public/congress-oai-response/index.html` | The tracker page. Hand-authored HTML, Lora-on-cream to match the site. The routine edits this. |
 | `public/congress-oai-response/coverage/index.html` | **Generated** by `scripts/build-coverage.mjs`. Never hand-edit — rerun the script. |
 | `scripts/build-coverage.mjs` | Regenerates the coverage map from the rosters. Run `node scripts/build-coverage.mjs` after any roster change. |
+| `public/congress-oai-response/changelog/index.html` | **Generated** by `scripts/build-changelog.mjs` from `git log`. Never hand-edit. The routine reruns it every time it commits. |
+| `scripts/build-changelog.mjs` | Regenerates the changelog page from commit history (commits touching the tracker paths). Run `node scripts/build-changelog.mjs`. |
 | `data/congress-tracker/members.json` | 537 current members (name/party/state/chamber/bioguide), from `unitedstates/congress-legislators`. |
 | `data/congress-tracker/official_handles.json` | 506 official X handles, keyed to bioguide. |
 | `data/congress-tracker/personal_handles.json` | Personal/campaign accounts: `verified` (271, trusted for attribution) + `needs_review` (579, NOT swept, NOT trusted). |
