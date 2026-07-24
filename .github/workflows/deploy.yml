@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Congress tracker sweep"]
+    types: [completed]
 
 permissions:
   contents: read
@@ -16,10 +19,15 @@ concurrency:
 
 jobs:
   build:
+    # When chained from the sweep (workflow_run) only deploy if the sweep succeeded;
+    # normal pushes and manual runs always deploy.
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: main   # always build latest main (workflow_run's head SHA predates the sweep commit)
 
       - name: Setup Node
         uses: actions/setup-node@v4
