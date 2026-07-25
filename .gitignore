@@ -42,3 +42,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# congress tracker: ephemeral timeline-sweep candidate list (regenerated each run)
+data/congress-tracker/timeline-candidates.json

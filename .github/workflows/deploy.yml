@@ -5,7 +5,7 @@ on:
     branches: [main]
   workflow_dispatch:
   workflow_run:
-    workflows: ["Congress tracker sweep"]
+    workflows: ["Congress tracker sweep", "Congress tracker timeline sweep"]
     types: [completed]
 
 permissions:
