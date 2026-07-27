@@ -1,12 +1,13 @@
 name: Deploy to GitHub Pages
 
+# The congress tracker sweeps live in viceversa1024/congress-oai-tracker and push the
+# updated page here with a PAT. PAT pushes trigger workflows normally, so a plain `push`
+# trigger covers them — the old workflow_run chain was only needed back when the sweep
+# ran in this repo and pushed with GITHUB_TOKEN, which cannot trigger a deploy.
 on:
   push:
     branches: [main]
   workflow_dispatch:
-  workflow_run:
-    workflows: ["Congress tracker sweep", "Congress tracker timeline sweep"]
-    types: [completed]
 
 permissions:
   contents: read
@@ -19,15 +20,10 @@ concurrency:
 
 jobs:
   build:
-    # When chained from the sweep (workflow_run) only deploy if the sweep succeeded;
-    # normal pushes and manual runs always deploy.
-    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          ref: main   # always build latest main (workflow_run's head SHA predates the sweep commit)
 
       - name: Setup Node
         uses: actions/setup-node@v4
