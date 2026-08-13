@@ -4,16 +4,10 @@ import { useState, useEffect, useLayoutEffect, useRef, useCallback } from 'react
 
 const isTouchDevice = () => 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-interface LayerInfo {
-  text: string;
-  href?: string;
-  action?: () => void;
-}
-
-const layers: LayerInfo[] = [
-  { text: 'meet with me', href: '/meet' },
-  { text: 'signal (copy)' },
-  { text: 'feedback', href: '/feedback' },
+const layerPolygons = [
+  '42,57 160,16 156,284 37,325',
+  '279,63 401,17 396,288 275,328',
+  '513,63 636,19 630,292 511,333',
 ];
 
 const layerCenterPct = [14, 48, 82];
@@ -61,13 +55,9 @@ export default function HomeContent({ altBios }: HomeContentProps) {
   }, [mobileTooltip, handleClickOutside]);
 
   const handlePolygonClick = (index: number, e: React.MouseEvent) => {
+    e.preventDefault();
     if (isTouchDevice()) {
-      e.preventDefault();
       setMobileTooltip(mobileTooltip === index ? null : index);
-    } else if (index === 1) {
-      e.preventDefault();
-      navigator.clipboard.writeText('harry.01');
-      setCopied(true);
     }
   };
 
@@ -137,36 +127,17 @@ export default function HomeContent({ altBios }: HomeContentProps) {
                 fill: rgba(0, 0, 0, 0.07);
               }
             `}</style>
-            <a
-              href="/meet"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="layer-link"
-              onMouseMove={(e) => { if (!isTouchDevice()) setTooltip({ x: e.clientX, y: e.clientY, text: 'meet with me' }); }}
-              onMouseLeave={() => setTooltip(null)}
-              onClick={(e) => handlePolygonClick(0, e)}
-            >
-              <polygon points="42,57 160,16 156,284 37,325" />
-            </a>
-            <a
-              className="layer-link"
-              onMouseMove={(e) => { if (!isTouchDevice()) setTooltip({ x: e.clientX, y: e.clientY, text: 'signal (copy)' }); }}
-              onMouseLeave={() => setTooltip(null)}
-              onClick={(e) => handlePolygonClick(1, e)}
-            >
-              <polygon points="279,63 401,17 396,288 275,328" />
-            </a>
-            <a
-              href="/feedback"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="layer-link"
-              onMouseMove={(e) => { if (!isTouchDevice()) setTooltip({ x: e.clientX, y: e.clientY, text: 'feedback' }); }}
-              onMouseLeave={() => setTooltip(null)}
-              onClick={(e) => handlePolygonClick(2, e)}
-            >
-              <polygon points="513,63 636,19 630,292 511,333" />
-            </a>
+            {layerPolygons.map((points, i) => (
+              <a
+                key={i}
+                className="layer-link"
+                onMouseMove={(e) => { if (!isTouchDevice()) setTooltip({ x: e.clientX, y: e.clientY, text: 'secret button' }); }}
+                onMouseLeave={() => setTooltip(null)}
+                onClick={(e) => handlePolygonClick(i, e)}
+              >
+                <polygon points={points} />
+              </a>
+            ))}
           </svg>
           {mobileTooltip !== null && (
             <div
@@ -184,26 +155,7 @@ export default function HomeContent({ altBios }: HomeContentProps) {
                 zIndex: 10,
               }}
             >
-              {layers[mobileTooltip].href ? (
-                <a
-                  href={layers[mobileTooltip].href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: 'white', textDecoration: 'underline' }}
-                >
-                  {layers[mobileTooltip].text}
-                </a>
-              ) : (
-                <span
-                  style={{ color: 'white', textDecoration: 'underline', cursor: 'pointer' }}
-                  onClick={() => {
-                    navigator.clipboard.writeText('harry.01');
-                    setCopied(true);
-                  }}
-                >
-                  {layers[mobileTooltip].text}
-                </span>
-              )}
+              secret button
             </div>
           )}
         </div>
@@ -226,6 +178,35 @@ export default function HomeContent({ altBios }: HomeContentProps) {
           {tooltip.text}
         </div>
       )}
+      {universe === null ? (
+        <>
+          <p>Hello, I&apos;m Harry.</p>
+          <p>I care about the future of humans and machines. Powerful artificial intelligence is possible, and when I&apos;m not working to align it, I enjoy writing, talking, wearing sweaters, believing, and seeing. On earth as it is in heaven.</p>
+          <p>I&apos;m currently studying math at the University of California, Irvine.</p>
+        </>
+      ) : (
+        <>
+          {altBios[universe].paragraphs.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
+        </>
+      )}
+      <div className="home-cta-row">
+        <a className="home-cta" href="/meet" target="_blank" rel="noopener noreferrer">meet with me</a>
+        <a className="home-cta" href="/feedback">feedback</a>
+        <button
+          className="home-cta"
+          onClick={() => {
+            navigator.clipboard.writeText(['watermah', 'uci.edu'].join('@'));
+            setCopied(true);
+          }}
+        >
+          email
+        </button>
+        <button ref={buttonRef} className="universe-toggle" onClick={handleUniverseToggle} style={{ marginTop: 0 }}>
+          {buttonLabel}
+        </button>
+      </div>
       {copied && (
         <div
           style={{
@@ -241,28 +222,9 @@ export default function HomeContent({ altBios }: HomeContentProps) {
             zIndex: 1000,
           }}
         >
-          signal username copied to clipboard
+          email copied to clipboard
         </div>
       )}
-      {universe === null ? (
-        <>
-          <p>Hello, I&apos;m Harry.</p>
-          <p>I care about the future of humans and machines. Powerful artificial intelligence is possible, and when I&apos;m not working to align it, I enjoy writing, talking, wearing sweaters, believing, and seeing. On earth as it is in heaven.</p>
-          <p>I&apos;m currently studying math at the University of California, Irvine.</p>
-        </>
-      ) : (
-        <>
-          {altBios[universe].paragraphs.map((p, i) => (
-            <p key={i}>{p}</p>
-          ))}
-        </>
-      )}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: '1em 0', width: '100%' }}>
-        <p style={{ margin: 0 }}>watermah at uci dot edu</p>
-        <button ref={buttonRef} className="universe-toggle" onClick={handleUniverseToggle} style={{ marginTop: 0 }}>
-          {buttonLabel}
-        </button>
-      </div>
     </>
   );
 }
