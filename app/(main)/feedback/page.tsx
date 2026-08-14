@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-const FEEDBACK_URL = "https://www.admonymous.co/harry-waterman";
+const FEEDBACK_URL = "https://www.admonymous.co/harry";
 
 export default function Feedback() {
   useEffect(() => {
