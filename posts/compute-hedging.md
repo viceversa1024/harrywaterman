@@ -1,7 +1,7 @@
 ---
 title: "AI Safety Should Hedge Against Low-compute Worlds"
 date: "2026-08-15"
-excerpt: "Compute is most useful for AI safety in the worlds where it will be hardest to get."
+excerpt: "Compute-crunch worlds are underhedged."
 ---
 
 Let's say the year is 2030-2035 and we're in a world where compute **isn't** extremely useful for the cause of AI safety. What happened? Some cases:
