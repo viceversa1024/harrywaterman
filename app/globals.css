@@ -506,6 +506,11 @@ a:hover {
   margin-bottom: 0.1em;
 }
 
+.reader-content li > ul,
+.reader-content li > ol {
+  margin-bottom: 0;
+}
+
 .reader-content blockquote {
   border-left: 3px solid #ddd;
   padding-left: 20px;
@@ -537,6 +542,69 @@ a:hover {
 .reader-content pre code {
   background: none;
   padding: 0;
+}
+
+.reader-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5em 0;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.reader-content th,
+.reader-content td {
+  border-bottom: 1px solid #ddd;
+  padding: 0.5em 0.6em;
+  text-align: left;
+  vertical-align: top;
+}
+
+.reader-content th {
+  font-weight: 600;
+  border-bottom: 2px solid #999;
+}
+
+/* Yes / Maybe / No comparison tables */
+.reader-content table.yesno td.yes,
+.reader-content table.yesno td.maybe,
+.reader-content table.yesno td.no {
+  font-weight: 500;
+}
+
+.reader-content table.yesno td.yes { background: #e2efdc; color: #2f5d2a; }
+.reader-content table.yesno td.maybe { background: #f6e9c4; color: #7a5a12; }
+.reader-content table.yesno td.no { background: #f4d9d3; color: #8a3226; }
+
+.reader-content sup a {
+  text-decoration: none;
+  padding: 0 0.15em;
+}
+
+.reader-content .footnotes {
+  margin-top: 3em;
+  padding-top: 1em;
+  border-top: 1px solid #ddd;
+  font-size: 0.85em;
+  line-height: 1.6;
+  color: #555;
+}
+
+.reader-content .footnotes .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.reader-content .footnotes p {
+  margin-bottom: 0.6em;
+}
+
+.reader-content .data-footnote-backref {
+  text-decoration: none;
 }
 
 .reader-content img {
@@ -684,6 +752,24 @@ a:hover {
 
 .reader-dark .reader-content pre {
   background: #252525;
+}
+
+.reader-dark .reader-content th,
+.reader-dark .reader-content td {
+  border-bottom-color: #444;
+}
+
+.reader-dark .reader-content th {
+  border-bottom-color: #777;
+}
+
+.reader-dark .reader-content table.yesno td.yes { background: #22391f; color: #b5d8ad; }
+.reader-dark .reader-content table.yesno td.maybe { background: #443712; color: #e6c66d; }
+.reader-dark .reader-content table.yesno td.no { background: #46231f; color: #e8a094; }
+
+.reader-dark .reader-content .footnotes {
+  border-top-color: #444;
+  color: #999;
 }
 
 .reader-dark .reader-content p:has(> img) + p > em:only-child {
