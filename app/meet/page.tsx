@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-const MEETING_URL = "https://cal.com/harry-waterman/15min";
+const MEETING_URL = "https://cal.com/harry-waterman";
 
 export default function Meet() {
   useEffect(() => {
