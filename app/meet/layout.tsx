@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const TITLE = "Schedule a 15 minute meeting with Harry";
+const TITLE = "Schedule a meeting";
 
 export const metadata: Metadata = {
   title: TITLE,
