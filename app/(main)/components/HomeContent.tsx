@@ -197,7 +197,7 @@ export default function HomeContent({ altBios }: HomeContentProps) {
         <button
           className="home-cta"
           onClick={() => {
-            navigator.clipboard.writeText(['watermah', 'uci.edu'].join('@'));
+            navigator.clipboard.writeText(['harrywatermanb', 'gmail.com'].join('@'));
             setCopied(true);
           }}
         >
