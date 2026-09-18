@@ -182,7 +182,7 @@ export default function HomeContent({ altBios }: HomeContentProps) {
         <>
           <p>Hello, I&apos;m Harry.</p>
           <p>I care about the future of humans and machines. Powerful artificial intelligence is coming, and when I&apos;m not working to make it go well, I enjoy writing, talking, wearing sweaters, believing, and seeing. On earth as it is in heaven.</p>
-          <p>I&apos;m currently studying math at the University of California, Irvine.</p>
+          <p>I&apos;m currently on leave from UCI, trying to make AI go well before it&apos;s too late.</p>
         </>
       ) : (
         <>
